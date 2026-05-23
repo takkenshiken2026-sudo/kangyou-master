@@ -16,5 +16,13 @@ python3 tools/build_all.py
 
 ## デプロイ
 
-`main` へ push すると `.github/workflows/deploy-pages.yml` が `public_site/` を GitHub Pages へ公開します。  
-リポジトリ Settings → Pages → Source を **GitHub Actions** に設定してください。
+**推奨:** `main` へ push すると GitHub Actions が `build_all.py` を実行し Pages へ公開します。
+
+1. リポジトリ **Settings → Pages → Build and deployment → Source** を **GitHub Actions** に設定（初回のみ）
+2. `main` に push
+
+手動デプロイ（Actions が使えない場合のみ）:
+
+```bash
+bash tools/deploy_gh_pages.sh
+```
