@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://takkenshiken2026-sudo.github.io/kangyou-master/sitemap.xml
