@@ -86,6 +86,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="site-asset-version.js"></script>
+<script src="site-exam-data-loader.js"></script>
+<link rel="preload" href="site-theme.css" as="style">
+<link rel="stylesheet" href="site-theme.css">
 <style>
 :root {
   --bg:    #ffffff;
@@ -1783,10 +1787,10 @@ body.is-solving .site-footer{display:none!important}
             <a href="articles/index.html">試験ガイド</a>
             <a href="related-sites.html">関連リンク</a>
             <a href="privacy.html">プライバシー</a>
-            <a href="https://github.com/takkenshiken2026-sudo/kangyou-master/issues" target="_blank" rel="noopener noreferrer">お問い合わせ</a>
+            <a href="https://forms.gle/FFPAFnijLYYAkyW1A" target="_blank" rel="noopener noreferrer">お問い合わせ</a>
           </nav>
           <span class="site-footer-sep" aria-hidden="true"></span>
-          <span class="site-footer-copy">© 2026 管業マスター学習支援・takkenshiken2026-sudo.github.io/kangyou-master</span>
+          <span class="site-footer-copy">© 2026 管業マスター学習支援・kangyou-master.jp</span>
         </div>
       </div>
     </footer>
@@ -1821,6 +1825,7 @@ function buildEvenFieldDistribution(total){
   ids.forEach(function(id, idx){ dist[id] = Math.floor(total / ids.length) + (idx < (total % ids.length) ? 1 : 0); });
   return dist;
 }
+var YEARS = [];
 function applyCsvImportedQuestions() {
   if (typeof CSV_IMPORTED_QUESTIONS === 'undefined' || !Array.isArray(CSV_IMPORTED_QUESTIONS)) return;
   var rows = CSV_IMPORTED_QUESTIONS;
@@ -1835,13 +1840,18 @@ function applyCsvImportedQuestions() {
     if (q.year != null && q.year !== '') yset.add(q.year);
   });
   YEARS = Array.from(yset).sort(function (a, b) { return b - a; });
+  if (typeof quizState !== 'undefined' && quizState && Array.isArray(YEARS) && YEARS.length) {
+    quizState.years = YEARS.slice();
+  }
+  if (typeof renderDailyStatus === 'function') {
+    try {
+      if (document.getElementById('page-quiz-start')?.classList.contains('active')) renderDailyStatus();
+    } catch (e) {
+      console.error('[applyCsvImportedQuestions]', e);
+    }
+  }
 }
 </script>
-<link rel="stylesheet" href="site-theme.css">
-<script src="site-config.js"></script>
-<script src="exam-site-data-practice.js"></script>
-<script src="exam-site-data-past.js"></script>
-<script src="exam-site-data-ichimondou.js"></script>
 <script>
 
 // ===== GAMIFICATION ENGINE =====
@@ -2288,7 +2298,7 @@ function getMissionProgress(mission, u){
   }
   if(mission.type==='field'){
     const cur=todayAnswers.filter(([qid])=>{
-      const q=QUESTIONS.find(qq=>qq.id==qid);
+      const q=typeof findQuestionById==='function'?findQuestionById(qid):null;
       return q&&q.field===mission.field;
     }).length;
     return {cur, target:mission.target};
@@ -2327,10 +2337,11 @@ function recordReviewMissionAction(u){
 }
 
 function renderDailyStatus(){
-  if(typeof updateQuizStartModeStats==='function') updateQuizStartModeStats();
   const wrap=document.getElementById('daily-status-wrap');
   if(!wrap) return;
   const u=getUserData(); if(!u) return;
+  try {
+  if(typeof updateQuizStartModeStats==='function') updateQuizStartModeStats();
   const total=Object.keys(u.answers||{}).length;
   const lv=getLevel(total);
   const next=getLevelNext(total);
@@ -2372,7 +2383,7 @@ function renderDailyStatus(){
   const calloutHTML = window._missionSpotlightPending
     ? `<div class="mission-callout"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v7"/><path d="M5 6l3 3 3-3"/><path d="M3 13h10"/></svg><span>今日のミッションはこれです。まず1つ、解いてみよう！</span></div>`
     : '';
-  wrap.innerHTML=`<div class="mission-card${spotlight}" id="today-mission-card">${calloutHTML}<div class="mode-card-header"><div class="mode-icon-wrap"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="#444" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M8 3l5 5-5 5"/></svg></div><div class="mode-card-title">今日のミッション</div></div>${mHTML}</div>`;
+  wrap.innerHTML=`${statusHTML}<div class="mission-card${spotlight}" id="today-mission-card">${calloutHTML}<div class="mode-card-header"><div class="mode-icon-wrap"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="#444" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M8 3l5 5-5 5"/></svg></div><div class="mode-card-title">今日のミッション</div></div>${mHTML}</div>`;
   if(window._missionSpotlightPending){
     window._missionSpotlightPending=false;
     setTimeout(()=>{
@@ -2386,7 +2397,11 @@ function renderDailyStatus(){
       card.classList.remove('spotlight');
     }, 4500);
   }
+  } catch (e) {
+    console.error('[renderDailyStatus]', e);
+  }
 }
+window.renderDailyStatus = renderDailyStatus;
 
 function renderDashLevel(){
   const el=document.getElementById('dash-level-bar');
@@ -2577,7 +2592,7 @@ function buildYearHistoryHTML(q){
 
 // ===== STATE =====
 let currentUser = null, db = {};
-let quizState = {mode:'past',fields:FIELDS.map(f=>f.id),years:[...YEARS],count:10,order:'seq',queue:[],idx:0,startTime:0,sessionResults:[],scoreReplayMode:false};
+let quizState = {mode:'past',fields:FIELDS.map(f=>f.id),years:Array.isArray(YEARS)?YEARS.slice():[],count:10,order:'seq',queue:[],idx:0,startTime:0,sessionResults:[],scoreReplayMode:false};
 
 // Storage: localStorage (works in real browsers / GitHub Pages)
 var _memStore = {};
@@ -4129,8 +4144,10 @@ function allPracticeQuestions(){
 }
 function findQuestionById(qid){
   const s=String(qid);
-  const hit=QUESTIONS.find(qq=>String(qq.id)===s);
-  if(hit)return hit;
+  if(typeof QUESTIONS!=='undefined'&&Array.isArray(QUESTIONS)){
+    const hit=QUESTIONS.find(qq=>String(qq.id)===s);
+    if(hit)return hit;
+  }
   if(typeof PRACTICE_QUESTIONS==='undefined')return null;
   for(const lv of [1,2,3]){
     const q=(PRACTICE_QUESTIONS[lv]||[]).find(qq=>String(qq.id)===s);
@@ -6159,14 +6176,21 @@ function closePremium(){document.getElementById('premium-modal').classList.remov
 function mockUpgrade(){const u=getUserData();u.plan='premium';saveUser(u);closePremium();gotoPage('dash')}
 
 loadDB();
-// ゲストとしてまず入場
+// ゲストとしてまず入場（問題データ JS は初回描画後に読み込み）
 (function(){
   const guestEmail='__guest__';
-  if(!db[guestEmail]){db[guestEmail]={name:'ゲスト',plan:'free',answers:{},sessions:[],streak:0};saveDB();}
-  currentUser={email:guestEmail,name:'ゲスト'};
-  enterApp();
-  renderOrigPage();
-  gotoPage('quiz-start');
+  function bootGuest(){
+    if(!db[guestEmail]){db[guestEmail]={name:'ゲスト',plan:'free',answers:{},sessions:[],streak:0};saveDB();}
+    currentUser={email:guestEmail,name:'ゲスト'};
+    enterApp();
+    renderOrigPage();
+    gotoPage('quiz-start');
+  }
+  function bootWhenReady(){
+    if(typeof whenExamSiteDataReady==='function'){ whenExamSiteDataReady(bootGuest); }
+    else { setTimeout(bootWhenReady, 0); }
+  }
+  bootWhenReady();
 })();
 // Supabaseセッションがあればログイン済みユーザーに切り替え
 (async function(){
@@ -6183,7 +6207,9 @@ loadDB();
     await loadAnswersFromSupabase();
     await loadMergeUserLearningSyncFromSupabase();
     await syncUserLearningToSupabaseNow();
-    enterApp();
+    const runEnter=function(){ enterApp(); };
+    if(typeof whenExamSiteDataReady==='function'){ whenExamSiteDataReady(runEnter); }
+    else { runEnter(); }
   }
 })();
 // ===== EXAM COUNTDOWN =====
@@ -7001,6 +7027,7 @@ window.gotoPage=function(id){
   setTimeout(()=>{
     if(id==='quiz-start'){
       if(typeof window.updateQuizStartModeStats==='function') window.updateQuizStartModeStats();
+      if(typeof window.renderDailyStatus==='function') window.renderDailyStatus();
       // 弱点カードが既にある場合は解放状態が変わっていれば再描画
       const existing=document.getElementById('weak-mode-inject');
       if(existing) existing.remove();
@@ -7057,7 +7084,8 @@ if(typeof getUserData==='function'){
 })();
 </script>
 <!-- GA4: tools/html_footer.analytics_snippet と同内容（トップ SPA） -->
-<script>window.__GA4_MEASUREMENT_ID__="";</script>
+<script>window.__GA4_MEASUREMENT_ID__="G-K7WTT45NJ8";</script>
+<script defer src="site-sw-register.js"></script>
 <script defer src="site-analytics.js"></script>
 </body>
 </html>

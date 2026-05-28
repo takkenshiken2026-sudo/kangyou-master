@@ -1,0 +1,2165 @@
+{
+  "同時履行の抗弁": {
+    "category": "民法・借地借家法",
+    "importance": "A",
+    "legal_basis": "民法第533条",
+    "related_terms": "催告解除;無催告解除;双務契約",
+    "tags": "民法・借地借家法;頻出;契約"
+  },
+  "催告解除": {
+    "category": "民法・借地借家法",
+    "importance": "A",
+    "legal_basis": "民法第541条",
+    "related_terms": "同時履行の抗弁;無催告解除;双務契約",
+    "tags": "民法・借地借家法;頻出;解除"
+  },
+  "無催告解除": {
+    "category": "民法・借地借家法",
+    "importance": "A",
+    "legal_basis": "民法第542条",
+    "related_terms": "同時履行の抗弁;催告解除;双務契約",
+    "tags": "民法・借地借家法;頻出;解除"
+  },
+  "双務契約": {
+    "category": "民法・借地借家法",
+    "importance": "A",
+    "legal_basis": "民法第533条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;契約総論"
+  },
+  "債務不履行": {
+    "category": "民法・借地借家法",
+    "importance": "A",
+    "legal_basis": "民法",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;頻出"
+  },
+  "損害賠償": {
+    "category": "民法・借地借家法",
+    "importance": "A",
+    "legal_basis": "民法第415条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;頻出"
+  },
+  "契約の解除": {
+    "category": "民法・借地借家法",
+    "importance": "A",
+    "legal_basis": "民法第540条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;頻出"
+  },
+  "債務の承認": {
+    "category": "民法・借地借家法",
+    "importance": "B",
+    "legal_basis": "民法第152条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;時効"
+  },
+  "消滅時効": {
+    "category": "民法・借地借家法",
+    "importance": "A",
+    "legal_basis": "民法第166条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;時効;頻出"
+  },
+  "無断転貸": {
+    "category": "民法・借地借家法",
+    "importance": "A",
+    "legal_basis": "民法第612条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;賃貸借;頻出"
+  },
+  "賃貸借契約": {
+    "category": "民法・借地借家法",
+    "importance": "A",
+    "legal_basis": "民法第601条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;賃貸借"
+  },
+  "原状回復": {
+    "category": "民法・借地借家法",
+    "importance": "A",
+    "legal_basis": "民法第621条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;賃貸借;頻出"
+  },
+  "敷金": {
+    "category": "民法・借地借家法",
+    "importance": "A",
+    "legal_basis": "民法",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;賃貸借;頻出"
+  },
+  "連帯保証": {
+    "category": "民法・借地借家法",
+    "importance": "B",
+    "legal_basis": "民法第454条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;担保"
+  },
+  "共有物": {
+    "category": "民法・借地借家法",
+    "importance": "B",
+    "legal_basis": "民法第249条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;共有"
+  },
+  "請負契約": {
+    "category": "民法・借地借家法",
+    "importance": "B",
+    "legal_basis": "民法第632条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;契約類型"
+  },
+  "委任契約": {
+    "category": "民法・借地借家法",
+    "importance": "B",
+    "legal_basis": "民法第643条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;契約類型"
+  },
+  "寄託契約": {
+    "category": "民法・借地借家法",
+    "importance": "B",
+    "legal_basis": "民法第657条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;契約類型"
+  },
+  "組合契約": {
+    "category": "民法・借地借家法",
+    "importance": "B",
+    "legal_basis": "民法第675条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;契約類型"
+  },
+  "弁済期": {
+    "category": "民法・借地借家法",
+    "importance": "B",
+    "legal_basis": "民法第475条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;債権"
+  },
+  "専有部分": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第2条",
+    "related_terms": "共用部分;管理組合;理事会",
+    "tags": "区分所有法;頻出;基本"
+  },
+  "共用部分": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第2条",
+    "related_terms": "専有部分;管理組合;理事会",
+    "tags": "区分所有法;頻出;基本"
+  },
+  "管理組合": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第3条",
+    "related_terms": "専有部分;共用部分;理事会",
+    "tags": "区分所有法;頻出;基本"
+  },
+  "理事会": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第36条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;組織"
+  },
+  "総会": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第31条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;組織"
+  },
+  "管理規約": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第13条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出"
+  },
+  "専用使用権": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第22条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出"
+  },
+  "敷地利用権": {
+    "category": "区分所有法",
+    "importance": "B",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;権利"
+  },
+  "修繕積立金": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第61条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;会計"
+  },
+  "建替え": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第62条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出"
+  },
+  "特例部分的建替え": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第68条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出"
+  },
+  "分別管理": {
+    "category": "区分所有法",
+    "importance": "B",
+    "legal_basis": "区分所有法第48条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;管理"
+  },
+  "区分所有者": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第2条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;基本"
+  },
+  "監事": {
+    "category": "区分所有法",
+    "importance": "B",
+    "legal_basis": "区分所有法第38条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;組織"
+  },
+  "規約の変更": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第13条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出"
+  },
+  "長期修繕計画": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第61条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;修繕"
+  },
+  "管理不全マンション": {
+    "category": "区分所有法",
+    "importance": "B",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;判例;実務"
+  },
+  "議決権": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第32条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;総会"
+  },
+  "管理費": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第61条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;会計"
+  },
+  "マンション標準管理規約": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "理事長;総会決議;普通決議",
+    "tags": "標準管理規約;頻出;基本"
+  },
+  "理事長": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;総会決議;普通決議",
+    "tags": "標準管理規約;頻出;組織"
+  },
+  "総会決議": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;普通決議",
+    "tags": "標準管理規約;頻出;総会"
+  },
+  "普通決議": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;総会"
+  },
+  "特別決議": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;総会"
+  },
+  "例外決議": {
+    "category": "標準管理規約",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;総会"
+  },
+  "管理事務の委託": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;委託"
+  },
+  "管理員": {
+    "category": "標準管理規約",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;実務"
+  },
+  "専用使用": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出"
+  },
+  "修繕の実施": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;修繕"
+  },
+  "総会の招集": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;総会"
+  },
+  "立会人": {
+    "category": "標準管理規約",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;総会"
+  },
+  "管理組合の表示": {
+    "category": "標準管理規約",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;登記"
+  },
+  "規約の設定": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;基本"
+  },
+  "総会出席と代理": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;総会"
+  },
+  "理事会の権限": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;理事会"
+  },
+  "管理費と修繕積立金の使途": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;会計"
+  },
+  "総会決議要件": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;総会"
+  },
+  "建築基準法": {
+    "category": "建築・設備",
+    "importance": "A",
+    "legal_basis": "建築基準法",
+    "related_terms": "エレベーター;昇降機;消防法",
+    "tags": "建築・設備;法令;頻出"
+  },
+  "エレベーター": {
+    "category": "建築・設備",
+    "importance": "A",
+    "legal_basis": "昇降機安全規則",
+    "related_terms": "建築基準法;昇降機;消防法",
+    "tags": "建築・設備;設備;頻出"
+  },
+  "昇降機": {
+    "category": "建築・設備",
+    "importance": "A",
+    "legal_basis": "昇降機安全規則",
+    "related_terms": "建築基準法;エレベーター;消防法",
+    "tags": "建築・設備;設備"
+  },
+  "消防法": {
+    "category": "建築・設備",
+    "importance": "A",
+    "legal_basis": "消防法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;法令;頻出"
+  },
+  "防火設備": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "消防法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;設備"
+  },
+  "給排水設備": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;設備"
+  },
+  "機械式駐車場": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "昇降機安全規則",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;設備"
+  },
+  "建築確認": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;手続"
+  },
+  "耐震基準": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;構造"
+  },
+  "バリアフリー": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "バリアフリー法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;設備"
+  },
+  "昇降機の定期検査": {
+    "category": "建築・設備",
+    "importance": "A",
+    "legal_basis": "昇降機安全規則",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;頻出;検査"
+  },
+  "共同住宅": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;用途"
+  },
+  "特殊建築物": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;用途"
+  },
+  "非常用エレベーター": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;設備"
+  },
+  "機械室レスエレベーター": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "昇降機安全規則",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;設備"
+  },
+  "積載荷重": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "昇降機安全規則",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;数値"
+  },
+  "管理費等": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "前受金;預り金;決算",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "前受金": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "管理費等;預り金;決算",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "預り金": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "管理費等;前受金;決算",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "決算": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "財務報告": {
+    "category": "会計・税務",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;会計"
+  },
+  "監査": {
+    "category": "会計・税務",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;会計"
+  },
+  "消費税": {
+    "category": "会計・税務",
+    "importance": "B",
+    "legal_basis": "消費税法",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;税務"
+  },
+  "源泉徴収": {
+    "category": "会計・税務",
+    "importance": "B",
+    "legal_basis": "所得税法",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;税務"
+  },
+  "修繕費": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "管理委託費": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "滞納管理費": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;回収"
+  },
+  "滞納管理費の回収手続": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;回収"
+  },
+  "収支報告": {
+    "category": "会計・税務",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;会計"
+  },
+  "積立金の使途": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;修繕"
+  },
+  "マンション等の管理の適正化の推進に関する法律": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "管理計画認定制度;管理業務主任者;マンション管理士",
+    "tags": "管理適正化法;法令;基本"
+  },
+  "管理計画認定制度": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理業務主任者;マンション管理士",
+    "tags": "管理適正化法;頻出;制度"
+  },
+  "管理業務主任者": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;マンション管理士",
+    "tags": "管理適正化法;資格;頻出"
+  },
+  "マンション管理士": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;資格"
+  },
+  "管理業務": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;基本"
+  },
+  "マンション管理業者": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;頻出;業者"
+  },
+  "73条書面": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法第73条",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;頻出;書面"
+  },
+  "管理計画": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;頻出"
+  },
+  "登録管理業務主任者": {
+    "category": "管理適正化法",
+    "importance": "B",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;資格"
+  },
+  "管理業務主任者試験": {
+    "category": "管理適正化法",
+    "importance": "B",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;試験"
+  },
+  "マンション標準管理委託契約書": {
+    "category": "標準管理委託契約書・指針",
+    "importance": "A",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "定額委託業務費;臨時委託業務;アフターサービス",
+    "tags": "標準管理委託契約書・指針;頻出;基本"
+  },
+  "定額委託業務費": {
+    "category": "標準管理委託契約書・指針",
+    "importance": "A",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "マンション標準管理委託契約書;臨時委託業務;アフターサービス",
+    "tags": "標準管理委託契約書・指針;頻出;会計"
+  },
+  "臨時委託業務": {
+    "category": "標準管理委託契約書・指針",
+    "importance": "A",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "マンション標準管理委託契約書;定額委託業務費;アフターサービス",
+    "tags": "標準管理委託契約書・指針;頻出"
+  },
+  "アフターサービス": {
+    "category": "標準管理委託契約書・指針",
+    "importance": "B",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "マンション標準管理委託契約書;定額委託業務費;臨時委託業務",
+    "tags": "標準管理委託契約書・指針;修繕"
+  },
+  "管理事務": {
+    "category": "標準管理委託契約書・指針",
+    "importance": "A",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "マンション標準管理委託契約書;定額委託業務費;臨時委託業務",
+    "tags": "標準管理委託契約書・指針;頻出"
+  },
+  "委託業務の範囲": {
+    "category": "標準管理委託契約書・指針",
+    "importance": "B",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "マンション標準管理委託契約書;定額委託業務費;臨時委託業務",
+    "tags": "標準管理委託契約書・指針;契約"
+  },
+  "契約の更新": {
+    "category": "標準管理委託契約書・指針",
+    "importance": "B",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "マンション標準管理委託契約書;定額委託業務費;臨時委託業務",
+    "tags": "標準管理委託契約書・指針;契約"
+  },
+  "夜間急変取扱": {
+    "category": "標準管理委託契約書・指針",
+    "importance": "B",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "マンション標準管理委託契約書;定額委託業務費;臨時委託業務",
+    "tags": "標準管理委託契約書・指針;実務"
+  },
+  "管理員室": {
+    "category": "標準管理委託契約書・指針",
+    "importance": "B",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "マンション標準管理委託契約書;定額委託業務費;臨時委託業務",
+    "tags": "標準管理委託契約書・指針;設備"
+  },
+  "修繕アフターサービス": {
+    "category": "標準管理委託契約書・指針",
+    "importance": "B",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "マンション標準管理委託契約書;定額委託業務費;臨時委託業務",
+    "tags": "標準管理委託契約書・指針;修繕"
+  },
+  "品質確保促進法": {
+    "category": "品確法・建替円滑化法等",
+    "importance": "A",
+    "legal_basis": "品質確保促進法",
+    "related_terms": "既存住宅状況調査;建替え等円滑化法;瑕疵担保責任",
+    "tags": "品確法・建替円滑化法等;法令"
+  },
+  "既存住宅状況調査": {
+    "category": "品確法・建替円滑化法等",
+    "importance": "B",
+    "legal_basis": "品質確保促進法",
+    "related_terms": "品質確保促進法;建替え等円滑化法;瑕疵担保責任",
+    "tags": "品確法・建替円滑化法等;調査"
+  },
+  "建替え等円滑化法": {
+    "category": "品確法・建替円滑化法等",
+    "importance": "A",
+    "legal_basis": "建替え等円滑化法",
+    "related_terms": "品質確保促進法;既存住宅状況調査;瑕疵担保責任",
+    "tags": "品確法・建替円滑化法等;法令;頻出"
+  },
+  "瑕疵担保責任": {
+    "category": "品確法・建替円滑化法等",
+    "importance": "B",
+    "legal_basis": "民法",
+    "related_terms": "品質確保促進法;既存住宅状況調査;建替え等円滑化法",
+    "tags": "品確法・建替円滑化法等;契約"
+  },
+  "10年瑕疵担保責任": {
+    "category": "品確法・建替円滑化法等",
+    "importance": "B",
+    "legal_basis": "品質確保促進法",
+    "related_terms": "品質確保促進法;既存住宅状況調査;建替え等円滑化法",
+    "tags": "品確法・建替円滑化法等;数値"
+  },
+  "既存住宅売買": {
+    "category": "品確法・建替円滑化法等",
+    "importance": "B",
+    "legal_basis": "品質確保促進法",
+    "related_terms": "品質確保促進法;既存住宅状況調査;建替え等円滑化法",
+    "tags": "品確法・建替円滑化法等;取引"
+  },
+  "宅地建物取引業": {
+    "category": "宅建業法",
+    "importance": "A",
+    "legal_basis": "宅地建物取引業法",
+    "related_terms": "重要事項説明;35条書面;37条書面",
+    "tags": "宅建業法;法令"
+  },
+  "重要事項説明": {
+    "category": "宅建業法",
+    "importance": "A",
+    "legal_basis": "宅地建物取引業法第35条",
+    "related_terms": "宅地建物取引業;35条書面;37条書面",
+    "tags": "宅建業法;頻出"
+  },
+  "35条書面": {
+    "category": "宅建業法",
+    "importance": "A",
+    "legal_basis": "宅地建物取引業法第35条",
+    "related_terms": "宅地建物取引業;重要事項説明;37条書面",
+    "tags": "宅建業法;頻出;書面"
+  },
+  "37条書面": {
+    "category": "宅建業法",
+    "importance": "B",
+    "legal_basis": "宅地建物取引業法第37条",
+    "related_terms": "宅地建物取引業;重要事項説明;35条書面",
+    "tags": "宅建業法;書面"
+  },
+  "クーリングオフ": {
+    "category": "宅建業法",
+    "importance": "B",
+    "legal_basis": "宅地建物取引業法",
+    "related_terms": "宅地建物取引業;重要事項説明;35条書面",
+    "tags": "宅建業法;消費者"
+  },
+  "媒介契約": {
+    "category": "宅建業法",
+    "importance": "B",
+    "legal_basis": "宅地建物取引業法",
+    "related_terms": "宅地建物取引業;重要事項説明;35条書面",
+    "tags": "宅建業法;契約"
+  },
+  "宅建業者": {
+    "category": "宅建業法",
+    "importance": "B",
+    "legal_basis": "宅地建物取引業法",
+    "related_terms": "宅地建物取引業;重要事項説明;35条書面",
+    "tags": "宅建業法;業者"
+  },
+  "共用部分規約案の説明": {
+    "category": "宅建業法",
+    "importance": "B",
+    "legal_basis": "宅地建物取引業法",
+    "related_terms": "宅地建物取引業;重要事項説明;35条書面",
+    "tags": "宅建業法;実務"
+  },
+  "主徴費": {
+    "category": "判例・横断総合",
+    "importance": "A",
+    "legal_basis": "判例",
+    "related_terms": "管理不全;組合の法人格;管理者",
+    "tags": "判例・横断総合;頻出;判例"
+  },
+  "管理不全": {
+    "category": "判例・横断総合",
+    "importance": "A",
+    "legal_basis": "判例",
+    "related_terms": "主徴費;組合の法人格;管理者",
+    "tags": "判例・横断総合;頻出"
+  },
+  "組合の法人格": {
+    "category": "判例・横断総合",
+    "importance": "B",
+    "legal_basis": "区分所有法",
+    "related_terms": "主徴費;管理不全;管理者",
+    "tags": "判例・横断総合;組織"
+  },
+  "管理者": {
+    "category": "判例・横断総合",
+    "importance": "B",
+    "legal_basis": "区分所有法",
+    "related_terms": "主徴費;管理不全;組合の法人格",
+    "tags": "判例・横断総合;実務"
+  },
+  "一括再委託": {
+    "category": "判例・横断総合",
+    "importance": "B",
+    "legal_basis": "管理適正化法",
+    "related_terms": "主徴費;管理不全;組合の法人格",
+    "tags": "判例・横断総合;実務"
+  },
+  "利益相反": {
+    "category": "判例・横断総合",
+    "importance": "B",
+    "legal_basis": "区分所有法",
+    "related_terms": "主徴費;管理不全;組合の法人格",
+    "tags": "判例・横断総合;実務"
+  },
+  "専有部分と共用部分": {
+    "category": "判例・横断総合",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "主徴費;管理不全;組合の法人格",
+    "tags": "判例・横断総合;頻出;基本"
+  },
+  "契約類型の対応": {
+    "category": "判例・横断総合",
+    "importance": "B",
+    "legal_basis": "民法",
+    "related_terms": "主徴費;管理不全;組合の法人格",
+    "tags": "判例・横断総合;横断"
+  },
+  "履行遅滞": {
+    "category": "民法・借地借家法",
+    "importance": "A",
+    "legal_basis": "民法第412条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;頻出;債務"
+  },
+  "履行不能": {
+    "category": "民法・借地借家法",
+    "importance": "B",
+    "legal_basis": "民法",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;債務"
+  },
+  "契約不適合責任": {
+    "category": "民法・借地借家法",
+    "importance": "A",
+    "legal_basis": "民法第562条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;頻出;瑕疵"
+  },
+  "危険負担": {
+    "category": "民法・借地借家法",
+    "importance": "A",
+    "legal_basis": "民法第536条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;頻出;双務"
+  },
+  "相殺": {
+    "category": "民法・借地借家法",
+    "importance": "A",
+    "legal_basis": "民法第505条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;頻出;債権"
+  },
+  "債権譲渡": {
+    "category": "民法・借地借家法",
+    "importance": "A",
+    "legal_basis": "民法第466条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;頻出;債権"
+  },
+  "使用貸借": {
+    "category": "民法・借地借家法",
+    "importance": "B",
+    "legal_basis": "民法第593条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;契約類型"
+  },
+  "定期建物賃貸借": {
+    "category": "民法・借地借家法",
+    "importance": "A",
+    "legal_basis": "借地借家法第38条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;頻出;賃貸借"
+  },
+  "借地借家法": {
+    "category": "民法・借地借家法",
+    "importance": "A",
+    "legal_basis": "借地借家法",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;法令;基本"
+  },
+  "賃貸借の対抗力": {
+    "category": "民法・借地借家法",
+    "importance": "A",
+    "legal_basis": "借地借家法第31条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;頻出;賃貸借"
+  },
+  "明渡し": {
+    "category": "民法・借地借家法",
+    "importance": "A",
+    "legal_basis": "借地借家法",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;頻出;賃貸借"
+  },
+  "賃料": {
+    "category": "民法・借地借家法",
+    "importance": "A",
+    "legal_basis": "借地借家法",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;賃貸借"
+  },
+  "借地権": {
+    "category": "民法・借地借家法",
+    "importance": "B",
+    "legal_basis": "借地借家法",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;借地"
+  },
+  "借家権": {
+    "category": "民法・借地借家法",
+    "importance": "B",
+    "legal_basis": "借地借家法",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;借家"
+  },
+  "地上権": {
+    "category": "民法・借地借家法",
+    "importance": "B",
+    "legal_basis": "民法第265条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;物権"
+  },
+  "地役権": {
+    "category": "民法・借地借家法",
+    "importance": "B",
+    "legal_basis": "民法第280条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;物権"
+  },
+  "表見代理": {
+    "category": "民法・借地借家法",
+    "importance": "B",
+    "legal_basis": "民法第109条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;代理"
+  },
+  "無権代理": {
+    "category": "民法・借地借家法",
+    "importance": "B",
+    "legal_basis": "民法第113条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;代理"
+  },
+  "債務承継": {
+    "category": "民法・借地借家法",
+    "importance": "B",
+    "legal_basis": "民法",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;相続;頻出"
+  },
+  "占有": {
+    "category": "民法・借地借家法",
+    "importance": "B",
+    "legal_basis": "民法第180条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;物権"
+  },
+  "単務契約": {
+    "category": "民法・借地借家法",
+    "importance": "B",
+    "legal_basis": "民法",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;契約総論"
+  },
+  "代位弁済": {
+    "category": "民法・借地借家法",
+    "importance": "B",
+    "legal_basis": "民法第499条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;債権"
+  },
+  "連帯債務": {
+    "category": "民法・借地借家法",
+    "importance": "B",
+    "legal_basis": "民法第436条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;債権"
+  },
+  "保証": {
+    "category": "民法・借地借家法",
+    "importance": "B",
+    "legal_basis": "民法第446条",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;担保"
+  },
+  "解除と損害賠償": {
+    "category": "民法・借地借家法",
+    "importance": "B",
+    "legal_basis": "民法",
+    "related_terms": "同時履行の抗弁;催告解除;無催告解除",
+    "tags": "民法・借地借家法;解除;頻出"
+  },
+  "規約共用部分": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第2条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;基本"
+  },
+  "附属共用部分": {
+    "category": "区分所有法",
+    "importance": "B",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;共用部分"
+  },
+  "一部共用部分": {
+    "category": "区分所有法",
+    "importance": "B",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;共用部分"
+  },
+  "専有部分への立入り": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第64条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;立入"
+  },
+  "占有者": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;実務"
+  },
+  "一部滅失": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第63条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;滅失"
+  },
+  "復旧": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;修繕"
+  },
+  "復旧決議": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;総会"
+  },
+  "建替え決議": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第62条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;建替え"
+  },
+  "分離処分": {
+    "category": "区分所有法",
+    "importance": "B",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;敷地利用権"
+  },
+  "5分の1議決権": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;数値;総会"
+  },
+  "4分の3議決権": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;数値;総会"
+  },
+  "5分の4議決権": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;数値;総会"
+  },
+  "直接請求": {
+    "category": "区分所有法",
+    "importance": "B",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;訴訟"
+  },
+  "使用禁止請求": {
+    "category": "区分所有法",
+    "importance": "B",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;訴訟"
+  },
+  "競売請求": {
+    "category": "区分所有法",
+    "importance": "B",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;滞納;回収"
+  },
+  "団地": {
+    "category": "区分所有法",
+    "importance": "B",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;横断"
+  },
+  "共用部分持分": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;基本"
+  },
+  "管理組合の存続": {
+    "category": "区分所有法",
+    "importance": "B",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;組織"
+  },
+  "議長": {
+    "category": "区分所有法",
+    "importance": "B",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;総会"
+  },
+  "議事録": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;総会"
+  },
+  "特別の影響": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;規約改正"
+  },
+  "規約改正": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出"
+  },
+  "集会招集": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;総会"
+  },
+  "総会決議事項": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;総会"
+  },
+  "役員の任務": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;理事会"
+  },
+  "理事長権限": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;理事長"
+  },
+  "監事の権限": {
+    "category": "標準管理規約",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;監事"
+  },
+  "規約設定変更": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;規約"
+  },
+  "義務違反者への措置": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;実務"
+  },
+  "占有者の地位": {
+    "category": "標準管理規約",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;占有"
+  },
+  "駐車場使用細則": {
+    "category": "標準管理規約",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;専用使用"
+  },
+  "専用使用の申出": {
+    "category": "標準管理規約",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;専用使用"
+  },
+  "理事会の招集": {
+    "category": "標準管理規約",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;理事会"
+  },
+  "理事会の決議": {
+    "category": "標準管理規約",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;理事会"
+  },
+  "総会の決議": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;総会"
+  },
+  "管理組合の表示登記": {
+    "category": "標準管理規約",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;登記"
+  },
+  "修繕の区分": {
+    "category": "標準管理規約",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;修繕"
+  },
+  "滞納者への通知": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;滞納"
+  },
+  "管理組合の代表": {
+    "category": "標準管理規約",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;組織"
+  },
+  "規約の効力": {
+    "category": "標準管理規約",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;基本"
+  },
+  "給水タンク": {
+    "category": "建築・設備",
+    "importance": "A",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;頻出;設備"
+  },
+  "排水設備": {
+    "category": "建築・設備",
+    "importance": "A",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;頻出;設備"
+  },
+  "給排水衛生設備": {
+    "category": "建築・設備",
+    "importance": "A",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;頻出;設備"
+  },
+  "換気設備": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;設備"
+  },
+  "非常用照明": {
+    "category": "建築・設備",
+    "importance": "A",
+    "legal_basis": "消防法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;頻出;設備"
+  },
+  "消防設備": {
+    "category": "建築・設備",
+    "importance": "A",
+    "legal_basis": "消防法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;頻出;設備"
+  },
+  "エレベーター保守": {
+    "category": "建築・設備",
+    "importance": "A",
+    "legal_basis": "昇降機安全規則",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;頻出;検査"
+  },
+  "容積率": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;数値"
+  },
+  "延べ面積": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;数値"
+  },
+  "建築材料": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;構造"
+  },
+  "コンクリート中性化": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;劣化"
+  },
+  "断熱結露": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;設備"
+  },
+  "ひび割れ": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;修繕"
+  },
+  "配管更新": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;修繕"
+  },
+  "耐震対策": {
+    "category": "建築・設備",
+    "importance": "A",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;頻出;耐震"
+  },
+  "駐車場設備": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;設備"
+  },
+  "バリアフリー法": {
+    "category": "建築・設備",
+    "importance": "A",
+    "legal_basis": "バリアフリー法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;法令;頻出"
+  },
+  "用途地域": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "都市計画法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;都市計画"
+  },
+  "建築物の構造": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;構造"
+  },
+  "検査済証": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;手続"
+  },
+  "昇降機の保守": {
+    "category": "建築・設備",
+    "importance": "A",
+    "legal_basis": "昇降機安全規則",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;頻出;検査"
+  },
+  "未払金": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "前払費用": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "未収入金": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "貸借対照表": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "収支報告書": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "修繕積立金会計": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "一般会計": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "修繕積立金取崩し": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;修繕"
+  },
+  "管理組合会計": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "会計区分": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "駐車場使用料": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "保険料処理": {
+    "category": "会計・税務",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;会計"
+  },
+  "管理費収入": {
+    "category": "会計・税務",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;会計"
+  },
+  "勘定科目": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "減価償却": {
+    "category": "会計・税務",
+    "importance": "B",
+    "legal_basis": "会計",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;税務"
+  },
+  "財務諸表": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "保証債務": {
+    "category": "会計・税務",
+    "importance": "B",
+    "legal_basis": "民法",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;会計"
+  },
+  "滞納管理費対応": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;滞納"
+  },
+  "修繕費と資本的支出": {
+    "category": "会計・税務",
+    "importance": "B",
+    "legal_basis": "会計",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;修繕"
+  },
+  "予算案": {
+    "category": "会計・税務",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;会計"
+  },
+  "監査報告": {
+    "category": "会計・税務",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;監査"
+  },
+  "事務管理業務": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;頻出;業務"
+  },
+  "マンション管理業者の義務": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;頻出;業者"
+  },
+  "契約成立時書面": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;頻出;書面"
+  },
+  "帳簿備付け": {
+    "category": "管理適正化法",
+    "importance": "B",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;実務"
+  },
+  "標識掲示": {
+    "category": "管理適正化法",
+    "importance": "B",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;実務"
+  },
+  "名義貸し": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;頻出;禁止"
+  },
+  "更新登録": {
+    "category": "管理適正化法",
+    "importance": "B",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;資格"
+  },
+  "管理業務主任者の選任": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;頻出;資格"
+  },
+  "管理業務主任者の解任": {
+    "category": "管理適正化法",
+    "importance": "B",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;資格"
+  },
+  "管理計画の認定": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;頻出;制度"
+  },
+  "管理計画の変更": {
+    "category": "管理適正化法",
+    "importance": "B",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;制度"
+  },
+  "管理不全マンションの指定": {
+    "category": "管理適正化法",
+    "importance": "B",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;制度"
+  },
+  "管理業務の再委託": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;頻出;委託"
+  },
+  "管理業務主任者の届出": {
+    "category": "管理適正化法",
+    "importance": "B",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;資格"
+  },
+  "管理業務主任者の研修": {
+    "category": "管理適正化法",
+    "importance": "B",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;資格"
+  },
+  "管理業務主任者の登録": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;頻出;資格"
+  },
+  "管理業務主任者の欠格事由": {
+    "category": "管理適正化法",
+    "importance": "B",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;資格"
+  },
+  "管理業務主任者の業務": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;頻出;業務"
+  },
+  "委託契約の解除": {
+    "category": "標準管理委託契約書・指針",
+    "importance": "B",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "マンション標準管理委託契約書;定額委託業務費;臨時委託業務",
+    "tags": "標準管理委託契約書・指針;契約"
+  },
+  "委託契約の変更": {
+    "category": "標準管理委託契約書・指針",
+    "importance": "B",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "マンション標準管理委託契約書;定額委託業務費;臨時委託業務",
+    "tags": "標準管理委託契約書・指針;契約"
+  },
+  "管理業務の報告": {
+    "category": "標準管理委託契約書・指針",
+    "importance": "A",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "マンション標準管理委託契約書;定額委託業務費;臨時委託業務",
+    "tags": "標準管理委託契約書・指針;頻出;報告"
+  },
+  "管理業務の監査": {
+    "category": "標準管理委託契約書・指針",
+    "importance": "B",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "マンション標準管理委託契約書;定額委託業務費;臨時委託業務",
+    "tags": "標準管理委託契約書・指針;監査"
+  },
+  "臨時委託業務費": {
+    "category": "標準管理委託契約書・指針",
+    "importance": "A",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "マンション標準管理委託契約書;定額委託業務費;臨時委託業務",
+    "tags": "標準管理委託契約書・指針;頻出;会計"
+  },
+  "定額委託業務": {
+    "category": "標準管理委託契約書・指針",
+    "importance": "A",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "マンション標準管理委託契約書;定額委託業務費;臨時委託業務",
+    "tags": "標準管理委託契約書・指針;頻出"
+  },
+  "管理員の配置": {
+    "category": "標準管理委託契約書・指針",
+    "importance": "B",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "マンション標準管理委託契約書;定額委託業務費;臨時委託業務",
+    "tags": "標準管理委託契約書・指針;実務"
+  },
+  "清掃業務": {
+    "category": "標準管理委託契約書・指針",
+    "importance": "B",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "マンション標準管理委託契約書;定額委託業務費;臨時委託業務",
+    "tags": "標準管理委託契約書・指針;委託"
+  },
+  "警備業務": {
+    "category": "標準管理委託契約書・指針",
+    "importance": "B",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "マンション標準管理委託契約書;定額委託業務費;臨時委託業務",
+    "tags": "標準管理委託契約書・指針;委託"
+  },
+  "修繕の発見報告": {
+    "category": "標準管理委託契約書・指針",
+    "importance": "B",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "マンション標準管理委託契約書;定額委託業務費;臨時委託業務",
+    "tags": "標準管理委託契約書・指針;修繕"
+  },
+  "委託者の指示": {
+    "category": "標準管理委託契約書・指針",
+    "importance": "B",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "マンション標準管理委託契約書;定額委託業務費;臨時委託業務",
+    "tags": "標準管理委託契約書・指針;契約"
+  },
+  "損害賠償責任": {
+    "category": "標準管理委託契約書・指針",
+    "importance": "B",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "マンション標準管理委託契約書;定額委託業務費;臨時委託業務",
+    "tags": "標準管理委託契約書・指針;責任"
+  },
+  "秘密保持": {
+    "category": "標準管理委託契約書・指針",
+    "importance": "B",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "マンション標準管理委託契約書;定額委託業務費;臨時委託業務",
+    "tags": "標準管理委託契約書・指針;契約"
+  },
+  "再委託の制限": {
+    "category": "標準管理委託契約書・指針",
+    "importance": "A",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "マンション標準管理委託契約書;定額委託業務費;臨時委託業務",
+    "tags": "標準管理委託契約書・指針;頻出;再委託"
+  },
+  "指針": {
+    "category": "標準管理委託契約書・指針",
+    "importance": "B",
+    "legal_basis": "マンション管理業務指針",
+    "related_terms": "マンション標準管理委託契約書;定額委託業務費;臨時委託業務",
+    "tags": "標準管理委託契約書・指針;基本"
+  },
+  "建替え等円滑化法の手続": {
+    "category": "品確法・建替円滑化法等",
+    "importance": "B",
+    "legal_basis": "建替え等円滑化法",
+    "related_terms": "品質確保促進法;既存住宅状況調査;建替え等円滑化法",
+    "tags": "品確法・建替円滑化法等;建替え"
+  },
+  "既存住宅状況調査技術者": {
+    "category": "品確法・建替円滑化法等",
+    "importance": "B",
+    "legal_basis": "品質確保促進法",
+    "related_terms": "品質確保促進法;既存住宅状況調査;建替え等円滑化法",
+    "tags": "品確法・建替円滑化法等;調査"
+  },
+  "住宅性能表示": {
+    "category": "品確法・建替円滑化法等",
+    "importance": "B",
+    "legal_basis": "品質確保促進法",
+    "related_terms": "品質確保促進法;既存住宅状況調査;建替え等円滑化法",
+    "tags": "品確法・建替円滑化法等;表示"
+  },
+  "瑕疵担保責任の追完": {
+    "category": "品確法・建替円滑化法等",
+    "importance": "B",
+    "legal_basis": "品質確保促進法",
+    "related_terms": "品質確保促進法;既存住宅状況調査;建替え等円滑化法",
+    "tags": "品確法・建替円滑化法等;瑕疵"
+  },
+  "建替えの合意": {
+    "category": "品確法・建替円滑化法等",
+    "importance": "B",
+    "legal_basis": "建替え等円滑化法",
+    "related_terms": "品質確保促進法;既存住宅状況調査;建替え等円滑化法",
+    "tags": "品確法・建替円滑化法等;建替え"
+  },
+  "建替えの手続": {
+    "category": "品確法・建替円滑化法等",
+    "importance": "A",
+    "legal_basis": "建替え等円滑化法",
+    "related_terms": "品質確保促進法;既存住宅状況調査;建替え等円滑化法",
+    "tags": "品確法・建替円滑化法等;頻出;建替え"
+  },
+  "マンション建替え": {
+    "category": "品確法・建替円滑化法等",
+    "importance": "A",
+    "legal_basis": "建替え等円滑化法",
+    "related_terms": "品質確保促進法;既存住宅状況調査;建替え等円滑化法",
+    "tags": "品確法・建替円滑化法等;頻出;建替え"
+  },
+  "既存不適格": {
+    "category": "品確法・建替円滑化法等",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "品質確保促進法;既存住宅状況調査;建替え等円滑化法",
+    "tags": "品確法・建替円滑化法等;建築"
+  },
+  "リフォーム": {
+    "category": "品確法・建替円滑化法等",
+    "importance": "B",
+    "legal_basis": "品質確保促進法",
+    "related_terms": "品質確保促進法;既存住宅状況調査;建替え等円滑化法",
+    "tags": "品確法・建替円滑化法等;修繕"
+  },
+  "宅地建物取引業法": {
+    "category": "宅建業法",
+    "importance": "A",
+    "legal_basis": "宅地建物取引業法",
+    "related_terms": "宅地建物取引業;重要事項説明;35条書面",
+    "tags": "宅建業法;法令;基本"
+  },
+  "宅地建物取引士": {
+    "category": "宅建業法",
+    "importance": "B",
+    "legal_basis": "宅地建物取引業法",
+    "related_terms": "宅地建物取引業;重要事項説明;35条書面",
+    "tags": "宅建業法;資格"
+  },
+  "業務上の規制": {
+    "category": "宅建業法",
+    "importance": "B",
+    "legal_basis": "宅地建物取引業法",
+    "related_terms": "宅地建物取引業;重要事項説明;35条書面",
+    "tags": "宅建業法;規制"
+  },
+  "37条書面の交付": {
+    "category": "宅建業法",
+    "importance": "B",
+    "legal_basis": "宅地建物取引業法第37条",
+    "related_terms": "宅地建物取引業;重要事項説明;35条書面",
+    "tags": "宅建業法;書面"
+  },
+  "35条書面の交付": {
+    "category": "宅建業法",
+    "importance": "A",
+    "legal_basis": "宅地建物取引業法第35条",
+    "related_terms": "宅地建物取引業;重要事項説明;35条書面",
+    "tags": "宅建業法;頻出;書面"
+  },
+  "重要事項説明書": {
+    "category": "宅建業法",
+    "importance": "A",
+    "legal_basis": "宅地建物取引業法第35条",
+    "related_terms": "宅地建物取引業;重要事項説明;35条書面",
+    "tags": "宅建業法;頻出"
+  },
+  "専有部分の売買": {
+    "category": "宅建業法",
+    "importance": "B",
+    "legal_basis": "宅地建物取引業法",
+    "related_terms": "宅地建物取引業;重要事項説明;35条書面",
+    "tags": "宅建業法;取引"
+  },
+  "管理規約の説明": {
+    "category": "宅建業法",
+    "importance": "A",
+    "legal_basis": "宅地建物取引業法",
+    "related_terms": "宅地建物取引業;重要事項説明;35条書面",
+    "tags": "宅建業法;頻出;実務"
+  },
+  "手付金": {
+    "category": "宅建業法",
+    "importance": "B",
+    "legal_basis": "宅地建物取引業法",
+    "related_terms": "宅地建物取引業;重要事項説明;35条書面",
+    "tags": "宅建業法;取引"
+  },
+  "媒介契約書": {
+    "category": "宅建業法",
+    "importance": "B",
+    "legal_basis": "宅地建物取引業法",
+    "related_terms": "宅地建物取引業;重要事項説明;35条書面",
+    "tags": "宅建業法;契約"
+  },
+  "占有者排除訴訟": {
+    "category": "判例・横断総合",
+    "importance": "A",
+    "legal_basis": "判例",
+    "related_terms": "主徴費;管理不全;組合の法人格",
+    "tags": "判例・横断総合;頻出;訴訟"
+  },
+  "管理人室をめぐる判例": {
+    "category": "判例・横断総合",
+    "importance": "A",
+    "legal_basis": "判例",
+    "related_terms": "主徴費;管理不全;組合の法人格",
+    "tags": "判例・横断総合;頻出;判例"
+  },
+  "主徴費の算定": {
+    "category": "判例・横断総合",
+    "importance": "A",
+    "legal_basis": "判例",
+    "related_terms": "主徴費;管理不全;組合の法人格",
+    "tags": "判例・横断総合;頻出;主徴費"
+  },
+  "滞納管理費の回収": {
+    "category": "判例・横断総合",
+    "importance": "A",
+    "legal_basis": "判例",
+    "related_terms": "主徴費;管理不全;組合の法人格",
+    "tags": "判例・横断総合;頻出;滞納"
+  },
+  "相続と区分所有": {
+    "category": "判例・横断総合",
+    "importance": "B",
+    "legal_basis": "区分所有法",
+    "related_terms": "主徴費;管理不全;組合の法人格",
+    "tags": "判例・横断総合;相続"
+  },
+  "時効と承認": {
+    "category": "判例・横断総合",
+    "importance": "B",
+    "legal_basis": "民法",
+    "related_terms": "主徴費;管理不全;組合の法人格",
+    "tags": "判例・横断総合;時効"
+  },
+  "無断転貸と解除": {
+    "category": "判例・横断総合",
+    "importance": "A",
+    "legal_basis": "民法",
+    "related_terms": "主徴費;管理不全;組合の法人格",
+    "tags": "判例・横断総合;頻出;賃貸借"
+  },
+  "履行遅滞と解除": {
+    "category": "判例・横断総合",
+    "importance": "A",
+    "legal_basis": "民法",
+    "related_terms": "主徴費;管理不全;組合の法人格",
+    "tags": "判例・横断総合;頻出;解除"
+  },
+  "前受金と預り金": {
+    "category": "判例・横断総合",
+    "importance": "A",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "主徴費;管理不全;組合の法人格",
+    "tags": "判例・横断総合;頻出;会計"
+  },
+  "未払金と前払費用": {
+    "category": "判例・横断総合",
+    "importance": "A",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "主徴費;管理不全;組合の法人格",
+    "tags": "判例・横断総合;頻出;会計"
+  },
+  "修繕積立金会計と一般会計": {
+    "category": "判例・横断総合",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "主徴費;管理不全;組合の法人格",
+    "tags": "判例・横断総合;頻出;会計"
+  },
+  "貸借対照表と収支報告": {
+    "category": "判例・横断総合",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "主徴費;管理不全;組合の法人格",
+    "tags": "判例・横断総合;頻出;会計"
+  },
+  "滅失復旧と建替え": {
+    "category": "判例・横断総合",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "主徴費;管理不全;組合の法人格",
+    "tags": "判例・横断総合;頻出;建替え"
+  },
+  "敷地利用権と分離処分": {
+    "category": "判例・横断総合",
+    "importance": "B",
+    "legal_basis": "区分所有法",
+    "related_terms": "主徴費;管理不全;組合の法人格",
+    "tags": "判例・横断総合;敷地利用権"
+  },
+  "規約改正と特別の影響": {
+    "category": "判例・横断総合",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "主徴費;管理不全;組合の法人格",
+    "tags": "判例・横断総合;頻出;規約"
+  },
+  "バリアフリー法とエレベーター": {
+    "category": "判例・横断総合",
+    "importance": "B",
+    "legal_basis": "バリアフリー法",
+    "related_terms": "主徴費;管理不全;組合の法人格",
+    "tags": "判例・横断総合;設備"
+  },
+  "契約類型の区別": {
+    "category": "判例・横断総合",
+    "importance": "A",
+    "legal_basis": "民法",
+    "related_terms": "主徴費;管理不全;組合の法人格",
+    "tags": "判例・横断総合;頻出;横断"
+  },
+  "請負と委任の区別": {
+    "category": "判例・横断総合",
+    "importance": "A",
+    "legal_basis": "民法",
+    "related_terms": "主徴費;管理不全;組合の法人格",
+    "tags": "判例・横断総合;頻出;契約"
+  },
+  "寄託と組合の区別": {
+    "category": "判例・横断総合",
+    "importance": "B",
+    "legal_basis": "民法",
+    "related_terms": "主徴費;管理不全;組合の法人格",
+    "tags": "判例・横断総合;契約"
+  },
+  "管理不全への対応": {
+    "category": "判例・横断総合",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "主徴費;管理不全;組合の法人格",
+    "tags": "判例・横断総合;頻出;実務"
+  }
+}

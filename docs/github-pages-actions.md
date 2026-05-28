@@ -54,7 +54,7 @@ git commit -m "…"
 git push origin main
 ```
 
-push 後、**Actions** タブで緑チェック → 数分で https://takkenshiken2026-sudo.github.io/kangyou-master/ が更新されます。
+push 後、**Actions** タブで緑チェック → 数分で https://kangyou-master.jp/ が更新されます。
 
 ## トラブル
 

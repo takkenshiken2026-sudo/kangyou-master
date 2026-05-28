@@ -2,9 +2,9 @@ window.SITE_CONFIG = {
   "brandName": "管業マスター",
   "brandMark": "管業",
   "examName": "管理業務主任者試験",
-  "siteOrigin": "https://takkenshiken2026-sudo.github.io/kangyou-master",
-  "contactUrl": "https://github.com/takkenshiken2026-sudo/kangyou-master/issues",
-  "ga4MeasurementId": "",
+  "siteOrigin": "https://kangyou-master.jp",
+  "contactUrl": "https://forms.gle/FFPAFnijLYYAkyW1A",
+  "ga4MeasurementId": "G-K7WTT45NJ8",
   "theme": {
     "accent": "#1a5f7a",
     "accentText": "#ffffff",
@@ -94,7 +94,7 @@ window.SITE_CONFIG = {
       },
       {
         "label": "お問い合わせ",
-        "href": "https://github.com/takkenshiken2026-sudo/kangyou-master/issues",
+        "href": "https://forms.gle/FFPAFnijLYYAkyW1A",
         "key": "contact"
       }
     ]
@@ -180,30 +180,6 @@ window.SITE_CONFIG = {
         "宅建業法"
       ],
       "legacyGlossaryCat": "law"
-    },
-    {
-      "id": "legacy-law",
-      "name": "法令・制度",
-      "aliases": [
-        "法令・制度"
-      ],
-      "legacyGlossaryCat": "law"
-    },
-    {
-      "id": "legacy-rights",
-      "name": "契約・実務",
-      "aliases": [
-        "契約・実務"
-      ],
-      "legacyGlossaryCat": "rights"
-    },
-    {
-      "id": "legacy-other",
-      "name": "設備・その他",
-      "aliases": [
-        "設備・その他"
-      ],
-      "legacyGlossaryCat": "limit"
     }
   ]
 };

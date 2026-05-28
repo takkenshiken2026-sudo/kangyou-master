@@ -1,0 +1,548 @@
+{
+  "4分の3議決権": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;数値;総会"
+  },
+  "5分の1議決権": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;数値;総会"
+  },
+  "5分の4議決権": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;数値;総会"
+  },
+  "マンション標準管理規約": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "理事長;総会決議;普通決議",
+    "tags": "標準管理規約;頻出;基本"
+  },
+  "一部共用部分": {
+    "category": "区分所有法",
+    "importance": "B",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;共用部分"
+  },
+  "一部滅失": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第63条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;滅失"
+  },
+  "使用禁止請求": {
+    "category": "区分所有法",
+    "importance": "B",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;訴訟"
+  },
+  "例外決議": {
+    "category": "標準管理規約",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;総会"
+  },
+  "修繕の区分": {
+    "category": "標準管理規約",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;修繕"
+  },
+  "修繕の実施": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;修繕"
+  },
+  "修繕積立金": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第61条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;会計"
+  },
+  "共用部分": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第2条",
+    "related_terms": "専有部分;管理組合;理事会",
+    "tags": "区分所有法;頻出;基本"
+  },
+  "共用部分持分": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;基本"
+  },
+  "分別管理": {
+    "category": "区分所有法",
+    "importance": "B",
+    "legal_basis": "区分所有法第48条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;管理"
+  },
+  "分離処分": {
+    "category": "区分所有法",
+    "importance": "B",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;敷地利用権"
+  },
+  "区分所有者": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第2条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;基本"
+  },
+  "占有者": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;実務"
+  },
+  "占有者の地位": {
+    "category": "標準管理規約",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;占有"
+  },
+  "団地": {
+    "category": "区分所有法",
+    "importance": "B",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;横断"
+  },
+  "専有部分": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第2条",
+    "related_terms": "共用部分;管理組合;理事会",
+    "tags": "区分所有法;頻出;基本"
+  },
+  "専有部分への立入り": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第64条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;立入"
+  },
+  "専用使用": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出"
+  },
+  "専用使用の申出": {
+    "category": "標準管理規約",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;専用使用"
+  },
+  "専用使用権": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第22条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出"
+  },
+  "建替え": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第62条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出"
+  },
+  "建替え決議": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第62条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;建替え"
+  },
+  "役員の任務": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;理事会"
+  },
+  "復旧": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;修繕"
+  },
+  "復旧決議": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;総会"
+  },
+  "敷地利用権": {
+    "category": "区分所有法",
+    "importance": "B",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;権利"
+  },
+  "普通決議": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;総会"
+  },
+  "滞納者への通知": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;滞納"
+  },
+  "特例部分的建替え": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第68条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出"
+  },
+  "特別の影響": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;規約改正"
+  },
+  "特別決議": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;総会"
+  },
+  "理事会": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第36条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;組織"
+  },
+  "理事会の招集": {
+    "category": "標準管理規約",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;理事会"
+  },
+  "理事会の権限": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;理事会"
+  },
+  "理事会の決議": {
+    "category": "標準管理規約",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;理事会"
+  },
+  "理事長": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;総会決議;普通決議",
+    "tags": "標準管理規約;頻出;組織"
+  },
+  "理事長権限": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;理事長"
+  },
+  "監事": {
+    "category": "区分所有法",
+    "importance": "B",
+    "legal_basis": "区分所有法第38条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;組織"
+  },
+  "監事の権限": {
+    "category": "標準管理規約",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;監事"
+  },
+  "直接請求": {
+    "category": "区分所有法",
+    "importance": "B",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;訴訟"
+  },
+  "立会人": {
+    "category": "標準管理規約",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;総会"
+  },
+  "競売請求": {
+    "category": "区分所有法",
+    "importance": "B",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;滞納;回収"
+  },
+  "管理不全マンション": {
+    "category": "区分所有法",
+    "importance": "B",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;判例;実務"
+  },
+  "管理事務の委託": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;委託"
+  },
+  "管理員": {
+    "category": "標準管理規約",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;実務"
+  },
+  "管理組合": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第3条",
+    "related_terms": "専有部分;共用部分;理事会",
+    "tags": "区分所有法;頻出;基本"
+  },
+  "管理組合の代表": {
+    "category": "標準管理規約",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;組織"
+  },
+  "管理組合の存続": {
+    "category": "区分所有法",
+    "importance": "B",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;組織"
+  },
+  "管理組合の表示": {
+    "category": "標準管理規約",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;登記"
+  },
+  "管理組合の表示登記": {
+    "category": "標準管理規約",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;登記"
+  },
+  "管理規約": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第13条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出"
+  },
+  "管理費": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第61条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;会計"
+  },
+  "管理費と修繕積立金の使途": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;会計"
+  },
+  "総会": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第31条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;組織"
+  },
+  "総会の招集": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;総会"
+  },
+  "総会の決議": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;総会"
+  },
+  "総会出席と代理": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;総会"
+  },
+  "総会決議": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;普通決議",
+    "tags": "標準管理規約;頻出;総会"
+  },
+  "総会決議事項": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;総会"
+  },
+  "総会決議要件": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;総会"
+  },
+  "義務違反者への措置": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;実務"
+  },
+  "規約の効力": {
+    "category": "標準管理規約",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;基本"
+  },
+  "規約の変更": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第13条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出"
+  },
+  "規約の設定": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;基本"
+  },
+  "規約共用部分": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第2条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;基本"
+  },
+  "規約改正": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出"
+  },
+  "規約設定変更": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;規約"
+  },
+  "議事録": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;総会"
+  },
+  "議決権": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第32条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;総会"
+  },
+  "議長": {
+    "category": "区分所有法",
+    "importance": "B",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;総会"
+  },
+  "長期修繕計画": {
+    "category": "区分所有法",
+    "importance": "A",
+    "legal_basis": "区分所有法第61条",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;頻出;修繕"
+  },
+  "附属共用部分": {
+    "category": "区分所有法",
+    "importance": "B",
+    "legal_basis": "区分所有法",
+    "related_terms": "専有部分;共用部分;管理組合",
+    "tags": "区分所有法;共用部分"
+  },
+  "集会招集": {
+    "category": "標準管理規約",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;頻出;総会"
+  },
+  "駐車場使用細則": {
+    "category": "標準管理規約",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "マンション標準管理規約;理事長;総会決議",
+    "tags": "標準管理規約;専用使用"
+  }
+}

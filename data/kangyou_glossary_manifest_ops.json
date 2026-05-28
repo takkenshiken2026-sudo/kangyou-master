@@ -1,0 +1,702 @@
+{
+  "73条書面": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法第73条",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;頻出;書面"
+  },
+  "ひび割れ": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;修繕"
+  },
+  "エレベーター": {
+    "category": "建築・設備",
+    "importance": "A",
+    "legal_basis": "昇降機安全規則",
+    "related_terms": "建築基準法;昇降機;消防法",
+    "tags": "建築・設備;設備;頻出"
+  },
+  "エレベーター保守": {
+    "category": "建築・設備",
+    "importance": "A",
+    "legal_basis": "昇降機安全規則",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;頻出;検査"
+  },
+  "コンクリート中性化": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;劣化"
+  },
+  "バリアフリー": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "バリアフリー法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;設備"
+  },
+  "バリアフリー法": {
+    "category": "建築・設備",
+    "importance": "A",
+    "legal_basis": "バリアフリー法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;法令;頻出"
+  },
+  "マンション等の管理の適正化の推進に関する法律": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "管理計画認定制度;管理業務主任者;マンション管理士",
+    "tags": "管理適正化法;法令;基本"
+  },
+  "マンション管理士": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;資格"
+  },
+  "マンション管理業者": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;頻出;業者"
+  },
+  "マンション管理業者の義務": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;頻出;業者"
+  },
+  "一般会計": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "予算案": {
+    "category": "会計・税務",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;会計"
+  },
+  "事務管理業務": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;頻出;業務"
+  },
+  "会計区分": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "保証債務": {
+    "category": "会計・税務",
+    "importance": "B",
+    "legal_basis": "民法",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;会計"
+  },
+  "保険料処理": {
+    "category": "会計・税務",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;会計"
+  },
+  "修繕積立金会計": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "修繕積立金取崩し": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;修繕"
+  },
+  "修繕費": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "修繕費と資本的支出": {
+    "category": "会計・税務",
+    "importance": "B",
+    "legal_basis": "会計",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;修繕"
+  },
+  "共同住宅": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;用途"
+  },
+  "前受金": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "管理費等;預り金;決算",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "前払費用": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "勘定科目": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "収支報告": {
+    "category": "会計・税務",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;会計"
+  },
+  "収支報告書": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "名義貸し": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;頻出;禁止"
+  },
+  "契約成立時書面": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;頻出;書面"
+  },
+  "容積率": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;数値"
+  },
+  "帳簿備付け": {
+    "category": "管理適正化法",
+    "importance": "B",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;実務"
+  },
+  "延べ面積": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;数値"
+  },
+  "建築基準法": {
+    "category": "建築・設備",
+    "importance": "A",
+    "legal_basis": "建築基準法",
+    "related_terms": "エレベーター;昇降機;消防法",
+    "tags": "建築・設備;法令;頻出"
+  },
+  "建築材料": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;構造"
+  },
+  "建築物の構造": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;構造"
+  },
+  "建築確認": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;手続"
+  },
+  "排水設備": {
+    "category": "建築・設備",
+    "importance": "A",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;頻出;設備"
+  },
+  "換気設備": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;設備"
+  },
+  "断熱結露": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;設備"
+  },
+  "昇降機": {
+    "category": "建築・設備",
+    "importance": "A",
+    "legal_basis": "昇降機安全規則",
+    "related_terms": "建築基準法;エレベーター;消防法",
+    "tags": "建築・設備;設備"
+  },
+  "昇降機の保守": {
+    "category": "建築・設備",
+    "importance": "A",
+    "legal_basis": "昇降機安全規則",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;頻出;検査"
+  },
+  "昇降機の定期検査": {
+    "category": "建築・設備",
+    "importance": "A",
+    "legal_basis": "昇降機安全規則",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;頻出;検査"
+  },
+  "更新登録": {
+    "category": "管理適正化法",
+    "importance": "B",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;資格"
+  },
+  "未収入金": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "未払金": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "検査済証": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;手続"
+  },
+  "標識掲示": {
+    "category": "管理適正化法",
+    "importance": "B",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;実務"
+  },
+  "機械室レスエレベーター": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "昇降機安全規則",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;設備"
+  },
+  "機械式駐車場": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "昇降機安全規則",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;設備"
+  },
+  "決算": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "消費税": {
+    "category": "会計・税務",
+    "importance": "B",
+    "legal_basis": "消費税法",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;税務"
+  },
+  "消防法": {
+    "category": "建築・設備",
+    "importance": "A",
+    "legal_basis": "消防法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;法令;頻出"
+  },
+  "消防設備": {
+    "category": "建築・設備",
+    "importance": "A",
+    "legal_basis": "消防法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;頻出;設備"
+  },
+  "減価償却": {
+    "category": "会計・税務",
+    "importance": "B",
+    "legal_basis": "会計",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;税務"
+  },
+  "源泉徴収": {
+    "category": "会計・税務",
+    "importance": "B",
+    "legal_basis": "所得税法",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;税務"
+  },
+  "滞納管理費": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;回収"
+  },
+  "滞納管理費の回収手続": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;回収"
+  },
+  "滞納管理費対応": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;滞納"
+  },
+  "特殊建築物": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;用途"
+  },
+  "用途地域": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "都市計画法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;都市計画"
+  },
+  "登録管理業務主任者": {
+    "category": "管理適正化法",
+    "importance": "B",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;資格"
+  },
+  "監査": {
+    "category": "会計・税務",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;会計"
+  },
+  "監査報告": {
+    "category": "会計・税務",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;監査"
+  },
+  "積立金の使途": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;修繕"
+  },
+  "積載荷重": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "昇降機安全規則",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;数値"
+  },
+  "管理不全マンションの指定": {
+    "category": "管理適正化法",
+    "importance": "B",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;制度"
+  },
+  "管理委託費": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "管理業務": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;基本"
+  },
+  "管理業務の再委託": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;頻出;委託"
+  },
+  "管理業務主任者": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;マンション管理士",
+    "tags": "管理適正化法;資格;頻出"
+  },
+  "管理業務主任者の届出": {
+    "category": "管理適正化法",
+    "importance": "B",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;資格"
+  },
+  "管理業務主任者の業務": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;頻出;業務"
+  },
+  "管理業務主任者の欠格事由": {
+    "category": "管理適正化法",
+    "importance": "B",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;資格"
+  },
+  "管理業務主任者の登録": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;頻出;資格"
+  },
+  "管理業務主任者の研修": {
+    "category": "管理適正化法",
+    "importance": "B",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;資格"
+  },
+  "管理業務主任者の解任": {
+    "category": "管理適正化法",
+    "importance": "B",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;資格"
+  },
+  "管理業務主任者の選任": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;頻出;資格"
+  },
+  "管理業務主任者試験": {
+    "category": "管理適正化法",
+    "importance": "B",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;試験"
+  },
+  "管理組合会計": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "管理計画": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;頻出"
+  },
+  "管理計画の変更": {
+    "category": "管理適正化法",
+    "importance": "B",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;制度"
+  },
+  "管理計画の認定": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理計画認定制度;管理業務主任者",
+    "tags": "管理適正化法;頻出;制度"
+  },
+  "管理計画認定制度": {
+    "category": "管理適正化法",
+    "importance": "A",
+    "legal_basis": "管理適正化法",
+    "related_terms": "マンション等の管理の適正化の推進に関する法律;管理業務主任者;マンション管理士",
+    "tags": "管理適正化法;頻出;制度"
+  },
+  "管理費収入": {
+    "category": "会計・税務",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;会計"
+  },
+  "管理費等": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "区分所有法",
+    "related_terms": "前受金;預り金;決算",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "給排水衛生設備": {
+    "category": "建築・設備",
+    "importance": "A",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;頻出;設備"
+  },
+  "給排水設備": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;設備"
+  },
+  "給水タンク": {
+    "category": "建築・設備",
+    "importance": "A",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;頻出;設備"
+  },
+  "耐震基準": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;構造"
+  },
+  "耐震対策": {
+    "category": "建築・設備",
+    "importance": "A",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;頻出;耐震"
+  },
+  "財務報告": {
+    "category": "会計・税務",
+    "importance": "B",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;会計"
+  },
+  "財務諸表": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "貸借対照表": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "配管更新": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;修繕"
+  },
+  "防火設備": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "消防法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;設備"
+  },
+  "非常用エレベーター": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;設備"
+  },
+  "非常用照明": {
+    "category": "建築・設備",
+    "importance": "A",
+    "legal_basis": "消防法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;頻出;設備"
+  },
+  "預り金": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "標準管理委託契約書",
+    "related_terms": "管理費等;前受金;決算",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "駐車場使用料": {
+    "category": "会計・税務",
+    "importance": "A",
+    "legal_basis": "標準管理規約",
+    "related_terms": "管理費等;前受金;預り金",
+    "tags": "会計・税務;頻出;会計"
+  },
+  "駐車場設備": {
+    "category": "建築・設備",
+    "importance": "B",
+    "legal_basis": "建築基準法",
+    "related_terms": "建築基準法;エレベーター;昇降機",
+    "tags": "建築・設備;設備"
+  }
+}

@@ -2,7 +2,7 @@
 
 管理業務主任者試験向けの学習サイトです。
 
-- **公開 URL（GitHub Pages）:** https://takkenshiken2026-sudo.github.io/kangyou-master/
+- **公開 URL:** https://kangyou-master.jp/
 - **データ:** `data/past_questions.csv`（900問）・`practice_questions.csv`（500問）・`ichimon_questions.csv`（400問）
 
 ## データ取り込み
@@ -13,6 +13,10 @@
 python3 tools/import_kangyou_questions.py
 python3 tools/build_all.py
 ```
+
+## パフォーマンス
+
+Lighthouse のキャッシュ・レンダリングブロック対策は `docs/performance-cache.md` を参照。ビルド時に `tools/write_asset_version.py` がアセット版を更新します。
 
 ## デプロイ
 
