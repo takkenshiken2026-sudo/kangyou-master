@@ -35,6 +35,7 @@ def main() -> int:
     run([py, "tools/validate_public_content.py"])
     run([py, "tools/write_asset_version.py"])
     run(["bash", "tools/prepare_public_site.sh"])
+    run(["bash", "tools/sync_gh_pages_branch.sh"])
     return 0
 
 
