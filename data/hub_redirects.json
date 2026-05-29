@@ -164,7 +164,10 @@
     "kangyou-chokuzen-num-s42": "kangyou-chokuzen-num-s40",
     "kangyou-chokuzen-num-s43": "kangyou-chokuzen-num-s40",
     "kangyou-chokuzen-num-s44": "kangyou-chokuzen-num-s40",
-    "koushin-5nen-s33": "koushin-touroku-5nen-s32"
+    "koushin-5nen-s33": "koushin-touroku-5nen-s32",
+    "sokai-teisu-s33": "soukai-teisu-s32",
+    "kanri-kaisha-tou-s34": "kanri-kaisha-touroku-s32",
+    "rijikai-kaisu-s33": "rijikai-kaisu-s32"
   },
   "mistakes": {
     "kumiai-unyou-mis-s36": "kumiai-unyou-mis-s35",
@@ -247,6 +250,7 @@
     "kangyou-chokuzen-mis-s42": "kangyou-chokuzen-mis-s40",
     "kangyou-chokuzen-mis-s43": "kangyou-chokuzen-mis-s40",
     "kangyou-chokuzen-mis-s44": "kangyou-chokuzen-mis-s40",
-    "tatekae-toku-same-s33": "tatekae-tokubetsu-same-s32"
+    "tatekae-toku-same-s33": "tatekae-tokubetsu-same-s32",
+    "kanrinin-fuyo-s33": "kanrinin-fuyo-s32"
   }
 }
