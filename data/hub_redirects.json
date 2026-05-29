@@ -79,7 +79,9 @@
     "kangyou-chokuzen-cmp-s41": "kangyou-chokuzen-cmp-s40",
     "kangyou-chokuzen-cmp-s42": "kangyou-chokuzen-cmp-s40",
     "kangyou-chokuzen-cmp-s43": "kangyou-chokuzen-cmp-s40",
-    "kangyou-chokuzen-cmp-s44": "kangyou-chokuzen-cmp-s40"
+    "kangyou-chokuzen-cmp-s44": "kangyou-chokuzen-cmp-s40",
+    "tatekae-ketsugi-s33": "tatekae-ketsugi-s32",
+    "senyu-kyoyo-s34": "kubun-shoyu-senyu-s32"
   },
   "numbers": {
     "kumiai-unyou-num-s36": "kumiai-unyou-num-s35",
@@ -161,7 +163,8 @@
     "kangyou-chokuzen-num-s41": "kangyou-chokuzen-num-s40",
     "kangyou-chokuzen-num-s42": "kangyou-chokuzen-num-s40",
     "kangyou-chokuzen-num-s43": "kangyou-chokuzen-num-s40",
-    "kangyou-chokuzen-num-s44": "kangyou-chokuzen-num-s40"
+    "kangyou-chokuzen-num-s44": "kangyou-chokuzen-num-s40",
+    "koushin-5nen-s33": "koushin-touroku-5nen-s32"
   },
   "mistakes": {
     "kumiai-unyou-mis-s36": "kumiai-unyou-mis-s35",
@@ -243,6 +246,7 @@
     "kangyou-chokuzen-mis-s41": "kangyou-chokuzen-mis-s40",
     "kangyou-chokuzen-mis-s42": "kangyou-chokuzen-mis-s40",
     "kangyou-chokuzen-mis-s43": "kangyou-chokuzen-mis-s40",
-    "kangyou-chokuzen-mis-s44": "kangyou-chokuzen-mis-s40"
+    "kangyou-chokuzen-mis-s44": "kangyou-chokuzen-mis-s40",
+    "tatekae-toku-same-s33": "tatekae-tokubetsu-same-s32"
   }
 }
