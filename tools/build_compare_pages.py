@@ -49,6 +49,7 @@ from tools.build_glossary_pages import (  # noqa: E402
     term_slug,
 )
 from tools.glossary_past_questions import past_questions_section_html  # noqa: E402
+from tools.hub_index_summary import hub_index_overview  # noqa: E402
 from tools.knowledge_hub_seo import (
     field_hub_page_exists,  # noqa: E402
     build_numbered_sections,
@@ -194,10 +195,12 @@ def load_compare_rows() -> list[dict]:
 def compare_index_item_dict(entry: dict) -> dict:
     tags = parse_term_tags(entry.get("tags") or "")
     subjects = " / ".join(entry.get("col_labels") or [])
+    overview = hub_index_overview(entry, "compare")
     search_bits = [
         entry["title"],
         entry.get("category") or "",
         entry.get("summary") or "",
+        overview,
         subjects,
         *tags,
     ]
@@ -205,7 +208,7 @@ def compare_index_item_dict(entry: dict) -> dict:
         "title": entry["title"],
         "category": entry.get("category") or "",
         "tags": tags,
-        "summary": entry.get("summary") or "",
+        "summary": overview,
         "subjects": subjects,
         "href": compare_index_href(entry["slug_file"]),
         "search": " ".join(x for x in search_bits if x),
@@ -218,7 +221,7 @@ def render_compare_index_tbody(entries: list[dict]) -> str:
     for item in items:
         href = html.escape(compare_index_href(item["slug_file"]))
         href_attr = f' data-entry-href="{href}"'
-        summary = html.escape(item.get("summary") or "")
+        overview = html.escape(hub_index_overview(item, "compare"))
         rows.append(
             "<tr class=\"terms-idx-table-row compare-idx-table-row\">"
             f'<td class="terms-idx-td-term compare-idx-td-title" data-label="項目"{href_attr} tabindex="0">'
@@ -227,7 +230,7 @@ def render_compare_index_tbody(entries: list[dict]) -> str:
             f'<td class="terms-idx-td-cat" data-label="分野"{href_attr}>'
             f'{html.escape(item.get("category") or "")}</td>'
             f'<td class="terms-idx-td-snippet compare-idx-td-summary" data-label="概要"{href_attr}>'
-            f"{summary}</td>"
+            f"{overview}</td>"
             "</tr>"
         )
     return "\n".join(rows)

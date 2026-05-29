@@ -49,6 +49,7 @@ from tools.build_glossary_pages import (  # noqa: E402
     term_slug,
 )
 from tools.glossary_past_questions import past_questions_section_html  # noqa: E402
+from tools.hub_index_summary import hub_index_overview  # noqa: E402
 from tools.knowledge_hub_seo import (
     field_hub_page_exists,  # noqa: E402
     build_numbered_sections,
@@ -198,6 +199,8 @@ def load_hub_rows(spec: HubSpec, *, row_parser: Callable[[str, int], list[dict]]
                 "category": norm(row.get("category")),
                 "tags": norm(row.get("tags")),
                 "summary": norm(row.get("summary")),
+                "highlight": norm(row.get("highlight")),
+                "confusion_point": norm(row.get("confusion_point")),
                 spec.index_detail_field: norm(row.get(spec.index_detail_field)),
                 "detail_rows": detail_rows,
                 "article_title": norm(row.get("article_title")),
@@ -230,14 +233,21 @@ def hub_index_href(spec: HubSpec, slug_file: str) -> str:
 
 def hub_index_item_dict(spec: HubSpec, entry: dict) -> dict:
     tags = parse_term_tags(entry.get("tags") or "")
-    detail = entry.get(spec.index_detail_field) or entry.get("summary") or ""
-    search_bits = [entry["title"], entry.get("category") or "", entry.get("summary") or "", detail, *tags]
+    kind = "numbers" if spec.hub_id == "numbers" else "mistakes"
+    overview = hub_index_overview(entry, kind)
+    search_bits = [
+        entry["title"],
+        entry.get("category") or "",
+        entry.get("summary") or "",
+        overview,
+        *tags,
+    ]
     return {
         "title": entry["title"],
         "category": entry.get("category") or "",
         "tags": tags,
-        "summary": entry.get("summary") or "",
-        "subjects": detail,
+        "summary": overview,
+        "subjects": overview,
         "href": hub_index_href(spec, entry["slug_file"]),
         "search": " ".join(x for x in search_bits if x),
     }
@@ -302,13 +312,14 @@ def render_index_tbody(spec: HubSpec, entries: list[dict]) -> str:
     for item in items:
         href = html.escape(hub_index_href(spec, item["slug_file"]))
         href_attr = f' data-entry-href="{href}"'
-        detail = html.escape(item.get(spec.index_detail_field) or item.get("summary") or "")
+        kind = "numbers" if spec.hub_id == "numbers" else "mistakes"
+        overview = html.escape(hub_index_overview(item, kind))
         rows.append(
             f'<tr class="terms-idx-table-row {spec.index_table_class}-row">'
             f'<td class="terms-idx-td-term {spec.index_table_class}-td-title" data-label="{html.escape(spec.index_col1)}"{href_attr} tabindex="0">'
             f'<div class="terms-idx-term-cell"><a href="{href}">{html.escape(item["title"])}</a></div></td>'
             f'<td class="terms-idx-td-cat" data-label="分野"{href_attr}>{html.escape(item.get("category") or "")}</td>'
-            f'<td class="terms-idx-td-snippet {spec.index_table_class}-td-detail" data-label="{html.escape(spec.index_col3)}"{href_attr}>{detail}</td>'
+            f'<td class="terms-idx-td-snippet {spec.index_table_class}-td-detail" data-label="{html.escape(spec.index_col3)}"{href_attr}>{overview}</td>'
             "</tr>"
         )
     return "\n".join(rows)

@@ -220,18 +220,7 @@ TERMS_INDEX_CSS_VER = "20260525-responsive-h1"
 TERMS_INDEX_JS_VER = "20260521-terms-snippet"
 TERMS_INDEX_SEARCH_PLACEHOLDER = "例：ストレスチェック、ラインケア、うつ病…"
 
-# CSV enrich 時の分野テンプレ（一覧の定義抜粋には出さない）
-_GENERIC_SNIPPET_SUFFIXES = (
-    "に関わる用語です。",
-    "を整理する際に使われます。",
-    "と関係します。",
-    "を確認します。",
-    "を確認するために使われます。",
-    "を考える場面で出てきます。",
-    "につながる経営課題として捉えます。",
-    "を説明する際に使われます。",
-    "を検討します。",
-)
+from tools.hub_index_summary import terms_index_snippet  # noqa: E402
 
 
 def parse_term_tags(raw: str) -> list[str]:
@@ -252,40 +241,6 @@ def sort_terms_index_entries(entries: list[dict]) -> list[dict]:
             e.get("term") or "",
         ),
     )
-
-
-def _is_generic_index_snippet(text: str, term: str) -> bool:
-    t = (text or "").strip()
-    if not t or not term or not t.startswith(term):
-        return False
-    return any(t.endswith(suffix) for suffix in _GENERIC_SNIPPET_SUFFIXES)
-
-
-def terms_index_snippet(entry: dict) -> str:
-    """一覧・検索用の定義抜粋。enrich テンプレ文は definition から実義を拾う。"""
-    term = (entry.get("term") or "").strip()
-    short = (entry.get("short_def") or "").strip()
-    definition = (entry.get("definition") or "").strip()
-
-    if definition:
-        m = re.search(r"まず「([^」]+)」", definition)
-        if m:
-            clause = m.group(1).strip()
-            if clause and not _is_generic_index_snippet(clause, term):
-                if clause.startswith(term):
-                    return clause if clause.endswith("。") else f"{clause}。"
-                body = clause.rstrip("。")
-                return f"{term}は、{body}。" if body else short
-
-    if short and not _is_generic_index_snippet(short, term):
-        return short
-
-    if definition:
-        for part in re.split(r"(?<=[。！？])", definition):
-            part = part.strip()
-            if part and part != short and not _is_generic_index_snippet(part, term):
-                return part[:200]
-    return short
 
 
 def render_terms_index_tbody(entries: list[dict]) -> str:
