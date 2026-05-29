@@ -42,6 +42,66 @@ def question_ask_mode(stem: str) -> str:
     return "unknown"
 
 
+def question_polarity(stem: str) -> str:
+    """正答の意味: pick_correct / pick_incorrect / pick_least_appropriate / unknown。"""
+    s = norm(stem)
+    if re.search(r"適切でない|不適切なもの", s):
+        return "pick_least_appropriate"
+    if re.search(r"誤っている|誤りである|正しくない", s):
+        return "pick_incorrect"
+    if re.search(r"正しい|妥当|適切である|適切なもの", s):
+        return "pick_correct"
+    return "unknown"
+
+
+def is_inverted_polarity(stem: str) -> bool:
+    return question_polarity(stem) in ("pick_incorrect", "pick_least_appropriate")
+
+
+def answer_clarifier(stem: str) -> str:
+    """正答ブロックに付ける設問形式の注記。"""
+    p = question_polarity(stem)
+    if p == "pick_incorrect":
+        return "（誤っている記述を選ぶ設問です）"
+    if p == "pick_least_appropriate":
+        return "（最も不適切な記述を選ぶ設問です）"
+    return ""
+
+
+def correct_section_heading(stem: str) -> str:
+    if is_inverted_polarity(stem):
+        return "正答肢の解説"
+    return "正解の理由"
+
+
+def normalize_inverted_explanation(body: str, correct: int, stem: str) -> str:
+    """逆方向設問で「正答=N なのに Nが誤り」と読める表現を言い換える。"""
+    if not body or not is_inverted_polarity(stem):
+        return body
+    n = correct
+    p = question_polarity(stem)
+    if p == "pick_incorrect":
+        replacements = [
+            (rf"とする{n}が誤り", rf"とする記述は誤っており、これが本問の正答（{n}）"),
+            (rf"とする{n}は誤り", rf"とする記述は誤っており、これが本問の正答（{n}）"),
+            (rf"([、。]){n}が誤り", rf"\1記述として誤っているのは（{n}）であり、これが本問の正答"),
+            (rf"したがって{n}が誤り", rf"したがって、記述として誤っているのは（{n}）であり、これが本問の正答"),
+            (rf"ので、{n}が誤り", rf"ので、記述として誤っているのは（{n}）であり、これが本問の正答"),
+            (rf"ので{n}が誤り", rf"ので、記述として誤っているのは（{n}）であり、これが本問の正答"),
+            (rf"([、。]){n}は誤り", rf"\1記述として誤っているのは（{n}）であり、これが本問の正答"),
+        ]
+    else:
+        replacements = [
+            (rf"とする{n}が(?:不適切|誤り)", rf"とする記述は最も不適切であり、これが本問の正答（{n}）"),
+            (rf"([、。]){n}が(?:不適切|誤り)", rf"\1最も不適切な記述は（{n}）であり、これが本問の正答"),
+            (rf"したがって{n}が(?:不適切|誤り)", rf"したがって、最も不適切な記述は（{n}）であり、これが本問の正答"),
+            (rf"ので、{n}が(?:不適切|誤り)", rf"ので、最も不適切な記述は（{n}）であり、これが本問の正答"),
+        ]
+    for pattern, repl in replacements:
+        body = re.sub(pattern, repl, body)
+    return body
+
+
 def _choice_sounds_positive(text: str) -> bool:
     t = norm(text)
     if not t:
@@ -123,16 +183,29 @@ def infer_wrong_choice_note(
             "設問文の「最も適切でない」を先に線引きし、四肢を比較して選んでください。"
         )
     elif mode == "least_appropriate":
-        parts.append(
-            f"「{opt}」は、一見もっともらしく見える場合がありますが、"
-            f"正答（{correct}）「{_snippet(correct_text, 56)}」と比べると、"
-            "学習・制度・実務の観点で「最も問題がある」記述ではありません。"
-        )
-        parts.append(
-            "「最も適切でない」形式では、正しそうな肢が複数あることがあります。"
-            "各肢の主語・客体・数字・期限・手続の順序が設問条件と合うかを確認し、"
-            "最も不適切な一つだけを選びます。"
-        )
+        polarity = question_polarity(stem)
+        if polarity == "pick_incorrect":
+            parts.append(
+                f"「{opt}」は、一見もっともらしく見える場合がありますが、"
+                f"正答（{correct}）「{_snippet(correct_text, 56)}」と比べると、"
+                "記述として誤っているとはいえません。"
+            )
+            parts.append(
+                "「誤っているもの」形式では、正しそうな肢が複数あることがあります。"
+                "各肢の主語・客体・数字・期限・手続の順序が設問条件と合うかを確認し、"
+                "誤っている一つだけを選びます。"
+            )
+        else:
+            parts.append(
+                f"「{opt}」は、一見もっともらしく見える場合がありますが、"
+                f"正答（{correct}）「{_snippet(correct_text, 56)}」と比べると、"
+                "学習・制度・実務の観点で「最も問題がある」記述ではありません。"
+            )
+            parts.append(
+                "「最も不適切なもの」形式では、正しそうな肢が複数あることがあります。"
+                "各肢の主語・客体・数字・期限・手続の順序が設問条件と合うかを確認し、"
+                "最も不適切な一つだけを選びます。"
+            )
     elif mode == "most_correct":
         parts.append(
             f"この肢は「{opt}」と述べていますが、"
@@ -373,11 +446,14 @@ def build_study_hint(page: dict, row: dict) -> str:
     return hint
 
 
-def split_legacy_explanation(exp: str) -> tuple[str, str]:
+def split_legacy_explanation(exp: str, *, stem: str = "") -> tuple[str, str]:
     m = re.match(r"^正解は\s*(\d+)\s*です[。.]?\s*(.*)$", exp, re.DOTALL)
     if m:
         body = norm(m.group(2)) or exp
-        summary = f"正答は（{m.group(1)}）です。"
+        n = int(m.group(1))
+        note = answer_clarifier(stem)
+        summary = f"正答は（{n}）です。{note}" if note else f"正答は（{n}）です。"
+        body = normalize_inverted_explanation(body, n, stem)
         return summary, body
     return "", exp
 
@@ -403,25 +479,30 @@ def build_explanation_html(page: dict, row: dict) -> str:
     if page.get("is_invalidated") or page.get("correct") is None:
         return f'<div class="q-exp"><p>{text_to_html(base)}</p></div>'
 
+    stem = norm(page.get("stem_plain") or page.get("stem") or "")
     summary = norm(row.get("explanation_summary"))
     correct_body = norm(row.get("explanation_correct"))
     point = norm(row.get("explanation_point"))
 
     if not summary and not correct_body and not point:
-        leg_summary, leg_body = split_legacy_explanation(base)
+        leg_summary, leg_body = split_legacy_explanation(base, stem=stem)
         summary = summary or leg_summary
         correct_body = correct_body or leg_body
+
+    correct = page.get("correct")
+    if correct_body and correct:
+        correct_body = normalize_inverted_explanation(correct_body, correct, stem)
 
     parts: list[str] = ['<div class="q-exp">']
     if summary:
         parts.append(f'<p class="q-exp-lead">{text_to_html(summary)}</p>')
 
-    correct = page.get("correct")
     if correct and not page.get("is_invalidated"):
         opt_text = page["opts"][correct - 1] if 1 <= correct <= len(page["opts"]) else ""
+        section_h = correct_section_heading(stem)
         parts.append(
             '<section class="q-exp-section" aria-labelledby="q-exp-correct-h">'
-            '<h3 id="q-exp-correct-h" class="q-exp-h3">正解の理由</h3>'
+            f'<h3 id="q-exp-correct-h" class="q-exp-h3">{html.escape(section_h)}</h3>'
         )
         if correct_body:
             parts.append(f"<p>{text_to_html(correct_body)}</p>")

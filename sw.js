@@ -1,6 +1,6 @@
 /* Service Worker: 静的アセットの長期キャッシュ（GitHub Pages の短い max-age=600 を補完） */
 var CACHE_PREFIX = "kangyou-master";
-var VERSION = "e292f91d08e8";
+var VERSION = "5e02c839cbf0";
 var CACHE_NAME = CACHE_PREFIX + "-" + VERSION;
 
 var PRECACHE = [
