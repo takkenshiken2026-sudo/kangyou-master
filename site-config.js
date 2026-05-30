@@ -104,7 +104,8 @@ window.SITE_CONFIG = {
       "id": "civil",
       "name": "民法・借地借家法",
       "aliases": [
-        "民法・借地借家法"
+        "民法・借地借家法",
+        "契約・実務"
       ],
       "legacyGlossaryCat": "law"
     },
@@ -112,7 +113,8 @@ window.SITE_CONFIG = {
       "id": "kuhyo",
       "name": "標準管理規約",
       "aliases": [
-        "標準管理規約"
+        "標準管理規約",
+        "法令・制度"
       ],
       "legacyGlossaryCat": "law"
     },
@@ -120,7 +122,8 @@ window.SITE_CONFIG = {
       "id": "building",
       "name": "建築・設備",
       "aliases": [
-        "建築・設備"
+        "建築・設備",
+        "設備・その他"
       ],
       "legacyGlossaryCat": "limit"
     },
