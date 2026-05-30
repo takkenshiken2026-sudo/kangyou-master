@@ -34,7 +34,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from tools.q_explanation import answer_clarifier, build_explanation_html
+from tools.q_explanation import build_explanation_html
 from tools.q_similar_questions import build_similar_questions_html, load_question_catalog
 from tools.html_footer import (
     ROBOTS_INDEX_FOLLOW,
@@ -624,14 +624,7 @@ def build_question_html(
             + "）。学習用に選択肢のみ掲載します。</p>"
         )
     else:
-        clarifier = answer_clarifier(page.get("stem_plain") or page.get("stem") or "")
-        if clarifier:
-            ans_block = (
-                f'<p>正答は <strong>（{page["correct"]}）</strong> です。'
-                f"{html.escape(clarifier)}</p>"
-            )
-        else:
-            ans_block = f'<p>正答は <strong>（{page["correct"]}）</strong> です。</p>'
+        ans_block = f'<p>正答は <strong>（{page["correct"]}）</strong> です。</p>'
 
     badges = []
     if page["is_exempt"]:
