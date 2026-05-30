@@ -9,7 +9,7 @@
 Cursor / ターミナルで PAT に **`workflow`** スコープを付けて push:
 
 ```bash
-cd /Users/otedaiki/Desktop/kangyou-master
+cd /Users/otedaiki/Projects/kangyou-master
 git push origin main
 ```
 
