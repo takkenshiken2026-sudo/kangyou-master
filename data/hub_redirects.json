@@ -167,7 +167,10 @@
     "koushin-5nen-s33": "koushin-touroku-5nen-s32",
     "sokai-teisu-s33": "soukai-teisu-s32",
     "kanri-kaisha-tou-s34": "kanri-kaisha-touroku-s32",
-    "rijikai-kaisu-s33": "rijikai-kaisu-s32"
+    "rijikai-kaisu-s33": "rijikai-kaisu-s32",
+    "juken-tesuryou": "/articles/exam-fees.html",
+    "shiken-nittei-2026": "/articles/exam-schedule.html",
+    "mankan-tesuryou-2026": "/articles/exam-fees.html"
   },
   "mistakes": {
     "kumiai-unyou-mis-s36": "kumiai-unyou-mis-s35",
