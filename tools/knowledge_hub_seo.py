@@ -924,45 +924,114 @@ def hub_faq_items_resolved(
 
 
 def glossary_exam_points_body_html(entry: dict) -> str:
-    """用語ページの試験ポイントを段落化。"""
-    exam_points = _norm(entry.get("exam_points"))
-    explanation = _norm(entry.get("explanation"))
-    definition = _norm(entry.get("definition"))
+    """用語ページの試験ポイントを段落化（正しい学習要点のみ）。"""
+    term = _norm(entry.get("term"))
+    paras: list[str] = []
+    for item in glossary_key_points_items(entry):
+        if "過去問" in item and "用語解説" in item:
+            if term:
+                paras.append(
+                    f"{term}は、関連する過去問で定義と数値の入れ替えに注意して復習する。"
+                )
+            continue
+        text = item.rstrip("。")
+        if text.startswith("根拠："):
+            paras.append(f"{text}を条文とセットで確認する。")
+        elif len(text) >= 36 or text.endswith("）"):
+            paras.append(text + ("。" if not text.endswith("。") else ""))
+        elif term:
+            paras.append(f"{term}では、{text.rstrip('で')}を試験で押さえるポイントです。")
+        else:
+            paras.append(text + "。")
+    return hub_prose_html(paras[:4])
+
+
+_DEFINITION_STRIP_RES = (
+    re.compile(r"【(?:専門家の視点|現場での意味|試験で差がつく見方|まとめ)】[^。\n]*。"),
+    re.compile(r"有害要因では[^。\n]*。"),
+    re.compile(r"ここでは[^。\n]*整理します。"),
+    re.compile(r"条文番号だけでなく[^。\n]*。"),
+    re.compile(r"過去問では[^。\n]*見られます。"),
+    re.compile(r"まとめると、[^。\n]*。"),
+    re.compile(r"本記事の表と[^。\n]*。"),
+    re.compile(r"※上記は[^。\n]*。"),
+    re.compile(r"定義＋数値＋手続」の5点[^。\n]*。"),
+    re.compile(r"失点差がつきやすい[^。\n]*。"),
+    re.compile(r"試験対策では[^。\n]*。"),
+    re.compile(r"過去問演習では[^。\n]*。"),
+    re.compile(r"実務目線では[^。\n]*。"),
+)
+_DEFINITION_NUM_RE = re.compile(
+    r"(\d+(?:\.\d+)?)\s*(人|時間|か月|月|年|日|回|週|mSv|mg/m³|mg|dB|ppm|%|時間以内|年間|回まで|回以上|人以上|時間超)"
+)
+_DEFINITION_SKIP_SENTENCE = (
+    "管理業務主任者試験では",
+    "第一種衛生管理者試験では",
+    "頻出となる基礎用語",
+    "失点差がつきやすい",
+    "試験対策では",
+    "過去問演習では",
+    "実務目線では",
+    "条文根拠と実務場面を往復",
+    "手続・判断基準を押さえる論点",
+)
+
+
+def _definition_sentences(text: str) -> list[str]:
+    parts: list[str] = []
+    for chunk in re.split(r"(?<=[。．])", text.strip()):
+        s = chunk.strip()
+        if s:
+            parts.append(s if s.endswith("。") else s + "。")
+    return parts
+
+
+def glossary_definition_body_text(entry: dict) -> str:
+    """定義セクション用。量産テンプレを除き、定義中心の短い本文に整える。"""
     term = _norm(entry.get("term"))
     category = _norm(entry.get("category"))
-    legal = _norm(entry.get("legal_basis"))
+    short_def = _norm(entry.get("short_def"))
+    definition = _norm(entry.get("definition"))
+    raw_body = _norm(entry.get("term_detail_body"))
 
-    paras: list[str] = []
-    if exam_points:
-        for item in hub_field_items(exam_points):
-            text = item.rstrip("。")
-            if len(text) >= 36:
-                paras.append(text + "。")
-            elif term and (text.startswith(term) or text.startswith(f"{term}の")):
-                paras.append(f"{text}が試験で問われやすい論点です。")
-            elif term:
-                paras.append(f"{term}では、{text}が試験で問われやすい論点です。")
-            else:
-                paras.append(text + "。")
+    parts: list[str] = []
+    if short_def and not any(skip in short_def for skip in _DEFINITION_SKIP_SENTENCE):
+        parts.append(short_def if short_def.endswith("。") else short_def + "。")
+    elif short_def:
+        parts.append(short_def if short_def.endswith("。") else short_def + "。")
 
-    if len(paras) < 2 and explanation:
-        for chunk in re.split(r"[。．]\s*", explanation):
-            chunk = chunk.strip()
-            if len(chunk) >= 20 and "とは、" not in chunk:
-                paras.append(chunk + "。")
-            if len(paras) >= 3:
-                break
+    defn = definition or short_def
+    body_so_far = "".join(parts)
+    for sent in _definition_sentences(defn):
+        if any(skip in sent for skip in _DEFINITION_SKIP_SENTENCE):
+            continue
+        key = re.sub(r"\s+", "", sent)[:48]
+        if not key or key in re.sub(r"\s+", "", body_so_far):
+            continue
+        parts.append(sent)
+        body_so_far = "".join(parts)
+        if len(parts) >= 3:
+            break
 
-    if category and len(paras) < 3:
-        paras.append(
-            f"{exam_name()}の{category}分野では、{term}の意味と適用場面を条文とセットで確認することが重要です。"
-        )
-    if legal and len(paras) < 4:
-        basis = legal.split(";")[0].strip()
-        if basis:
-            paras.append(f"根拠法令として{basis}などが関連します。条文の読み取り問題と結びつけて復習してください。")
+    nums: list[str] = []
+    for m in _DEFINITION_NUM_RE.finditer(defn):
+        val = m.group(1) + m.group(2)
+        if val not in nums:
+            nums.append(val)
+    joined = "".join(parts)
+    if nums and not any(n in joined for n in nums):
+        parts.append(f"押さえる数値・期限：{'、'.join(nums[:4])}。")
 
-    return hub_prose_html(paras)
+    body = "\n\n".join(parts)
+    if "有害" not in category:
+        for pat in _DEFINITION_STRIP_RES:
+            body = pat.sub("", body)
+    else:
+        for pat in _DEFINITION_STRIP_RES[:1]:
+            body = pat.sub("", body)
+
+    body = re.sub(r"\n{3,}", "\n\n", body).strip()
+    return body.strip() or definition or short_def
 
 
 def glossary_mistakes_body_html(entry: dict) -> str:

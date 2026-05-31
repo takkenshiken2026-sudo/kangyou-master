@@ -763,6 +763,7 @@ def build_term_html(
     )
     points = study_points(explanation)
     from tools.knowledge_hub_seo import (  # noqa: E402
+        glossary_definition_body_text,
         glossary_exam_points_body_html,
         glossary_memory_body_html,
         glossary_mistakes_body_html,
@@ -774,7 +775,10 @@ def build_term_html(
         points_html = hub_prose_html([p for p in points])
     entries_by_term = by_term or {e["term"]: e for e in entries}
     compare_html = peer_comparison_table_html(term, related, entries_by_term)
-    detail_html = text_paragraphs(term_detail_body or definition)
+    detail_html = text_paragraphs(glossary_definition_body_text(entry))
+    comparison_table = norm(entry.get("comparison_table"))
+    if comparison_table and "<table" in comparison_table:
+        detail_html = (detail_html + comparison_table) if detail_html else comparison_table
     if compare_html:
         detail_html = (detail_html + compare_html) if detail_html else compare_html
     diagram_id = norm(entry.get("diagram_id"))
@@ -1385,6 +1389,7 @@ def load_glossary_entries(*, strict: bool = True) -> list[dict]:
                 "article_title": norm(row.get("article_title")),
                 "article_lead": norm(row.get("article_lead")),
                 "term_detail_body": norm(row.get("term_detail_body")),
+                "comparison_table": norm(row.get("comparison_table")),
                 "exam_points": norm(row.get("exam_points")),
                 "common_mistakes": norm(row.get("common_mistakes")),
                 "memory_tip": norm(row.get("memory_tip")),
