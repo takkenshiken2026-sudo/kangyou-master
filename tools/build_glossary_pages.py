@@ -776,9 +776,6 @@ def build_term_html(
     entries_by_term = by_term or {e["term"]: e for e in entries}
     compare_html = peer_comparison_table_html(term, related, entries_by_term)
     detail_html = text_paragraphs(glossary_definition_body_text(entry))
-    comparison_table = norm(entry.get("comparison_table"))
-    if comparison_table and "<table" in comparison_table:
-        detail_html = (detail_html + comparison_table) if detail_html else comparison_table
     if compare_html:
         detail_html = (detail_html + compare_html) if detail_html else compare_html
     diagram_id = norm(entry.get("diagram_id"))
@@ -868,7 +865,7 @@ def build_term_html(
 
     content_sections: list[str] = []
     body_toc_items: list[tuple[str, str]] = []
-    from tools.knowledge_hub_seo import glossary_summary_body_html
+    from tools.knowledge_hub_seo import glossary_summary_body_html, glossary_legal_body_html
 
     section_plan: list[tuple[str, str, str]] = [
         ("summary", "まず押さえる要点", glossary_summary_body_html(short_def)),
@@ -879,7 +876,7 @@ def build_term_html(
         section_plan.append(("diagram", "図解で理解する", diagram_html))
     section_plan.extend(
         [
-            ("legal", "法令・根拠", legal_basis_html(legal)),
+            ("legal", "法令・根拠", glossary_legal_body_html(entry)),
             ("exam", "選択肢で問われやすい点", text_paragraphs(explanation)),
             ("mistakes", "よくある誤解・注意点", mistakes_html),
             ("memory", "覚え方・整理のコツ", memory_html),
@@ -1389,7 +1386,6 @@ def load_glossary_entries(*, strict: bool = True) -> list[dict]:
                 "article_title": norm(row.get("article_title")),
                 "article_lead": norm(row.get("article_lead")),
                 "term_detail_body": norm(row.get("term_detail_body")),
-                "comparison_table": norm(row.get("comparison_table")),
                 "exam_points": norm(row.get("exam_points")),
                 "common_mistakes": norm(row.get("common_mistakes")),
                 "memory_tip": norm(row.get("memory_tip")),
