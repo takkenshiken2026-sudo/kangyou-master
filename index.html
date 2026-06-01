@@ -12,11 +12,11 @@
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#111111">
 <meta name="application-name" content="管業マスター（管理業務主任者試験）">
-<link rel="canonical" href="https://takkenshiken2026-sudo.github.io/kangyou-master/" id="canonical-link">
+<link rel="canonical" href="https://kangyou-master.jp/" id="canonical-link">
 
 <!-- Open Graph (SNS・Slack等でのリッチ表示) -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://takkenshiken2026-sudo.github.io/kangyou-master/">
+<meta property="og:url" content="https://kangyou-master.jp/">
 <meta property="og:title" content="管業マスター｜管理業務主任者試験 無料学習プラットフォーム">
 <meta property="og:description" content="過去問演習・実践演習・一問一答・重要用語解説を網羅。年度別・分野別に絞った効率学習で合格を目指す。">
 <meta property="og:locale" content="ja_JP">
@@ -34,8 +34,8 @@
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://takkenshiken2026-sudo.github.io/kangyou-master/#website",
-      "url": "https://takkenshiken2026-sudo.github.io/kangyou-master/",
+      "@id": "https://kangyou-master.jp/#website",
+      "url": "https://kangyou-master.jp/",
       "name": "管業マスター",
       "alternateName": "管理業務主任者試験対策サイト",
       "description": "管理業務主任者試験の過去問・実践演習・一問一答・用語解説を網羅した無料学習プラットフォーム",
@@ -43,7 +43,7 @@
     },
     {
       "@type": "EducationalApplication",
-      "@id": "https://takkenshiken2026-sudo.github.io/kangyou-master/#app",
+      "@id": "https://kangyou-master.jp/#app",
       "name": "管業マスター",
       "alternateName": "管理業務主任者試験対策サイト",
       "description": "管理業務主任者試験の過去問・実践演習・一問一答・用語解説を網羅した無料学習プラットフォーム",
@@ -71,10 +71,10 @@
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "トップ", "item": "https://takkenshiken2026-sudo.github.io/kangyou-master/"},
-        {"@type": "ListItem", "position": 2, "name": "過去問", "item": "https://takkenshiken2026-sudo.github.io/kangyou-master/#past"},
-        {"@type": "ListItem", "position": 3, "name": "実践演習", "item": "https://takkenshiken2026-sudo.github.io/kangyou-master/#orig"},
-        {"@type": "ListItem", "position": 4, "name": "用語解説", "item": "https://takkenshiken2026-sudo.github.io/kangyou-master/terms/"}
+        {"@type": "ListItem", "position": 1, "name": "トップ", "item": "https://kangyou-master.jp/"},
+        {"@type": "ListItem", "position": 2, "name": "過去問", "item": "https://kangyou-master.jp/#past"},
+        {"@type": "ListItem", "position": 3, "name": "実践演習", "item": "https://kangyou-master.jp/#orig"},
+        {"@type": "ListItem", "position": 4, "name": "用語解説", "item": "https://kangyou-master.jp/terms/"}
       ]
     }
   ]
@@ -86,10 +86,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<script src="site-asset-version.js"></script>
-<script src="site-exam-data-loader.js"></script>
-<link rel="preload" href="site-theme.css" as="style">
-<link rel="stylesheet" href="site-theme.css">
 <style>
 :root {
   --bg:    #ffffff;
@@ -231,9 +227,6 @@ body{font-family:var(--font);font-size:var(--fs-body);background:#f0f0f1;color:v
 .topnav-logo-mark,.site-footer-logo-mark{min-width:54px;min-height:36px;padding:6px 10px 5px;border-radius:4px;background:var(--ink);display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;flex-shrink:0;font-family:var(--font);color:var(--bg2);box-sizing:border-box}
 .topnav-logo-mark .logo-mark-line,.site-footer-logo-mark .logo-mark-line{display:block;font-size:12px;font-weight:700;line-height:1.05;text-align:center;white-space:nowrap;letter-spacing:.02em}
 .topnav-logo-mark .logo-mark-line--sub,.site-footer-logo-mark .logo-mark-line--sub{font-size:11px;letter-spacing:.04em}
-.site-footer-logo-mark{min-width:46px;min-height:30px;padding:4px 8px 3px;border-radius:3px}
-.site-footer-logo-mark .logo-mark-line{font-size:10px}
-.site-footer-logo-mark .logo-mark-line--sub{font-size:9px}
 .topnav-logo-text{font-size:16px;font-weight:700;letter-spacing:-0.01em;white-space:nowrap}
 .topnav-logo-stack{display:flex;flex-direction:column;align-items:flex-start;gap:1px;line-height:1.15;min-width:0}
 .topnav-logo-sub{font-size:10px;font-weight:600;color:var(--text3);letter-spacing:0;line-height:1.25;white-space:normal;max-width:min(220px,52vw)}
@@ -791,7 +784,9 @@ details.rich-detail summary{display:none}
   .topnav-hamburger{display:flex}
   .topnav-inner{padding:0 10px;height:52px}
   .topnav-logo{margin-right:8px}
-  .topnav-logo-mark{min-width:48px;min-height:32px;padding:5px 8px 4px}  .topnav-logo-mark .logo-mark-line{font-size:11px}  .topnav-logo-mark .logo-mark-line--sub{font-size:10px}
+  .topnav-logo-mark{min-width:48px;min-height:32px;padding:5px 8px 4px}
+  .topnav-logo-mark .logo-mark-line{font-size:11px}
+  .topnav-logo-mark .logo-mark-line--sub{font-size:10px}
   .topnav-logo-text{font-size:15px}
   .topnav-logo-sub{font-size:9px;max-width:min(200px,58vw)}
   .focus-btn{margin-left:auto;margin-right:6px;width:34px;height:34px}
@@ -913,6 +908,7 @@ details.rich-detail summary{display:none}
     gap:8px 10px;
     padding:6px max(12px,env(safe-area-inset-right,0px)) calc(8px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));
   }
+  .site-footer-logo-mark{width:20px;height:20px;font-size:9px;border-radius:5px}
   .site-footer-site-name{font-size:11px}
   .site-footer-legal{gap:8px 10px}
   .site-footer-legal a{font-size:10px}
@@ -991,6 +987,7 @@ body.is-solving .site-footer{display:none!important}
 }
 .site-footer-brand{display:flex;align-items:center;gap:6px;text-decoration:none;color:var(--text);flex:0 0 auto;transition:opacity .15s}
 .site-footer-brand:hover{opacity:.88}
+.site-footer-logo-mark{width:22px;height:22px;border-radius:6px;background:var(--ink);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--bg2);flex-shrink:0;font-family:var(--font)}
 .site-footer-site-name{font-size:12px;font-weight:700;letter-spacing:-0.02em;color:var(--text);white-space:nowrap}
 .site-footer-sep{width:1px;height:14px;background:var(--border2);flex:0 0 auto;align-self:center;opacity:.85}
 .site-footer-legal{display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;gap:10px 14px;flex:0 0 auto}
@@ -1131,6 +1128,10 @@ body.is-solving .site-footer{display:none!important}
 .mission-text.done{color:var(--text);text-decoration:none}
 .mission-prog{font-size:13px;font-family:var(--mono);color:#111111;font-weight:800}
 .mission-prog.done{color:var(--green)}
+.mission-share-row{margin-top:14px;padding-top:14px;border-top:1px solid var(--border)}
+.mission-card-share{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;padding:11px;background:#000;border:none;border-radius:10px;color:#fff;font-size:14px;font-weight:700;cursor:pointer;font-family:var(--font);transition:opacity .15s}
+.mission-card-share:hover{opacity:.82}
+.mission-card-share svg{width:15px;height:15px;fill:currentColor;flex-shrink:0}
 /* Difficulty stars in q-meta */
 .q-meta-item.diff-wrap{flex:0 0 114px}
 .q-meta-item.freq-item{flex:0 0 108px}
@@ -1192,130 +1193,26 @@ body.is-solving .site-footer{display:none!important}
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "契約に関する次の記述のうち、民法の規定によれば、正しいものはどれか。",
+      "name": "Sample試験の制度に関する次の記述のうち、正しいものはどれか。",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "正解は1です。双務契約では、相手方の債務が弁済期にあり、その履行の提供があるまで自己の履行を拒めるため、同時履行の抗弁を述べた1が正しいです。2は、当事者双方の責めに帰することができない事由で役務提供ができなくなった場合、報酬請求権は原則としてそのまま残りません。3は、履行遅滞を理由とする解除では原則として相当期間を定めた催告が必要です。4は、契約を解除しても損害賠償請求は妨げられません。"
+        "text": "試験制度は年度ごとに見直されるため、最新の公式情報を確認する姿勢が重要です。"
       }
     },
     {
       "@type": "Question",
-      "name": "管理組合法人を一般の法人と比較した次の記述のうち、建物の区分所有等
-に関する法律（昭和37年法律第69号。以下「区分所有法」という。）及び一般社団
-法人及び一般財団法人に関する法律（平成18年法律第48号）の規定によれば、正し
-いものはどれか。",
+      "name": "学習計画に関する次の記述のうち、最も適切でないものはどれか。",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "（解説は未入力です。）"
+        "text": "「最も適切でないもの」を選ぶ問題です。学習法として明らかに誤った選択肢を見極めます。"
       }
     },
     {
       "@type": "Question",
-      "name": "Aが区分所有しているマンションの501号室（以下本間において「本件専
-有部分」という。）に、債権者Bのために抵権が設定されている場合に関する次
-の記述のうち、民法及び区分所有法の規定によれば、正しいものはどれか。",
+      "name": "設備・その他分野の学習に関する次の記述のうち、正しいものはどれか。",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "（解説は未入力です。）"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "宅地建物取引業者（宅地建物取引業法（昭和27年法律第176号）第2条第
-3号に規定する者をいう。以下同じ。）から、その行う業務の用に供する目的でマ
-ンションに関する情報の提供を要求された場合のマンション管理業者（マンション
-管理適正化法第2条第8号に規定する者をいう。以下同じ。）の対応に関する次の
-記述のうち、マンション標準管理委託契約書（平成15年4月9日国総動第1号～第
-4号。国土交通省総合政策局長通達。以下同じ。）の定めによれば、最も適切なも
-のはどれか。",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "正解は4です。マンション標準管理委託契約書では、重要事項に関わる一定の情報は書面で開示する扱いになっており、修繕積立金積立総額はその代表例です。1は専有部分まで含めた修繕履歴を一律に書面開示する趣旨ではありません。2も、管理規約の写しの提供に管理業務主任者の記名押印が必須とされているわけではありません。3も、電磁的記録なら単に画面表示で足りるという整理ではありません。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "管理事務の内容及び実施方法に関する次のアからエまでの記述のうち、マ
-ンション標準管理委託契約書及びマンション標準管理委託契約書コメント（平成15
-年4月9日国総動第1号～第4号。国土交通省総合政策局長通達。以下「マンショ
-ン標準管理委託契約書」という。）の定めによれば、適切なものはいくつあるか。
-アマンション管理業者が行う管理事務の内容として、事務管理業務、管理員業務、
-清掃業務及び建物・設備管理業務があるが、消防法（昭和23年法律第186号）に定
-める防火管理者が行う業務は、管理事務に含まれない。
-イマンション管理業者は、建築基準法（昭和25年法律第201号）第12条に規定する
-特殊建築物定期調査及び建築設備定期検査を行うと共に、その報告等に係る補助を
-行うものとする。
-ウマンション管理業者は、管理対象部分に係る各種の点検、検査等を実施した場合、
-その結果を管理組合に報告すると共に、改善等の必要がある事項については、文書
-又は口頭で、具体的な方策を管理組合に助言するものとする。
-エマンション管理業者は、管理規約の原本、総会議事録、総会議案書等を、マンシ
-ョン管理業者の事務所で保管するものとする。
-一つ
-二つ
-三つ
-四つ",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "（解説は未入力です。）"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "マンション標準管理規約及びマンション標準管理規約コメント（単棟型）
-（平成16年1月23日国総動第232号・国住マ第37号。国土交通省総合政策局長・同住
-宅局長通知。以下「マンション標準管理規約」という。）によれば、管理組合の会
-計と承認に関する次の記述のうち、最も不適切なものはどれか。",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "正解は1です。この設問は最も不適切なものを選ぶ問題です。管理費等に不足が生じ、各区分所有者に追加負担を求めるのであれば、理事会決議だけで足りるものではなく、総会での承認を要する整理になります。そのため『理事会の決議を経なければならない』とする記述は最も不適切であり、これが本問の正答（1）です。2の予算変更、3の借入れ、4の修繕積立金の保管・運用方法は、いずれも総会関与を要する事項として理解できます。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "管理組合会計の処理方法の一つである企業会計原則に関する次の記述のう
-ち、最も不適切なものはどれか。",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "正解は4です。この設問は最も不適切なものを選ぶ問題です。継続性の原則は、会計処理の原則や手続をみだりに変えないことを求めるものですが、正当な理由があり、その影響を明らかにすれば変更自体が一切禁止されるわけではありません。したがって『いかなる場合でも変更を認めていない』とする記述は最も不適切であり、これが本問の正答（4）です。1から3は、企業会計原則の説明として概ね整合しています。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "建築基準法（昭和25年法律第201号）第2条の用語の定義に関する次の記
-述のうち、誤っているものはどれか。",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "正解は3です。この設問は誤っているものを選ぶ問題です。3は、防火性能を『内壁又は天井に必要とされる性能』として説明していますが、防火性能の捉え方がずれており、建築基準法上の定義として適切ではありません。1の耐火性能、2の準耐火性能、4の遮炎性能は、いずれも法の定義に沿った説明です。用語の違いを問う基本問題として整理すると解きやすいです。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "宅地建物取引業者が、マンションの販売を行う場合における宅地建物取引
-業法第35条の規定に基づく重要事項の説明に関する次の記述のうち、同条の規定に
-違反しないものはどれか。",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "正解は3です。重要事項説明では、定まっていない事項についてまで断定的な説明はできないため、引渡し時期が未定であるなら、その趣旨で説明することになります。したがって3は宅建業法35条違反になりません。1は買主が宅建業者でも説明者が宅地建物取引士でなければならず不適切です。2は書面交付を省略できず、4も共用部分規約が案の段階であればその案を説明対象に含める必要があります。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "新築分譲マンションのアフターサービスに関する次の記述のうち、適切な
-もののみの組合せはどれか。
-ア アフターサービスは、天災地変等の不可抗力による損壊、購入者の使用ミスによ
-るものについても、その対象とすることが多い。
-イアフターサービスの対象範囲は、マンションの専有部分に限られず、共用部分も
-対象とすることが多い。
-ウ アフターサービスは、隠れた欠陥についてのみ、その対象とすることが多い。
-エアフターサービスを行う期間の起算日は、対象となる部位や久陥の種類に関わら
-ず、マンションを買主に引き渡した日とすることが多い。
-オアフターサービスの対象部位は、マンションの基本構造部分に限られず、専有部
-分内にある設備も含むことが多い。
-カ アフターサービスの内容について、宅地建物取引業者が遵守しなかった場合は、
-宅地建物取引業法に違反することとなる。",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "正解は1です。適切なのはイとオです。アは、天災地変や購入者の使用ミスまでアフターサービスの対象にするのが一般的とはいえず誤りです。イは、専有部分だけでなく共用部分も対象とすることが多く正しいです。ウも、隠れた欠陥だけに限るものではありません。エも、部位や不具合の種類にかかわらず一律に引渡日を起算日とするとは限りません。オは、専有部分内の設備まで対象に含むことが多く正しいです。カは、アフターサービス基準違反が直ちに宅建業法違反になるわけではありません。"
+        "text": "数値・期限・例外規定は暗記だけでは混同しやすいため、一覧表や比較表で整理する学習法が有効です。"
       }
     }
   ]
@@ -1374,8 +1271,9 @@ body.is-solving .site-footer{display:none!important}
   <nav class="topnav">
     <div class="topnav-inner">
       <a class="topnav-logo" href="/" onclick="event.preventDefault();gotoPage('quiz-start')" aria-label="管業マスター、管理業務主任者試験対策のトップへ">
-        <div class="topnav-logo-mark" aria-hidden="true"><span class="logo-mark-line">管業</span><span class="logo-mark-line logo-mark-line--sub">マスター</span></div>
+        <div class="topnav-logo-mark logo-mark--narrow" aria-hidden="true"><span class="logo-mark-line">Sample</span><span class="logo-mark-line logo-mark-line--sub">マスター</span></div>
         <span class="topnav-logo-stack">
+          <span class="topnav-logo-text">管業マスター</span>
           <span class="topnav-logo-sub">管理業務主任者試験</span>
         </span>
       </a>
@@ -1823,7 +1721,7 @@ body.is-solving .site-footer{display:none!important}
           <li>契約・実務（契約・実務論点・応用論点・重要事項説明など）</li>
           <li>設備・その他（設備・その他・不動産証券化など）</li>
         </ul>
-        <p style="margin-top:24px;font-size:14px;line-height:2"><a href="about.html">このサイトについて</a> ・ <a href="q/index.html">過去問一覧</a> ・ <a href="q/practice/index.html">実践演習一覧</a> ・ <a href="q/ichimon/index.html">一問一答一覧</a> ・ <a href="terms/index.html">用語集</a> ・ <a href="articles/index.html">試験ガイド</a> ・ <a href="related-sites.html">関連リンク</a> ・ <a href="privacy.html">プライバシー</a> ・ <a href="https://github.com/takkenshiken2026-sudo/kangyou-master/issues" target="_blank" rel="noopener noreferrer">お問い合わせ</a></p>
+        <p style="margin-top:24px;font-size:14px;line-height:2"><a href="about.html">このサイトについて</a> ・ <a href="q/index.html">過去問一覧</a> ・ <a href="q/practice/index.html">実践演習一覧</a> ・ <a href="q/ichimon/index.html">一問一答一覧</a> ・ <a href="terms/index.html">用語集</a> ・ <a href="articles/index.html">試験ガイド</a> ・ <a href="related-sites.html">関連リンク</a> ・ <a href="privacy.html">プライバシー</a> ・ <a href="https://forms.gle/FFPAFnijLYYAkyW1A" target="_blank" rel="noopener noreferrer">お問い合わせ</a></p>
       </div>
     </noscript>
 
@@ -1883,7 +1781,6 @@ function buildEvenFieldDistribution(total){
   ids.forEach(function(id, idx){ dist[id] = Math.floor(total / ids.length) + (idx < (total % ids.length) ? 1 : 0); });
   return dist;
 }
-var YEARS = [];
 function applyCsvImportedQuestions() {
   if (typeof CSV_IMPORTED_QUESTIONS === 'undefined' || !Array.isArray(CSV_IMPORTED_QUESTIONS)) return;
   var rows = CSV_IMPORTED_QUESTIONS;
@@ -1898,18 +1795,13 @@ function applyCsvImportedQuestions() {
     if (q.year != null && q.year !== '') yset.add(q.year);
   });
   YEARS = Array.from(yset).sort(function (a, b) { return b - a; });
-  if (typeof quizState !== 'undefined' && quizState && Array.isArray(YEARS) && YEARS.length) {
-    quizState.years = YEARS.slice();
-  }
-  if (typeof renderDailyStatus === 'function') {
-    try {
-      if (document.getElementById('page-quiz-start')?.classList.contains('active')) renderDailyStatus();
-    } catch (e) {
-      console.error('[applyCsvImportedQuestions]', e);
-    }
-  }
 }
 </script>
+<link rel="stylesheet" href="site-theme.css">
+<script src="site-config.js"></script>
+<script src="exam-site-data-practice.js"></script>
+<script src="exam-site-data-past.js"></script>
+<script src="exam-site-data-ichimondou.js"></script>
 <script>
 
 // ===== GAMIFICATION ENGINE =====
@@ -2356,7 +2248,7 @@ function getMissionProgress(mission, u){
   }
   if(mission.type==='field'){
     const cur=todayAnswers.filter(([qid])=>{
-      const q=typeof findQuestionById==='function'?findQuestionById(qid):null;
+      const q=QUESTIONS.find(qq=>qq.id==qid);
       return q&&q.field===mission.field;
     }).length;
     return {cur, target:mission.target};
@@ -2395,11 +2287,10 @@ function recordReviewMissionAction(u){
 }
 
 function renderDailyStatus(){
+  if(typeof updateQuizStartModeStats==='function') updateQuizStartModeStats();
   const wrap=document.getElementById('daily-status-wrap');
   if(!wrap) return;
   const u=getUserData(); if(!u) return;
-  try {
-  if(typeof updateQuizStartModeStats==='function') updateQuizStartModeStats();
   const total=Object.keys(u.answers||{}).length;
   const lv=getLevel(total);
   const next=getLevelNext(total);
@@ -2436,12 +2327,17 @@ function renderDailyStatus(){
       <div class="mission-prog${done?' done':''}">${prog.cur}/${prog.target}</div>
     </div>`;
   }).join('');
+  const allMissionsDone=missions.every(m=>{
+    const prog=getMissionProgress(m,u);
+    return prog.cur>=prog.target;
+  });
+  const missionShareHTML=allMissionsDone?`<div class="mission-share-row"><button type="button" class="mission-card-share" onclick="shareMissionToX()"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.749l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Xに投稿する</button></div>`:'';
 
   const spotlight = window._missionSpotlightPending ? ' spotlight' : '';
   const calloutHTML = window._missionSpotlightPending
     ? `<div class="mission-callout"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v7"/><path d="M5 6l3 3 3-3"/><path d="M3 13h10"/></svg><span>今日のミッションはこれです。まず1つ、解いてみよう！</span></div>`
     : '';
-  wrap.innerHTML=`${statusHTML}<div class="mission-card${spotlight}" id="today-mission-card">${calloutHTML}<div class="mode-card-header"><div class="mode-icon-wrap"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="#444" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M8 3l5 5-5 5"/></svg></div><div class="mode-card-title">今日のミッション</div></div>${mHTML}</div>`;
+  wrap.innerHTML=`<div class="mission-card${spotlight}" id="today-mission-card">${calloutHTML}<div class="mode-card-header"><div class="mode-icon-wrap"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="#444" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M8 3l5 5-5 5"/></svg></div><div class="mode-card-title">今日のミッション</div></div>${mHTML}${missionShareHTML}</div>`;
   if(window._missionSpotlightPending){
     window._missionSpotlightPending=false;
     setTimeout(()=>{
@@ -2455,11 +2351,7 @@ function renderDailyStatus(){
       card.classList.remove('spotlight');
     }, 4500);
   }
-  } catch (e) {
-    console.error('[renderDailyStatus]', e);
-  }
 }
-window.renderDailyStatus = renderDailyStatus;
 
 function renderDashLevel(){
   const el=document.getElementById('dash-level-bar');
@@ -2650,7 +2542,7 @@ function buildYearHistoryHTML(q){
 
 // ===== STATE =====
 let currentUser = null, db = {};
-let quizState = {mode:'past',fields:FIELDS.map(f=>f.id),years:Array.isArray(YEARS)?YEARS.slice():[],count:10,order:'seq',queue:[],idx:0,startTime:0,sessionResults:[],scoreReplayMode:false};
+let quizState = {mode:'past',fields:FIELDS.map(f=>f.id),years:[...YEARS],count:10,order:'seq',queue:[],idx:0,startTime:0,sessionResults:[],scoreReplayMode:false};
 
 // Storage: localStorage (works in real browsers / GitHub Pages)
 var _memStore = {};
@@ -3127,7 +3019,7 @@ const PAGE_SEO = {
 };
 
 function publicCanonicalUrl(seoPath) {
-  const base = 'https://takkenshiken2026-sudo.github.io/kangyou-master';
+  const base = 'https://kangyou-master.jp';
   const p = (seoPath || '/').trim();
   if (!p || p === '/' || p === '/index.html') return base + '/';
   // SPA の /#past 等はトップに正規化（ハッシュは別URLとして扱わない）
@@ -4202,10 +4094,8 @@ function allPracticeQuestions(){
 }
 function findQuestionById(qid){
   const s=String(qid);
-  if(typeof QUESTIONS!=='undefined'&&Array.isArray(QUESTIONS)){
-    const hit=QUESTIONS.find(qq=>String(qq.id)===s);
-    if(hit)return hit;
-  }
+  const hit=QUESTIONS.find(qq=>String(qq.id)===s);
+  if(hit)return hit;
   if(typeof PRACTICE_QUESTIONS==='undefined')return null;
   for(const lv of [1,2,3]){
     const q=(PRACTICE_QUESTIONS[lv]||[]).find(qq=>String(qq.id)===s);
@@ -4598,9 +4488,12 @@ function checkMissionAllComplete(){
     const p = getMissionProgress(m, u);
     return p.cur >= p.target;
   });
-  if(allDone && !_missionWasAllDone){
-    showMissionPopup();
-    _missionWasAllDone = true;
+  if(allDone){
+    renderDailyStatus();
+    if(!_missionWasAllDone){
+      showMissionPopup();
+      _missionWasAllDone = true;
+    }
   }
 }
 
@@ -4784,14 +4677,28 @@ function tryOpenNextBadgeEarnPopup(){
   openBadgeShare(id);
 }
 
-const SHARE_URL = (SITE_CONFIG.siteOrigin || 'https://takkenshiken2026-sudo.github.io/kangyou-master');
-const SHARE_TWITTER_HASHTAGS = [(SITE_CONFIG.examName || '管理業務主任者試験').replace(/[\s（）()]/g,''), '資格学習', (SITE_CONFIG.brandName || '管業マスター').replace(/[\s（）()]/g,'')].join(',');
+const SHARE_URL = (SITE_CONFIG.siteOrigin || 'https://kangyou-master.jp');
+function twitterHashtagToken(value){
+  return String(value||'').trim().replace(/#/g,'').replace(/\s+/g,'');
+}
+function getShareTwitterHashtags(){
+  const tags=[
+    twitterHashtagToken(SITE_CONFIG.examShortName||SITE_CONFIG.examAbbrev||SITE_CONFIG.brandMark),
+    twitterHashtagToken(SITE_CONFIG.examName),
+    twitterHashtagToken(SITE_CONFIG.brandName),
+    '資格マスターテンプレ',
+  ].filter(Boolean);
+  return [...new Set(tags)].join(',');
+}
+function getSiteShareLabel(){
+  return `${SITE_CONFIG.brandName||'管業マスター'}（${SITE_CONFIG.examName||'管理業務主任者試験'}）`;
+}
 /** X Web Intent 用：本文・公式URL・ハッシュタグをパラメータで渡す（投稿欄に読み込まれる） */
 function openTwitterShareIntent(bodyCore){
   const params=new URLSearchParams();
   params.set('text', bodyCore.trim());
   params.set('url', SHARE_URL);
-  params.set('hashtags', SHARE_TWITTER_HASHTAGS);
+  params.set('hashtags', getShareTwitterHashtags());
   window.open(`https://twitter.com/intent/tweet?${params.toString()}`,'_blank','noopener,noreferrer');
 }
 let lastSessionShareData = null;
@@ -5321,7 +5228,7 @@ function saveBadgeShareImage(){
 async function shareMissionToX(){
   const now = new Date();
   const dateStr = `${now.getMonth()+1}月${now.getDate()}日`;
-  openTwitterShareIntent(`管業マスター（管理業務主任者試験）で今日のミッションをすべてクリアしました。\n${dateStr}も合格を目指して学習を続けています。`);
+  openTwitterShareIntent(`${getSiteShareLabel()}で今日のミッションをすべてクリアしました。\n${dateStr}も合格を目指して学習を続けています。`);
 }
 function buildKaisetsu(k, q){
   if(!k) return '';
@@ -6234,21 +6141,14 @@ function closePremium(){document.getElementById('premium-modal').classList.remov
 function mockUpgrade(){const u=getUserData();u.plan='premium';saveUser(u);closePremium();gotoPage('dash')}
 
 loadDB();
-// ゲストとしてまず入場（問題データ JS は初回描画後に読み込み）
+// ゲストとしてまず入場
 (function(){
   const guestEmail='__guest__';
-  function bootGuest(){
-    if(!db[guestEmail]){db[guestEmail]={name:'ゲスト',plan:'free',answers:{},sessions:[],streak:0};saveDB();}
-    currentUser={email:guestEmail,name:'ゲスト'};
-    enterApp();
-    renderOrigPage();
-    gotoPage('quiz-start');
-  }
-  function bootWhenReady(){
-    if(typeof whenExamSiteDataReady==='function'){ whenExamSiteDataReady(bootGuest); }
-    else { setTimeout(bootWhenReady, 0); }
-  }
-  bootWhenReady();
+  if(!db[guestEmail]){db[guestEmail]={name:'ゲスト',plan:'free',answers:{},sessions:[],streak:0};saveDB();}
+  currentUser={email:guestEmail,name:'ゲスト'};
+  enterApp();
+  renderOrigPage();
+  gotoPage('quiz-start');
 })();
 // Supabaseセッションがあればログイン済みユーザーに切り替え
 (async function(){
@@ -6265,9 +6165,7 @@ loadDB();
     await loadAnswersFromSupabase();
     await loadMergeUserLearningSyncFromSupabase();
     await syncUserLearningToSupabaseNow();
-    const runEnter=function(){ enterApp(); };
-    if(typeof whenExamSiteDataReady==='function'){ whenExamSiteDataReady(runEnter); }
-    else { runEnter(); }
+    enterApp();
   }
 })();
 // ===== EXAM COUNTDOWN =====
@@ -7085,7 +6983,6 @@ window.gotoPage=function(id){
   setTimeout(()=>{
     if(id==='quiz-start'){
       if(typeof window.updateQuizStartModeStats==='function') window.updateQuizStartModeStats();
-      if(typeof window.renderDailyStatus==='function') window.renderDailyStatus();
       // 弱点カードが既にある場合は解放状態が変わっていれば再描画
       const existing=document.getElementById('weak-mode-inject');
       if(existing) existing.remove();
@@ -7143,7 +7040,6 @@ if(typeof getUserData==='function'){
 </script>
 <!-- GA4: tools/html_footer.analytics_snippet と同内容（トップ SPA） -->
 <script>window.__GA4_MEASUREMENT_ID__="G-K7WTT45NJ8";</script>
-<script defer src="site-sw-register.js"></script>
 <script defer src="site-analytics.js"></script>
 </body>
 </html>
