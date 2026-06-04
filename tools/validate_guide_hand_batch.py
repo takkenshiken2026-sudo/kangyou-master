@@ -15,22 +15,13 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-
-def load_rewrites_module(path: Path) -> ModuleType:
-    spec = importlib.util.spec_from_file_location("guide_rewrite_batch", path)
-    if spec is None or spec.loader is None:
-        raise ImportError(f"cannot load {path}")
-    mod = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(mod)
-    if not hasattr(mod, "REWRITES"):
-        raise ValueError(f"{path} must define REWRITES dict")
-    return mod
-
+from tools.apply_guide_rewrite_batch import load_rewrites_module  # noqa: E402
 from tools.build_article_pages import sanitize_guide_text  # noqa: E402
 from tools.editorial_quality import norm  # noqa: E402
 from tools.guide_article_rules import GUIDE_MIN_FAQ_ANSWER, GUIDE_MIN_SECTION_BODY  # noqa: E402
 from tools.guide_prose_patterns import scan_prose_text  # noqa: E402
 from tools.guide_rewrite_rules import rewrite_forbidden_hits  # noqa: E402
+from tools.guide_concrete_rewrite_rules import validate_concrete_rewrite  # noqa: E402
 from tools.strip_generic_guide_padding import strip_padding_from_text  # noqa: E402
 
 REQUIRED_KEYS = (
@@ -45,21 +36,6 @@ SECTION_BODY_KEYS = tuple(f"section_{n}_body" for n in range(1, 6))
 FAQ_Q_KEYS = tuple(f"faq_{n}_question" for n in range(1, 4))
 FAQ_A_KEYS = tuple(f"faq_{n}_answer" for n in range(1, 4))
 TITLE_DUP_EXAM_RE = re.compile(r"試験の試験[のと]|試験試験")
-
-_REVISION_ONLY_KEYS = frozenset(
-    {
-        "revision_note",
-        "fact_checked_at",
-        "last_reviewed_at",
-        "source_checked_at",
-        "original_note",
-    }
-)
-
-
-def _is_revision_only_patch(patch: dict[str, str]) -> bool:
-    active = {k for k, v in patch.items() if norm(v)}
-    return bool(active) and active <= _REVISION_ONLY_KEYS and "revision_note" in active
 
 
 def _visible_body(slug: str, text: str) -> str:
@@ -79,8 +55,6 @@ def validate_rewrites(rewrites: dict[str, dict[str, str]], *, root: Path) -> lis
 
     for slug, patch in rewrites.items():
         prefix = f"{slug}:"
-        if _is_revision_only_patch(patch):
-            continue
         for key in REQUIRED_KEYS:
             if not norm(patch.get(key)):
                 errors.append(f"{prefix} missing {key}")
@@ -135,6 +109,8 @@ def validate_rewrites(rewrites: dict[str, dict[str, str]], *, root: Path) -> lis
             visible = _visible_body(slug, text)
             for phrase in rewrite_forbidden_hits(visible):
                 errors.append(f"{prefix} {col} forbidden: {phrase[:32]}…")
+
+        errors.extend(validate_concrete_rewrite(slug, patch))
 
     return errors
 
