@@ -9,7 +9,7 @@
 
 **5本 batch の手順:** `docs/guide-hand-rewrite-batch-workflow.md`（`exam-site-shell` から sync）
 
-**運用:** 危険物乙4 130/130 完走後に着手。現状 expert_pass **26/161**（exemplar + batch1–5 適用済み）。
+**運用:** 危険物乙4 130/130 完走後に着手。現状 expert_pass **36/161**（exemplar + batch1–7 適用済み）。
 
 ```bash
 cd ~/Projects/kangyou-master
