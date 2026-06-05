@@ -30,7 +30,7 @@ from tools.guide_rewrite_rules import is_affiliate_row, is_hand_rewritten, rewri
 from tools.site_config import brand_name, exam_name, official_organization, primary_external_link  # noqa: E402
 
 TODAY = date.today().isoformat()
-REVISION = f"{TODAY}: 手書きリライト"
+REVISION = f"{TODAY}: 自動prose差し替え（要手書き）"
 
 
 def official_label() -> str:
@@ -97,8 +97,8 @@ def patch_row(row: dict[str, str], ctx, *, force: bool = False) -> bool:
         row["last_reviewed_at"] = TODAY
         row["source_checked_at"] = TODAY
         note = norm(row.get("original_note"))
-        if "手書きリライト" not in note:
-            row["original_note"] = f"手書きリライト {TODAY}。" + (note if note else "")
+        if "手書きリライト" not in note and "自動prose" not in note:
+            row["original_note"] = f"自動prose差し替え {TODAY}（要手書き）。" + (note if note else "")
     return changed
 
 
