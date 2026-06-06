@@ -5,11 +5,10 @@
 from __future__ import annotations
 
 import argparse
-import importlib.util
 import re
 import sys
+from collections import Counter
 from pathlib import Path
-from types import ModuleType
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -20,8 +19,9 @@ from tools.build_article_pages import sanitize_guide_text  # noqa: E402
 from tools.editorial_quality import norm  # noqa: E402
 from tools.guide_article_rules import GUIDE_MIN_FAQ_ANSWER, GUIDE_MIN_SECTION_BODY  # noqa: E402
 from tools.guide_prose_patterns import scan_prose_text  # noqa: E402
-from tools.guide_rewrite_rules import rewrite_forbidden_hits  # noqa: E402
+from tools.guide_rewrite_rules import is_affiliate_row, rewrite_forbidden_hits  # noqa: E402
 from tools.guide_concrete_rewrite_rules import validate_concrete_rewrite  # noqa: E402
+from tools.guide_rewrite_quality import is_auto_prose_text, revision_is_hand  # noqa: E402
 from tools.strip_generic_guide_padding import strip_padding_from_text  # noqa: E402
 
 REQUIRED_KEYS = (
@@ -42,8 +42,25 @@ def _visible_body(slug: str, text: str) -> str:
     return sanitize_guide_text(strip_padding_from_text(norm(text)), slug)
 
 
+def _batch_duplicate_heading_errors(rewrites: dict[str, dict[str, str]]) -> list[str]:
+    """5本 batch で同一見出しが4回以上 → テンプレ使い回し疑い。"""
+    errors: list[str] = []
+    if len(rewrites) < 5:
+        return errors
+    for n in range(1, 6):
+        hcol = f"section_{n}_heading"
+        headings = [norm(p.get(hcol)) for p in rewrites.values() if norm(p.get(hcol))]
+        for heading, count in Counter(headings).items():
+            if count >= 4:
+                errors.append(
+                    f"batch: {hcol} duplicated {count}x across slugs ({heading[:36]}…)"
+                )
+    return errors
+
+
 def validate_rewrites(rewrites: dict[str, dict[str, str]], *, root: Path) -> list[str]:
     errors: list[str] = []
+    errors.extend(_batch_duplicate_heading_errors(rewrites))
     try:
         from tools.fix_guide_duplicate_bodies import load_site_lib
 
@@ -55,6 +72,12 @@ def validate_rewrites(rewrites: dict[str, dict[str, str]], *, root: Path) -> lis
 
     for slug, patch in rewrites.items():
         prefix = f"{slug}:"
+        if slug.startswith("affiliate-") or is_affiliate_row({"tags": patch.get("tags", ""), "slug": slug}):
+            errors.append(
+                f"{prefix} アフィリエイト slug — 手書き batch 対象外。"
+                f" docs/affiliate/affiliate-article-rules.md を参照"
+            )
+            continue
         for key in REQUIRED_KEYS:
             if not norm(patch.get(key)):
                 errors.append(f"{prefix} missing {key}")
@@ -109,6 +132,11 @@ def validate_rewrites(rewrites: dict[str, dict[str, str]], *, root: Path) -> lis
             visible = _visible_body(slug, text)
             for phrase in rewrite_forbidden_hits(visible):
                 errors.append(f"{prefix} {col} forbidden: {phrase[:32]}…")
+
+        if revision_is_hand(patch):
+            combined_bodies = " ".join(norm(patch.get(k)) for k in SECTION_BODY_KEYS if norm(patch.get(k)))
+            if is_auto_prose_text(combined_bodies):
+                errors.append(f"{prefix} section bodies contain auto-prose signatures (not hand quality)")
 
         errors.extend(validate_concrete_rewrite(slug, patch))
 
