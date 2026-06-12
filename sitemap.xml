@@ -131,17 +131,7 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://kangyou-master.jp/articles/free-materials-online/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
     <loc>https://kangyou-master.jp/articles/glossary-how-to/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://kangyou-master.jp/articles/ichimon-practice/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
   </url>
@@ -151,37 +141,12 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://kangyou-master.jp/articles/mental-prep-exam-day/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://kangyou-master.jp/articles/mistake-notebook/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://kangyou-master.jp/articles/mock-exam-how-to/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://kangyou-master.jp/articles/note-taking-method/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
     <loc>https://kangyou-master.jp/articles/official-info-sources/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://kangyou-master.jp/articles/pass-announcement-guide/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://kangyou-master.jp/articles/pass-only-past-questions-myth/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
   </url>
@@ -206,41 +171,6 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://kangyou-master.jp/articles/past-questions-by-year/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://kangyou-master.jp/articles/past-questions-first-attempt/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://kangyou-master.jp/articles/past-questions-latest-year/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://kangyou-master.jp/articles/past-questions-review-cycle/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://kangyou-master.jp/articles/past-questions-score-analysis/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://kangyou-master.jp/articles/past-questions-wrong-reasons/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://kangyou-master.jp/articles/plateau-breakthrough/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
     <loc>https://kangyou-master.jp/articles/registration-after-pass/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -251,77 +181,7 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://kangyou-master.jp/articles/retake-schedule-adjustment/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
     <loc>https://kangyou-master.jp/articles/retake-strategy/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://kangyou-master.jp/articles/review-cycle-spaced/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://kangyou-master.jp/articles/scope-revision-history/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://kangyou-master.jp/articles/scope-vs-past-questions/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://kangyou-master.jp/articles/score-gap-analysis/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://kangyou-master.jp/articles/self-study-environment/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://kangyou-master.jp/articles/self-study-mistakes/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://kangyou-master.jp/articles/self-study-motivation/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://kangyou-master.jp/articles/self-study-roadmap/</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://kangyou-master.jp/articles/self-study-schedule/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://kangyou-master.jp/articles/self-study-start/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://kangyou-master.jp/articles/self-study-without-school/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://kangyou-master.jp/articles/simulation-exam-schedule/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://kangyou-master.jp/articles/study-hours-myth/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
   </url>
