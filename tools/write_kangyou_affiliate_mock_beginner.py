@@ -352,7 +352,10 @@ CSV_ROWS = {
             "pass-score:合格基準;"
             "affiliate-textbooks-recommend:おすすめテキスト;"
             "affiliate-problem-books:おすすめ問題集;"
-            "study-plan-beginner:初学者向け学習計画"
+            "study-plan-beginner:初学者向け学習計画;"
+            f"{amazon('4300120293')}:管業セレクト1000（Amazon）;"
+            f"{amazon('4844974314')}:LEC出る順速習（Amazon）;"
+            f"{amazon('4300120285')}:TAC項目別過去8年（Amazon）"
         ),
         "key_points": (
             "2026年度版 管理業務主任者 一問一答セレクト1000;"
@@ -473,7 +476,13 @@ CSV_ROWS = {
             "affiliate-textbooks-recommend:おすすめテキスト;"
             "affiliate-problem-books:おすすめ問題集;"
             "textbook-selection:テキストの選び方;"
-            "pass-score:合格基準"
+            "pass-score:合格基準;"
+            f"{amazon('4300120277')}:TAC基本テキスト（Amazon）;"
+            f"{amazon('4300120285')}:TAC項目別過去8年（Amazon）;"
+            f"{amazon('484715343X')}:Wマスターテキスト（Amazon）;"
+            f"{amazon('4847153448')}:Wマスター過去問（Amazon）;"
+            f"{amazon('4844974314')}:LEC出る順速習（Amazon）;"
+            f"{amazon('4844974321')}:LEC分野別過去問（Amazon）"
         ),
         "key_points": (
             "TAC2冊セット（基本テキスト+項目別過去8年）;"
