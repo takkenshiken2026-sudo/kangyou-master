@@ -17,6 +17,12 @@ AFFILIATE_TITLES = {
     "affiliate-problem-books": (
         "管理業務主任者のおすすめ問題集3選【過去問·分野別2026】"
     ),
+    "affiliate-mock-exam-materials": (
+        "管理業務主任者の一問一答·速習3選【セレクト1000·2026】"
+    ),
+    "affiliate-beginner-material-set": (
+        "管理業務主任者試験の初学者向け教材セット3選【2026年度版·テキスト+問題集】"
+    ),
 }
 
 BODY = {
@@ -30,18 +36,29 @@ BODY = {
         "LEC分野別過去問·Wマスター過去問集の3冊から選ぶと、"
         "50問120分通しの演習量を確保しやすくなります。"
     ),
+    "affiliate-mock-exam-materials": (
+        "短問演習の補助1冊は、affiliate-mock-exam-materials でセレクト1000·"
+        "出る順速習·項目別過去8年の3冊を比較してから固定すると、"
+        "通勤時間の穴埋めと50問通し前の drill に使い分けやすくなります。"
+    ),
+    "affiliate-beginner-material-set": (
+        "初めて揃える2冊セットは、affiliate-beginner-material-set でTAC·Wマスター·"
+        "LECの3セットを比較してから固定すると、予算と章立てのつながりを"
+        "無駄なく設計しやすくなります。"
+    ),
 }
 
 GUIDE_AFFILIATE: dict[str, tuple[str, int]] = {
     "textbook-selection": ("affiliate-textbooks-recommend", 2),
-    "study-plan": ("affiliate-textbooks-recommend", 3),
-    "study-plan-beginner": ("affiliate-textbooks-recommend", 2),
+    "study-plan": ("affiliate-beginner-material-set", 3),
+    "study-plan-beginner": ("affiliate-beginner-material-set", 2),
     "study-plan-3months": ("affiliate-textbooks-recommend", 3),
     "study-plan-6months": ("affiliate-textbooks-recommend", 3),
     "study-plan-working": ("affiliate-textbooks-recommend", 3),
     "past-question-strategy": ("affiliate-problem-books", 2),
     "past-questions-by-field": ("affiliate-problem-books", 2),
-    "mock-exam-how-to": ("affiliate-problem-books", 3),
+    "timed-practice": ("affiliate-mock-exam-materials", 3),
+    "time-limit-strategy": ("affiliate-mock-exam-materials", 2),
 }
 
 

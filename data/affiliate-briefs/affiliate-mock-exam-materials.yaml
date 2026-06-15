@@ -1,0 +1,69 @@
+slug: affiliate-mock-exam-materials
+theme_key: mock-exam-materials
+search_intent: 管理業務主任者試験の一問一答·速習教材を比較して選びたい
+title: 管理業務主任者の一問一答·速習3選【セレクト1000·2026】
+layout: product-comparison
+asp_primary: amazon
+comparison_kind: books
+comparison_title: 一問一答·速習3選（比較）
+price_disclaimer: 価格は執筆時点（2026-06-15）のAmazon税込参考です。試験形式は要項で必ず確認してください。
+products:
+- rank: 1
+  offer_type: book
+  name: 2026年度版 管理業務主任者 一問一答セレクト1000
+  publisher: TAC出版
+  edition: 2026年度版
+  price_yen: 2200
+  price_note: Amazon税込参考・送料別
+  pages: 516
+  format: B5判
+  asin: '4300120293'
+  image_file: kangyou-book-4300120293.webp
+  amazon_url: https://www.amazon.co.jp/dp/4300120293/ref=nosim?tag=ue083093-22
+  for_who: 通勤·隙間時間で短問演習量を確保したい人
+  highlights:
+  - 管業専用セレクト1000問で演習効率を上げやすい
+  - 基本テキスト·項目別過去8年との併用向き
+  - 直前期の穴埋め演習にも使える
+- rank: 2
+  offer_type: book
+  name: 2026年版 出る順管理業務主任者 速習テキスト
+  publisher: LEC
+  edition: 2026年版
+  price_yen: 4400
+  price_note: Amazon税込参考・送料別
+  pages: 0
+  format: B5判
+  asin: '4844974314'
+  image_file: kangyou-book-4844974314.webp
+  amazon_url: https://www.amazon.co.jp/dp/4844974314/ref=nosim?tag=ue083093-22
+  for_who: 要点整理から演習比重を上げたい人
+  highlights:
+  - 頻出論点をコンパクトに整理
+  - 分野別過去問題集との縦串が明確
+  - 社会人の週次計画に組み込みやすい
+- rank: 3
+  offer_type: book
+  name: 2026年度版 管理業務主任者 項目別過去8年問題集
+  publisher: TAC出版
+  edition: 2026年度版
+  price_yen: 2860
+  price_note: Amazon税込参考・送料別
+  pages: 0
+  format: B5判
+  asin: '4300120285'
+  image_file: kangyou-book-4300120285.webp
+  amazon_url: https://www.amazon.co.jp/dp/4300120285/ref=nosim?tag=ue083093-22
+  for_who: 50問120分通し前の分野別·年度別 drill に使いたい人
+  highlights:
+  - 過去8年を項目別に整理し弱点を切り出しやすい
+  - セレクト1000の誤答分野へ戻る演習量を確保
+  - 10月以降の通し模試の本丸候補
+related_links:
+- past-question-strategy:過去問の使い方
+- timed-practice:時間計測演習
+- pass-score:合格基準
+- affiliate-textbooks-recommend:おすすめテキスト
+- affiliate-problem-books:おすすめ問題集
+- study-plan-beginner:初学者向け学習計画
+operator_note: Amazon tag=ue083093-22。4300120293 / 4844974314 / 4300120285。2026-06-15価格確認。

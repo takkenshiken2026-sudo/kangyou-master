@@ -1,0 +1,79 @@
+slug: affiliate-beginner-material-set
+theme_key: beginner-material-set
+search_intent: 管理業務主任者初学者が最初に揃えるテキスト+問題集セットを比較したい
+title: 管理業務主任者試験の初学者向け教材セット3選【2026年度版·テキスト+問題集】
+genre: 学習計画
+layout: product-comparison
+asp_primary: amazon
+comparison_kind: books
+comparison_title: 初学者向け教材セット3選（比較）
+price_disclaimer: 価格·在庫は執筆時点（2026-06-15）のAmazon税込参考です。購入前に必ず販売ページで最新版を確認してください。
+products:
+- rank: 1
+  offer_type: book
+  name: TAC2冊セット（基本テキスト+項目別過去8年）
+  publisher: TAC出版
+  edition: 2026年度版
+  price_yen: 6050
+  price_label: 約6,050円（2冊合計·税込参考）
+  price_note: テキスト3,190円+問題集2,860円·送料別
+  pages: 860
+  format: B5判×2冊
+  asin: '4300120277'
+  image_file: kangyou-book-4300120277.webp
+  amazon_url: https://www.amazon.co.jp/dp/4300120277/ref=nosim?tag=ue083093-22
+  workbook_name: 2026年度版 管理業務主任者 項目別過去8年問題集
+  workbook_amazon_url: https://www.amazon.co.jp/dp/4300120285/ref=nosim?tag=ue083093-22
+  for_who: 管業初受験でTAC系列の縦串を揃えたい人
+  highlights:
+  - 基本テキストと過去8年の章·項目対応が取りやすい
+  - 3セットの中で合計予算を抑えやすい
+  - 5出題分野を丁寧に1周する初学者向け
+- rank: 2
+  offer_type: book
+  name: Wマスター2冊セット（テキスト+過去問集）
+  publisher: Wマスター
+  edition: 2026年度版
+  price_yen: 8030
+  price_label: 約8,030円（2冊合計·税込参考）
+  price_note: テキスト3,630円+過去問4,400円·送料別
+  pages: 0
+  format: B5判×2冊
+  asin: 484715343X
+  image_file: kangyou-book-484715343x.webp
+  amazon_url: https://www.amazon.co.jp/dp/484715343X/ref=nosim?tag=ue083093-22
+  workbook_name: 2026年度版 Wマスター過去問集
+  workbook_amazon_url: https://www.amazon.co.jp/dp/4847153448/ref=nosim?tag=ue083093-22
+  for_who: マン管併用·解説厚めの2冊を縦串で揃えたい人
+  highlights:
+  - Wマスターテキストと過去問の章立て相性がよい
+  - マン管合格者の45問演習にも使い分けやすい
+  - 適正化法·委託契約の横断整理に向く
+- rank: 3
+  offer_type: book
+  name: LEC出る順2冊セット（速習テキスト+分野別過去問）
+  publisher: LEC
+  edition: 2026年度版
+  price_yen: 7150
+  price_label: 約7,150円（2冊合計·税込参考）
+  price_note: テキスト4,400円+過去問2,750円·送料別
+  pages: 0
+  format: B5判×2冊
+  asin: '4844974314'
+  image_file: kangyou-book-4844974314.webp
+  amazon_url: https://www.amazon.co.jp/dp/4844974314/ref=nosim?tag=ue083093-22
+  workbook_name: 2026年版 出る順管理業務主任者 分野別過去問題集
+  workbook_amazon_url: https://www.amazon.co.jp/dp/4844974321/ref=nosim?tag=ue083093-22
+  for_who: 論点整理から分野別演習へ進みたい人
+  highlights:
+  - 出る順テキストと分野別過去問の縦串が明確
+  - 週15問の分野別 drill と相性がよい
+  - TAC·Wマスターとの比較選択肢
+related_links:
+- study-plan:学習計画
+- study-plan-beginner:初学者向け学習計画
+- affiliate-textbooks-recommend:おすすめテキスト
+- affiliate-problem-books:おすすめ問題集
+- textbook-selection:テキストの選び方
+- pass-score:合格基準
+operator_note: Amazon tag=ue083093-22。6 ASIN URL確定。合計 6,050 / 8,030 / 7,150円（税込参考）。
