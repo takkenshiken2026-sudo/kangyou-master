@@ -278,6 +278,38 @@
       "legacyGlossaryCat": "law"
     }
   ],
+  "guideIndexPicks": {
+    "title": "おすすめの教材",
+    "lead": "2026年度版の比較記事から、テキスト・問題集の選び方へ。",
+    "leadsByHub": {
+      "articles": "2026年度版の比較記事から、テキスト・問題集の選び方へ。",
+      "terms": "用語暗記と併用するテキスト・問題集の比較記事へ。",
+      "q": "無料演習と併用するテキスト・問題集の比較記事へ。"
+    },
+    "layout": "grid-2",
+    "items": [
+      {
+        "kind": "textbook",
+        "kindLabel": "テキスト",
+        "title": "管業おすすめテキスト3選【2026年度版】",
+        "description": "TAC基本テキスト·LEC出る順速習·Wマスターテキストを比較。5出題分野の章立てと週次計画への組み込み方を解説します。",
+        "href": "affiliate-textbooks-recommend/",
+        "cta": "3冊を比較する",
+        "image": "images/affiliate/kangyou-book-4300120277.webp",
+        "imageAlt": "2026年度版 管理業務主任者 基本テキスト"
+      },
+      {
+        "kind": "problem-book",
+        "kindLabel": "問題集",
+        "title": "管業おすすめ問題集3選【2026年度版】",
+        "description": "TAC項目別過去8年·LEC分野別過去問·Wマスター過去問集の3冊を比較。テキスト読了後の演習1冊の選び方をまとめます。",
+        "href": "affiliate-problem-books/",
+        "cta": "3冊を比較する",
+        "image": "images/affiliate/kangyou-book-4300120285.webp",
+        "imageAlt": "2026年度版 管理業務主任者 項目別過去8年問題集"
+      }
+    ]
+  },
   "externalLinks": [
     {
       "label": "管理業務主任者試験センター（公式）",
