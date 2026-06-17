@@ -19,6 +19,11 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from tools.q_content_quality import is_placeholder_explanation  # noqa: E402
+
 DEFAULT_CSV = ROOT / "data" / "past_questions.csv"
 CIRC = "①②③④⑤"
 MIN_WRONG_NOTE_LEN = 36
@@ -390,8 +395,8 @@ def combo_choice_note(n: int, opt: str, exp: str, correct: int, correct_opt: str
         return f"（{n}）の組合せ「{opt}」について：{hits[0]}"
     correct_letters = "".join(re.findall(r"[A-E]", correct_opt))
     return (
-        f"（{n}）「{opt}」は、作業主任者の選任が必要な作業の組合せ（{correct_letters}）を"
-        f"含んでいません。解説のとおり、該当作業と非該当作業の区別を確認してください。"
+        f"（{n}）「{opt}」は、正答（{correct}）「{correct_opt[:48]}…」と異なる組合せです。"
+        f"解説のとおり、各肢の要件（{correct_letters or '正答側'}）との対応を確認してください。"
     )
 
 
@@ -647,9 +652,8 @@ def build_row_fields(row: dict) -> tuple[str, str, str]:
         return "", "", norm(row.get("explanation_summary")), pt
 
     exp = norm(row.get("explanation"))
-    if not exp:
-        cat = norm(row.get("category"))
-        return "", "", "", CATEGORY_STUDY_HINTS.get(cat, "")
+    if not exp or is_placeholder_explanation(exp):
+        return "", "", "", ""
 
     stem = norm(row.get("stem"))
     inappropriate = stem_asks_inappropriate(stem)

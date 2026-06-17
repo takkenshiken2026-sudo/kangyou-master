@@ -16,10 +16,31 @@ _KANA_BRANCH_ORDER = "アイウエオ"
 _DEMO_STEM_RE = re.compile(
     r"Sample試験|テンプレートの使い方|生成済みJS|CSV.*build_all|列名は自由|ドメイン設定は不要"
 )
+_PLACEHOLDER_EXPLANATION_RE = re.compile(
+    r"^（解説は未入力です。）$|^解説は未入力|^（解説なし）$|^TBD$|^TODO$"
+)
+
+# 管理業務主任者サイトで他資格解説テンプレが混入したときの ERROR 用
+KANGYOU_CROSS_EXAM_PHRASES = (
+    "作業主任者",
+    "有機溶剤",
+    "ストレスチェック",
+    "管理監督者",
+    "こころの耳",
+    "MHM検定",
+)
 
 
 def norm(value: object) -> str:
     return (value or "").strip() if value is not None else ""
+
+
+def is_placeholder_explanation(text: object) -> bool:
+    """執筆前プレースホルダ。派生解説（他肢・要約）を付けてはいけない。"""
+    raw = norm(text)
+    if not raw:
+        return True
+    return bool(_PLACEHOLDER_EXPLANATION_RE.match(raw))
 
 
 def dedupe_prose(text: str) -> str:

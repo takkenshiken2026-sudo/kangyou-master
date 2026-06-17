@@ -368,8 +368,25 @@ def main() -> int:
     ap.add_argument("--past", type=Path, default=DEFAULT_PAST)
     ap.add_argument("--practice", type=Path, default=DEFAULT_PRACTICE)
     ap.add_argument("--ichimon", type=Path, default=DEFAULT_ICHIMON)
+    ap.add_argument(
+        "--from-imported",
+        action="store_true",
+        help="data/imported/ の最新アーカイブ CSV を入力に使う（Desktop ソースが無いとき）",
+    )
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
+
+    if args.from_imported:
+        imported = sorted(ARCHIVE.glob("kangyou_past_*.csv"))
+        imp_practice = sorted(ARCHIVE.glob("kangyou_practice_*.csv"))
+        imp_ichimon = sorted(ARCHIVE.glob("kangyou_ichimon_*.csv"))
+        if not imported or not imp_practice or not imp_ichimon:
+            print("data/imported/ に kangyou_* アーカイブがありません", file=sys.stderr)
+            return 1
+        args.past = imported[-1]
+        args.practice = imp_practice[-1]
+        args.ichimon = imp_ichimon[-1]
+        print(f"from-imported: past={args.past.name} practice={args.practice.name} ichimon={args.ichimon.name}")
 
     for p in (args.past, args.practice, args.ichimon):
         if not p.is_file():

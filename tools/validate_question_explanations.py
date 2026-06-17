@@ -14,10 +14,12 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from tools.q_content_quality import (  # noqa: E402
+    KANGYOU_CROSS_EXAM_PHRASES,
     build_ichimon_primary_ids,
     dedupe_prose,
     is_demo_past_question_row,
     is_demo_practice_question_row,
+    is_placeholder_explanation,
 )
 from tools.q_explanation import (  # noqa: E402
     norm,
@@ -25,7 +27,7 @@ from tools.q_explanation import (  # noqa: E402
     question_ask_mode,
     _parrots_stem,
 )
-from tools.site_config import is_template_site, excluded_past_exam_years  # noqa: E402
+from tools.site_config import is_template_site, excluded_past_exam_years, load_config  # noqa: E402
 
 DATA = ROOT / "data"
 
@@ -36,6 +38,56 @@ def _warn(msg: str) -> None:
 
 def _error(msg: str) -> None:
     print(f"[ERROR] {msg}")
+
+
+def _is_kangyou_site() -> bool:
+    try:
+        cfg = load_config()
+    except Exception:
+        return False
+    exam = norm(cfg.get("examName"))
+    brand = norm(cfg.get("brandName"))
+    return "管理業務主任者" in exam or "管業" in brand
+
+
+def audit_past_provenance() -> tuple[int, int]:
+    """未入力解説への派生列付与・他資格フレーズ混入を ERROR。"""
+    path = DATA / "past_questions.csv"
+    if not path.is_file():
+        return 0, 0
+    errs = warns = 0
+    kangyou = _is_kangyou_site()
+    cross_phrases = KANGYOU_CROSS_EXAM_PHRASES if kangyou else ()
+    with path.open(encoding="utf-8-sig", newline="") as f:
+        rows = list(csv.DictReader(f))
+    for idx, row in enumerate(rows, start=2):
+        exp = norm(row.get("explanation"))
+        derived_parts = [
+            norm(row.get(c))
+            for c in (
+                "explanation_summary",
+                "explanation_correct",
+                "explanation_choices",
+                "explanation_point",
+            )
+        ]
+        if is_placeholder_explanation(exp) and any(derived_parts):
+            errs += 1
+            _error(
+                f"{path.name}:{idx} 解説未入力なのに explanation_summary/correct/choices が存在"
+            )
+            continue
+        if kangyou and any(derived_parts):
+            combined = " ".join(derived_parts)
+            for phrase in cross_phrases:
+                if phrase in combined:
+                    errs += 1
+                    _error(f"{path.name}:{idx} 他資格フレーズ混入: {phrase!r}")
+                    break
+        if exp and not is_placeholder_explanation(exp) and len(exp) < 40:
+            warns += 1
+            _warn(f"{path.name}:{idx} 解説が40字未満（要確認）")
+    return errs, warns
 
 
 def audit_past() -> tuple[int, int]:
@@ -137,7 +189,7 @@ def audit_ichimon() -> tuple[int, int]:
 
 def main() -> int:
     total_err = total_warn = 0
-    for fn in (audit_past, audit_practice, audit_ichimon):
+    for fn in (audit_past_provenance, audit_past, audit_practice, audit_ichimon):
         e, w = fn()
         total_err += e
         total_warn += w

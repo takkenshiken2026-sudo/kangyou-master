@@ -10,6 +10,7 @@ from tools.q_content_quality import (
     clean_ichimon_correct_body,
     dedupe_prose,
     ichimon_body_already_states_truth,
+    is_placeholder_explanation,
     strip_four_choice_leak,
 )
 
@@ -1193,6 +1194,8 @@ def collapse_wrong_choice_items(
 
 
 def build_choice_commentary(page: dict, row: dict) -> list[tuple[int, str, str]]:
+    if is_placeholder_explanation(row.get("explanation")):
+        return []
     mode = _extended_question_mode(page, row)
     if mode in {"combination", "truefalse_group"}:
         return []
@@ -1216,6 +1219,8 @@ def build_choice_commentary(page: dict, row: dict) -> list[tuple[int, str, str]]
 
 def build_explanation_html(page: dict, row: dict) -> str:
     base = norm(row.get("explanation")) or "（解説は未入力です。）"
+    if is_placeholder_explanation(base):
+        return f'<div class="q-exp"><p>{text_to_html(base)}</p></div>'
     if page.get("is_invalidated") or page.get("correct") is None:
         return f'<div class="q-exp"><p>{text_to_html(base)}</p></div>'
 
