@@ -51,6 +51,7 @@ from tools.build_past_question_pages import (  # noqa: E402
     parse_correct,
     parse_tags,
     public_url,
+    question_quiz_jsonld,
     rel_css,
     rel_href,
     rel_theme_css,
@@ -417,6 +418,9 @@ def build_practice_question_html(
             },
         ],
     }
+    quiz_ld = question_quiz_jsonld(page, heading)
+    if quiz_ld:
+        json_ld["@graph"].append(quiz_ld)
     site_header = site_page_header(rel_path, current="practice")
     site_breadcrumb = breadcrumb_html(
         rel_path,

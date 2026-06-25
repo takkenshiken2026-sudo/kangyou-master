@@ -639,6 +639,39 @@ def page_dict(row: dict, line_no: int) -> dict:
     }
 
 
+def question_quiz_jsonld(page: dict, heading: str) -> dict | None:
+    """過去問・実践演習ページ用の Quiz（Education Q&A）構造化データを返す。
+
+    可視コンテンツ（問題文・選択肢・正答）と一致する場合のみ生成する。
+    出題無効・正答が単一選択肢に定まらない設問では None を返す。
+    """
+    opts = page.get("opts") or []
+    correct = page.get("correct")
+    stem = norm(page.get("stem_plain"))
+    if page.get("is_invalidated") or correct is None or not stem:
+        return None
+    # correct は 1 始まりの選択肢番号のときだけ acceptedAnswer を確定できる
+    if not isinstance(correct, int) or not (1 <= correct <= len(opts)) or len(opts) < 2:
+        return None
+    suggested = [
+        {"@type": "Answer", "position": i, "text": o}
+        for i, o in enumerate(opts)
+        if i != correct - 1
+    ]
+    return {
+        "@type": "Quiz",
+        "name": heading,
+        "about": {"@type": "Thing", "name": exam_name()},
+        "hasPart": {
+            "@type": "Question",
+            "eduQuestionType": "Multiple choice",
+            "text": stem,
+            "acceptedAnswer": {"@type": "Answer", "text": opts[correct - 1]},
+            "suggestedAnswer": suggested,
+        },
+    }
+
+
 def build_question_html(
     page: dict,
     row: dict,
@@ -717,6 +750,9 @@ def build_question_html(
             },
         ],
     }
+    quiz_ld = question_quiz_jsonld(page, heading)
+    if quiz_ld:
+        json_ld["@graph"].append(quiz_ld)
 
     site_header = site_page_header(
         rel_path,
