@@ -19,7 +19,12 @@ from tools.seo_utils import (  # noqa: E402
     sitemap_loc_rel,
 )
 from tools.site_config import clean_origin  # noqa: E402
-from tools.sitemap_utils import SitemapEntry, iso_date, iso_from_mtime, write_sitemap  # noqa: E402
+from tools.sitemap_utils import (  # noqa: E402
+    SitemapEntry,
+    iso_date,
+    lastmod_for,
+    write_sitemap,
+)
 
 GUIDE_CSV = ROOT / "data" / "guide_articles.csv"
 GLOSSARY_CSV = ROOT / "data" / "glossary_terms.csv"
@@ -150,7 +155,7 @@ def add_file(
     path = ROOT / rel
     if not path.is_file():
         return
-    mod = csv_dates.get(rel) or lastmod or iso_from_mtime(path)
+    mod = csv_dates.get(rel) or lastmod or lastmod_for(path, ROOT)
     loc_rel = sitemap_loc_rel(rel)
     entries.append(SitemapEntry(loc=f"{base}/{loc_rel}", lastmod=mod))
 
@@ -160,7 +165,7 @@ def add_home(entries: list[SitemapEntry], base: str) -> None:
     path = ROOT / "index.html"
     if not path.is_file() or not should_include_rel("index.html"):
         return
-    entries.append(SitemapEntry(loc=f"{base}/", lastmod=iso_from_mtime(path)))
+    entries.append(SitemapEntry(loc=f"{base}/", lastmod=lastmod_for(path, ROOT)))
 
 
 def collect_entries(base: str) -> list[SitemapEntry]:

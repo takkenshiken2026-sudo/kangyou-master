@@ -23,6 +23,10 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          # sitemap.xml の lastmod を各ファイルの最終コミット日から算出するため
+          # 全履歴が必要（shallow clone だと全URLがビルド日に化ける）
+          fetch-depth: 0
 
       - uses: actions/configure-pages@v5
 
