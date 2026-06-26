@@ -10,6 +10,7 @@ import json
 import re
 import shutil
 import sys
+from functools import lru_cache
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -184,6 +185,38 @@ def merged_url_labels(
     return {**site_url_labels_from_articles(by_slug), **article_url_labels(article)}
 
 
+@lru_cache(maxsize=1)
+def _retired_redirects() -> dict[str, str]:
+    """{退役slug: 後継slug}。本文中の退役slug参照を後継へ読み替えるため。"""
+    from tools.build_guide_retire_redirects import load_retired_map  # noqa: WPS433
+
+    return load_retired_map()
+
+
+def _remap_retired_slugs(text: str, slug_titles: dict[str, str]) -> str:
+    """本文の bare 退役slug を、後継slug（公開済みに限る）へ置換する。
+
+    退役記事は noindex の移動中ページなので、参照を後継の公開記事に向け直す。
+    これにより resolver が後継slugを正しく内部リンク化できる。
+    """
+    redirects = _retired_redirects()
+    if not redirects or not text:
+        return text
+    from tools.guide_slug_prose import _SLUG_AFTER, _SLUG_BEFORE  # noqa: WPS433
+
+    # 後継が公開済み（slug_titles に存在）の退役slugのみ対象。長い順で部分一致回避。
+    targets = sorted(
+        (s for s, t in redirects.items() if t in slug_titles and s not in slug_titles),
+        key=len,
+        reverse=True,
+    )
+    if not targets:
+        return text
+    alts = "|".join(re.escape(s) for s in targets)
+    pattern = re.compile(rf"{_SLUG_BEFORE}({alts}){_SLUG_AFTER}")
+    return pattern.sub(lambda m: redirects[m.group(1)], text)
+
+
 def resolve_reader_prose(
     text: str,
     *,
@@ -196,6 +229,7 @@ def resolve_reader_prose(
 ) -> str:
     if not text:
         return text
+    text = _remap_retired_slugs(text, slug_titles)
     labels = prefix_labels if prefix_labels is not None else field_prefix_labels(ROOT)
     return resolve_reader_slug_prose(
         text,

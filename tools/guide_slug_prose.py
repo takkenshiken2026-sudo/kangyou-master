@@ -19,7 +19,9 @@ _BARE_URL_RE = re.compile(rf"https?://{_URL_CHARS}+", re.I)
 _PAREN_URL_RE = re.compile(rf"[（(](https?://{_URL_CHARS}+)[）)]")
 _MD_LINK_RE = re.compile(r"\[[^\]]+\]\([^)]+\)")
 _SLUG_BEFORE = r"(?<![a-z0-9-])"
-_SLUG_AFTER = r"(?![a-z0-9-])"
+# slug 直後が数字でも境界として扱う（例: "subject-breakdown5分野" の slug を解決する）。
+# article slug は数字で終わらないため、数字を境界に含めても誤マッチしない。
+_SLUG_AFTER = r"(?![a-z-])"
 
 
 def slug_link_label(title: str) -> str:
