@@ -686,6 +686,7 @@ def build_question_html(
     heading = page_heading(page)
     title = page_title_seo(page)
     desc = page_meta_description(page)
+    year_disp = _year_display(int(page["year"]), norm(page.get("wareki")))
     context_line = page_context_line(page)
     lead = norm(page.get("stem_plain"))
     # 問題セクション（q-stem）と同一のため q-page-lead は出さない
@@ -745,7 +746,8 @@ def build_question_html(
                 "itemListElement": [
                     {"@type": "ListItem", "position": 1, "name": "トップ", "item": public_url(base_url, "index.html")},
                     {"@type": "ListItem", "position": 2, "name": "過去問一覧", "item": public_url(base_url, "q/index.html")},
-                    {"@type": "ListItem", "position": 3, "name": heading, "item": canonical},
+                    {"@type": "ListItem", "position": 3, "name": year_disp, "item": public_url(base_url, f"q/past/y{page['year']}/index.html")},
+                    {"@type": "ListItem", "position": 4, "name": heading, "item": canonical},
                 ],
             },
         ],
@@ -760,7 +762,12 @@ def build_question_html(
     )
     site_breadcrumb = breadcrumb_html(
         rel_path,
-        [("トップ", "index.html"), ("過去問一覧", "q/index.html"), (heading, None)],
+        [
+            ("トップ", "index.html"),
+            ("過去問一覧", "q/index.html"),
+            (year_disp, f"q/past/y{page['year']}/index.html"),
+            (heading, None),
+        ],
     )
     site_footer = site_page_footer(rel_path, current="q")
     from tools.q_page_seo import study_modes_note_html
@@ -862,6 +869,12 @@ def build_q_index(pages: list[dict], base_url: str) -> str:
         jump_label = year_label or (f"{y}年" if y <= 9999 else sample["wareki"])
         expanded = "true" if y in open_years else "false"
         collapsed = "" if y in open_years else " is-collapsed"
+        hub_link = (
+            f'<a class="q-index-year-hub-link" href="past/y{y}/index.html">'
+            f'{html.escape(jump_label)}の一覧ページ →</a>'
+            if y <= 9999
+            else ""
+        )
         year_jump_links.append(
             f'<a class="q-index-filter-opt q-index-year-link" href="#year-{y}" data-year="{y}">'
             f'{html.escape(jump_label)}<span class="q-index-filter-count">（{len(by_year[y])}）</span></a>'
@@ -876,6 +889,7 @@ def build_q_index(pages: list[dict], base_url: str) -> str:
             f"</div>"
             f'<span class="q-index-year-count" data-total="{len(by_year[y])}">{len(by_year[y])}問</span>'
             f"</div>"
+            f'<p class="q-index-year-hub">{hub_link}</p>'
             f'<div class="q-year-table-wrap" id="year-body-{y}">'
             f'<table class="q-year-table" aria-labelledby="year-{y}-heading">'
             "<thead><tr>"
@@ -1020,6 +1034,295 @@ def build_q_index(pages: list[dict], base_url: str) -> str:
 """
 
 
+def _year_display(year: int, wareki: str) -> str:
+    """パンくず・見出し用の年度表記。"""
+    if year > 9999:
+        return wareki or f"{year}"
+    return f"{wareki}（{year}年度）" if wareki else f"{year}年度"
+
+
+def _year_hub_row(page: dict) -> str:
+    """年度ハブ用の問題行（リンクは年度ディレクトリからの相対）。"""
+    href_rel = f"q{page['qno']:02d}/index.html"
+    label = f"第{page['qno']}問"
+    preview = stem_preview(page.get("stem_plain") or "")
+    preview_cell = (
+        html.escape(preview)
+        if preview
+        else '<span class="q-year-table-desc--empty">問題文は各ページで確認できます</span>'
+    )
+    return (
+        '<tr class="q-year-table-row" tabindex="0"'
+        f' data-app-id="{page["app_id"]}"'
+        f' data-href="{html.escape(href_rel, quote=True)}"'
+        f' data-category="{html.escape(page["category"], quote=True)}">'
+        f'<td class="q-year-table-no" data-label="問"><a href="{html.escape(href_rel)}">{html.escape(label)}</a></td>'
+        f'<td class="q-year-table-cat" data-label="分野">{html.escape(page["category"])}</td>'
+        f'<td class="q-year-table-desc" data-label="問題文">{preview_cell}</td>'
+        "</tr>"
+    )
+
+
+def build_year_hub_html(
+    year: int,
+    year_pages: list[dict],
+    base_url: str,
+    *,
+    prev_year: int | None = None,
+    next_year: int | None = None,
+) -> str:
+    """年度別の過去問一覧ハブ（q/past/yXXXX/index.html）。"""
+    from tools.site_config import brand_name
+
+    year_pages = sorted(year_pages, key=lambda p: p["qno"])
+    wareki = norm(year_pages[0].get("wareki"))
+    year_disp = _year_display(year, wareki)
+    n = len(year_pages)
+    rel_path = Path(f"q/past/y{year}/index.html")
+    canonical = public_url(base_url, f"q/past/y{year}/index.html")
+    heading = f"{exam_name()} 過去問 {year_disp}"
+    title = f"{heading} 全{n}問一覧｜{brand_name()}"
+    desc = (
+        f"{exam_name()}の{year_disp}本試験 全{n}問の一覧です。"
+        f"各問の問題文・4択・正答・詳しい解説ページへ移動できます。"
+        f"年度ごとの出題傾向の確認や過去問演習にご活用ください。"
+    )
+    rows_html = "".join(_year_hub_row(p) for p in year_pages)
+
+    nav_parts: list[str] = []
+    if prev_year is not None:
+        nav_parts.append(
+            f'<a class="related-link" href="../y{prev_year}/index.html">← 前の年度</a>'
+        )
+    nav_parts.append(f'<a class="related-link" href="../index.html">年度別一覧へ戻る</a>')
+    if next_year is not None:
+        nav_parts.append(
+            f'<a class="related-link" href="../y{next_year}/index.html">次の年度 →</a>'
+        )
+    nav_html = (
+        '<nav class="q-year-nav" aria-label="年度の移動">'
+        + " ".join(nav_parts)
+        + "</nav>"
+    )
+
+    json_ld = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "CollectionPage",
+                "@id": canonical + "#webpage",
+                "url": canonical,
+                "name": title,
+                "description": desc,
+                "inLanguage": "ja-JP",
+                "mainEntity": {
+                    "@type": "ItemList",
+                    "numberOfItems": n,
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": p["qno"],
+                            "url": public_url(
+                                base_url, f"q/past/y{year}/q{p['qno']:02d}/index.html"
+                            ),
+                            "name": f"第{p['qno']}問",
+                        }
+                        for p in year_pages
+                    ],
+                },
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "トップ", "item": public_url(base_url, "index.html")},
+                    {"@type": "ListItem", "position": 2, "name": "過去問一覧", "item": public_url(base_url, "q/index.html")},
+                    {"@type": "ListItem", "position": 3, "name": year_disp, "item": canonical},
+                ],
+            },
+        ],
+    }
+
+    site_header = site_page_header(rel_path, current="q")
+    site_breadcrumb = breadcrumb_html(
+        rel_path,
+        [("トップ", "index.html"), ("過去問一覧", "q/index.html"), (year_disp, None)],
+    )
+    site_footer = site_page_footer(rel_path, current="q")
+    css_href = rel_css(rel_path)
+    theme_href = rel_theme_css(rel_path)
+    intro = (
+        f"{year_disp}に実施された{exam_name()}本試験の全{n}問をまとめた一覧です。"
+        f"気になる問題を選ぶと、問題文・選択肢・正答・解説を確認できます。"
+        f"過去問の使い方は<a class=\"related-link\" href=\"{html.escape(rel_href(rel_path, 'articles/past-question-strategy/'))}\">過去問の解き方</a>、"
+        f"学習の進め方は<a class=\"related-link\" href=\"{html.escape(rel_href(rel_path, 'articles/study-plan/'))}\">学習計画</a>もご覧ください。"
+    )
+
+    return f"""<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+{seo_brand_asset_tags(rel_path)}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{html.escape(title)}</title>
+<meta name="description" content="{html.escape(desc)}">
+{ROBOTS_INDEX_FOLLOW}
+<link rel="canonical" href="{html.escape(canonical)}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{html.escape(title)}">
+<meta property="og:description" content="{html.escape(desc)}">
+<meta property="og:url" content="{html.escape(canonical)}">
+{HEAD_FONTS}
+<link rel="stylesheet" href="{html.escape(css_href)}">
+<link rel="stylesheet" href="{html.escape(theme_href)}">
+<script type="application/ld+json">
+{json.dumps(json_ld, ensure_ascii=False, indent=2)}
+</script>
+</head>
+<body class="{shell_body_class('q-static-page')}">
+{site_page_wrap_open()}
+{site_header}
+<main class="q-static-main">
+  {site_breadcrumb}
+  <h1 class="q-h1">{html.escape(heading)}</h1>
+  <p class="q-page-lead">{intro}</p>
+  {nav_html}
+  <section class="q-block" aria-labelledby="q-year-list-h">
+    <h2 id="q-year-list-h" class="q-h2">{html.escape(year_disp)}の問題一覧（全{n}問）</h2>
+    <div class="q-year-table-wrap">
+      <table class="q-year-table" aria-labelledby="q-year-list-h">
+        <thead><tr>
+          <th scope="col">問</th><th scope="col">分野</th>
+          <th scope="col">問題文（抜粋）</th>
+        </tr></thead>
+        <tbody>{rows_html}</tbody>
+      </table>
+    </div>
+  </section>
+  {nav_html}
+  <p class="q-app-link"><a href="{html.escape(rel_href(rel_path, 'q/index.html'))}">過去問一覧（全年度）へ</a></p>
+</main>
+{site_footer}
+{site_page_wrap_close()}
+</body>
+</html>
+"""
+
+
+def build_past_root_hub_html(pages_by_year: dict[int, list[dict]], base_url: str) -> str:
+    """年度別インデックス（q/past/index.html）。各年度ハブへの導線。"""
+    from tools.site_config import brand_name
+
+    years = sorted(pages_by_year.keys(), reverse=True)
+    rel_path = Path("q/past/index.html")
+    canonical = public_url(base_url, "q/past/index.html")
+    oldest = sorted(pages_by_year.keys())[0]
+    newest = years[0]
+    old_wareki = norm(pages_by_year[oldest][0].get("wareki"))
+    new_wareki = norm(pages_by_year[newest][0].get("wareki"))
+    heading = f"{exam_name()} 過去問 年度別一覧"
+    title = f"{heading}（{old_wareki}〜{new_wareki}）｜{brand_name()}"
+    desc = (
+        f"{exam_name()}の過去問を年度別にまとめたインデックスです。"
+        f"{old_wareki}から{new_wareki}まで、各年度の全問一覧ページへ移動できます。"
+    )
+
+    cards = []
+    for y in years:
+        wareki = norm(pages_by_year[y][0].get("wareki"))
+        year_disp = _year_display(y, wareki)
+        n = len(pages_by_year[y])
+        cards.append(
+            f'<li class="q-year-index-item">'
+            f'<a class="related-link" href="y{y}/index.html">{html.escape(year_disp)}</a>'
+            f'<span class="q-year-index-count">（全{n}問）</span></li>'
+        )
+    cards_html = "".join(cards)
+
+    json_ld = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "CollectionPage",
+                "@id": canonical + "#webpage",
+                "url": canonical,
+                "name": title,
+                "description": desc,
+                "inLanguage": "ja-JP",
+                "mainEntity": {
+                    "@type": "ItemList",
+                    "numberOfItems": len(years),
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": i + 1,
+                            "url": public_url(base_url, f"q/past/y{y}/index.html"),
+                            "name": _year_display(y, norm(pages_by_year[y][0].get("wareki"))),
+                        }
+                        for i, y in enumerate(years)
+                    ],
+                },
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "トップ", "item": public_url(base_url, "index.html")},
+                    {"@type": "ListItem", "position": 2, "name": "過去問一覧", "item": public_url(base_url, "q/index.html")},
+                    {"@type": "ListItem", "position": 3, "name": "年度別一覧", "item": canonical},
+                ],
+            },
+        ],
+    }
+
+    site_header = site_page_header(rel_path, current="q")
+    site_breadcrumb = breadcrumb_html(
+        rel_path,
+        [("トップ", "index.html"), ("過去問一覧", "q/index.html"), ("年度別一覧", None)],
+    )
+    site_footer = site_page_footer(rel_path, current="q")
+    css_href = rel_css(rel_path)
+    theme_href = rel_theme_css(rel_path)
+
+    return f"""<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+{seo_brand_asset_tags(rel_path)}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{html.escape(title)}</title>
+<meta name="description" content="{html.escape(desc)}">
+{ROBOTS_INDEX_FOLLOW}
+<link rel="canonical" href="{html.escape(canonical)}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{html.escape(title)}">
+<meta property="og:description" content="{html.escape(desc)}">
+<meta property="og:url" content="{html.escape(canonical)}">
+{HEAD_FONTS}
+<link rel="stylesheet" href="{html.escape(css_href)}">
+<link rel="stylesheet" href="{html.escape(theme_href)}">
+<script type="application/ld+json">
+{json.dumps(json_ld, ensure_ascii=False, indent=2)}
+</script>
+</head>
+<body class="{shell_body_class('q-static-page')}">
+{site_page_wrap_open()}
+{site_header}
+<main class="q-static-main">
+  {site_breadcrumb}
+  <h1 class="q-h1">{html.escape(heading)}</h1>
+  <p class="q-page-lead">{html.escape(desc)}</p>
+  <section class="q-block" aria-labelledby="q-year-index-h">
+    <h2 id="q-year-index-h" class="q-h2">年度を選ぶ</h2>
+    <ul class="q-year-index-list">{cards_html}</ul>
+  </section>
+  <p class="q-app-link"><a href="{html.escape(rel_href(rel_path, 'q/index.html'))}">過去問一覧（検索・絞り込み）へ</a></p>
+</main>
+{site_footer}
+{site_page_wrap_close()}
+</body>
+</html>
+"""
+
+
 def main() -> int:
     import argparse
 
@@ -1066,22 +1369,24 @@ def main() -> int:
     q_index.parent.mkdir(parents=True, exist_ok=True)
     q_index.write_text(build_q_index(pages, base), encoding="utf-8")
 
-    try:
-        from tools.past_question_seo import build_past_root_hub_html  # noqa: WPS433
-        from tools.site_config import brand_name, clean_origin, exam_name
-
-        years = sorted({int(p["year"]) for p in pages})
-        past_hub = ROOT / "q" / "past" / "index.html"
-        past_hub.parent.mkdir(parents=True, exist_ok=True)
-        past_hub.write_text(
-            build_past_root_hub_html(
-                years, pages, clean_origin(), brand_name(), exam_name()
-            ),
+    # 年度別ハブ（q/past/yXXXX/index.html）と年度別インデックス（q/past/index.html）
+    pages_by_year: dict[int, list[dict]] = {}
+    for p in pages:
+        pages_by_year.setdefault(int(p["year"]), []).append(p)
+    years_sorted = sorted(pages_by_year.keys())
+    for idx, y in enumerate(years_sorted):
+        prev_y = years_sorted[idx - 1] if idx > 0 else None
+        next_y = years_sorted[idx + 1] if idx < len(years_sorted) - 1 else None
+        year_hub = ROOT / "q" / "past" / f"y{y}" / "index.html"
+        year_hub.parent.mkdir(parents=True, exist_ok=True)
+        year_hub.write_text(
+            build_year_hub_html(y, pages_by_year[y], base, prev_year=prev_y, next_year=next_y),
             encoding="utf-8",
         )
-        print(f"Wrote {past_hub}")
-    except ImportError:
-        pass
+    past_hub = ROOT / "q" / "past" / "index.html"
+    past_hub.parent.mkdir(parents=True, exist_ok=True)
+    past_hub.write_text(build_past_root_hub_html(pages_by_year, base), encoding="utf-8")
+    print(f"Wrote {len(years_sorted)} year hubs + {past_hub}")
 
     # sitemap.xml は tools/build_sitemap.py が生成
 
