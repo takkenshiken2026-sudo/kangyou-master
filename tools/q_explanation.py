@@ -101,6 +101,27 @@ def question_ask_mode(stem: str) -> str:
     return "unknown"
 
 
+def question_polarity(stem: str) -> str:
+    """設問の極性（旧API互換）: pick_correct / inverted / その他。
+
+    question_ask_mode を旧来の呼称へマップする。
+    - most_correct      → pick_correct（正しいものを選ぶ）
+    - least_appropriate → inverted（誤り・不適切なものを選ぶ）
+    - それ以外          → そのまま（truefalse_mark / unknown）
+    """
+    mode = question_ask_mode(stem)
+    if mode == "most_correct":
+        return "pick_correct"
+    if mode == "least_appropriate":
+        return "inverted"
+    return mode
+
+
+def is_inverted_polarity(stem: str) -> bool:
+    """「誤り・不適切なものを選ぶ」逆方向設問なら True。"""
+    return question_ask_mode(stem) == "least_appropriate"
+
+
 def _choice_sounds_positive(text: str) -> bool:
     t = norm(text)
     if not t:
@@ -974,7 +995,9 @@ def build_study_hint(page: dict, row: dict) -> str:
     return dedupe_prose("".join(parts)) if parts else DEFAULT_STUDY_HINT
 
 
-def split_legacy_explanation(exp: str) -> tuple[str, str]:
+def split_legacy_explanation(exp: str, *, stem: str | None = None) -> tuple[str, str]:
+    # stem は旧API互換のため受け取るが、現行の分割ロジックでは未使用。
+    del stem
     m = re.match(r"^正解は\s*(\d+)\s*です[。.]?\s*(.*)$", exp, re.DOTALL)
     if m:
         body = norm(m.group(2)) or exp

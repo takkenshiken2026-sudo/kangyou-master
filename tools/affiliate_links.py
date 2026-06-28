@@ -100,6 +100,23 @@ def is_affiliate_article(row: dict[str, str]) -> bool:
     return AFFILIATE_TAG in tags
 
 
+def is_internal_affiliate_article(row: dict[str, str]) -> bool:
+    """内部誘導型のアフィリエイト記事か。
+
+    自前の外部ASPリンクを持たず、related_links で別の内部アフィリエイト記事
+    （slug が ``affiliate-`` で始まる）へ誘導するタイプを指す。こうした記事は
+    内部のアフィリエイト導線に依存するため、外部リンク欠落チェック
+    （affiliate_needs_links）の対象から除外する。
+    """
+    if not is_affiliate_article(row):
+        return False
+    for item in split_semicolon(row.get("related_links", "")):
+        target, _label = parse_related_link_token(item)
+        if norm(target).startswith("affiliate-"):
+            return True
+    return False
+
+
 def affiliate_article_is_buildable(
     row: dict[str, str],
     *,
