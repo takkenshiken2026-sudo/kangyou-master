@@ -1,0 +1,335 @@
+{
+  "brandName": "管業マスター",
+  "brandMark": "管業",
+  "examName": "管理業務主任者試験",
+  "siteOrigin": "https://kangyou-master.jp",
+  "contactUrl": "https://forms.gle/FFPAFnijLYYAkyW1A",
+  "ga4MeasurementId": "G-K7WTT45NJ8",
+  "copyright": "",
+  "footerDisclaimer": "学習用のコンテンツです。出題・法令の正確な内容は国土交通省・管理業務主任者試験センター等の公式情報で必ず確認してください。",
+  "officialOrganization": "管理業務主任者試験センター",
+  "seoCopy": {
+    "mockExam": "模試・模擬試験",
+    "studyModes": "過去問・実践演習・一問一答"
+  },
+  "theme": {
+    "accent": "#1a5f7a",
+    "accentText": "#ffffff",
+    "background": "#f4f4f5",
+    "surface": "#ffffff",
+    "surfaceAlt": "#f4f4f5",
+    "text": "#121212",
+    "textMuted": "#555555",
+    "border": "rgba(0, 0, 0, 0.09)",
+    "radius": "10px",
+    "navWidth": "1080px",
+    "contentWidth": "1080px"
+  },
+  "navigation": {
+    "header": [
+      {
+        "label": "トップ",
+        "href": "index.html",
+        "key": "top"
+      },
+      {
+        "label": "このサイトについて",
+        "href": "about.html",
+        "key": "about"
+      },
+      {
+        "label": "過去問一覧",
+        "href": "q/index.html",
+        "key": "q"
+      },
+      {
+        "label": "用語解説",
+        "href": "terms/index.html",
+        "key": "terms"
+      },
+      {
+        "label": "試験ガイド",
+        "href": "articles/index.html",
+        "key": "articles"
+      },
+      {
+        "label": "関連リンク",
+        "href": "related-sites.html",
+        "key": "related"
+      },
+      {
+        "label": "プライバシー",
+        "href": "privacy.html",
+        "key": "privacy"
+      }
+    ],
+    "footer": [
+      {
+        "label": "トップ",
+        "href": "index.html",
+        "key": "top"
+      },
+      {
+        "label": "このサイトについて",
+        "href": "about.html",
+        "key": "about"
+      },
+      {
+        "label": "過去問一覧",
+        "href": "q/index.html",
+        "key": "q"
+      },
+      {
+        "label": "用語解説",
+        "href": "terms/index.html",
+        "key": "terms"
+      },
+      {
+        "label": "試験ガイド",
+        "href": "articles/index.html",
+        "key": "articles"
+      },
+      {
+        "label": "関連リンク",
+        "href": "related-sites.html",
+        "key": "related"
+      },
+      {
+        "label": "プライバシー",
+        "href": "privacy.html",
+        "key": "privacy"
+      },
+      {
+        "label": "お問い合わせ",
+        "href": "__CONTACT__",
+        "key": "contact"
+      }
+    ]
+  },
+  "guideArticleGenres": [
+    {
+      "id": "overview",
+      "label": "試験概要",
+      "phase": "制度を知る",
+      "style": "overview",
+      "hint": "試験の全体像・公式情報の見方"
+    },
+    {
+      "id": "application",
+      "label": "受験・申込",
+      "phase": "制度を知る",
+      "style": "institution",
+      "hint": "受験資格・日程・申込"
+    },
+    {
+      "id": "pass-stats",
+      "label": "合格・難易度",
+      "phase": "制度を知る",
+      "style": "institution",
+      "hint": "合格率・合格点"
+    },
+    {
+      "id": "exam-scope",
+      "label": "出題・形式",
+      "phase": "制度を知る",
+      "style": "institution",
+      "hint": "出題範囲・科目構成"
+    },
+    {
+      "id": "study-plan",
+      "label": "学習計画",
+      "phase": "学習を設計する",
+      "style": "study",
+      "hint": "学習期間・週間表"
+    },
+    {
+      "id": "self-study",
+      "label": "独学対策",
+      "phase": "学習を設計する",
+      "style": "study",
+      "hint": "独学の進め方・教材選び"
+    },
+    {
+      "id": "past-questions",
+      "label": "過去問活用",
+      "phase": "演習と定着",
+      "style": "practice",
+      "hint": "過去問・一問一答・解き直し"
+    },
+    {
+      "id": "field-study",
+      "label": "分野別対策",
+      "phase": "演習と定着",
+      "style": "practice",
+      "hint": "分野ごとの頻出・整理"
+    },
+    {
+      "id": "glossary-study",
+      "label": "用語ハブ活用法",
+      "phase": "演習と定着",
+      "style": "practice",
+      "hint": "知識ハブ4タブの使い方・回遊（用語の定義記事は書かない）"
+    },
+    {
+      "id": "review-weak",
+      "label": "復習・苦手克服",
+      "phase": "演習と定着",
+      "style": "practice",
+      "hint": "復習サイクル・間違いノート"
+    },
+    {
+      "id": "final-prep",
+      "label": "直前・当日",
+      "phase": "直前と当日",
+      "style": "final",
+      "hint": "直前・当日の確認"
+    },
+    {
+      "id": "cautions",
+      "label": "注意点・更新",
+      "phase": "横断",
+      "style": "meta",
+      "hint": "制度変更・公式確認"
+    }
+  ],
+  "fields": [
+    {
+      "id": "civil",
+      "name": "民法・借地借家法",
+      "aliases": [
+        "民法・借地借家法",
+        "契約・実務"
+      ],
+      "legacyGlossaryCat": "law"
+    },
+    {
+      "id": "kuhyo",
+      "name": "標準管理規約",
+      "aliases": [
+        "標準管理規約",
+        "法令・制度"
+      ],
+      "legacyGlossaryCat": "law"
+    },
+    {
+      "id": "building",
+      "name": "建築・設備",
+      "aliases": [
+        "建築・設備",
+        "設備・その他"
+      ],
+      "legacyGlossaryCat": "limit"
+    },
+    {
+      "id": "condo",
+      "name": "区分所有法",
+      "aliases": [
+        "区分所有法"
+      ],
+      "legacyGlossaryCat": "law"
+    },
+    {
+      "id": "accounting",
+      "name": "会計・税務",
+      "aliases": [
+        "会計・税務"
+      ],
+      "legacyGlossaryCat": "rights"
+    },
+    {
+      "id": "tekisei",
+      "name": "管理適正化法",
+      "aliases": [
+        "管理適正化法"
+      ],
+      "legacyGlossaryCat": "law"
+    },
+    {
+      "id": "hinkaku",
+      "name": "品確法・建替円滑化法等",
+      "aliases": [
+        "品確法・建替円滑化法等"
+      ],
+      "legacyGlossaryCat": "law"
+    },
+    {
+      "id": "cross",
+      "name": "判例・横断総合",
+      "aliases": [
+        "判例・横断総合"
+      ],
+      "legacyGlossaryCat": "limit"
+    },
+    {
+      "id": "itaku",
+      "name": "標準管理委託契約書・指針",
+      "aliases": [
+        "標準管理委託契約書・指針",
+        "標準管理委託契約書"
+      ],
+      "legacyGlossaryCat": "rights"
+    },
+    {
+      "id": "takken",
+      "name": "宅建業法",
+      "aliases": [
+        "宅建業法"
+      ],
+      "legacyGlossaryCat": "law"
+    }
+  ],
+  "guideIndexPicks": {
+    "title": "おすすめの教材セット・テキスト・問題集",
+    "lead": "2026年度版の比較記事から、初学者セット・テキスト・問題集の選び方へ。",
+    "leadsByHub": {
+      "articles": "2026年度版の比較記事から、初学者セット・テキスト・問題集の選び方へ。",
+      "terms": "用語暗記と併用するテキスト・問題集の比較記事へ。",
+      "q": "無料演習と併用する教材セット・問題集の比較記事へ。"
+    },
+    "layout": "grid-3",
+    "items": [
+      {
+        "kind": "textbook",
+        "kindLabel": "初学者セット",
+        "title": "初学者向け教材セット3選【2026年度版】",
+        "description": "TAC基本+過去8年·Wマスター2冊·LEC出る順2冊の3セットを比較。50問120分と5出題分野前提の購入順を解説します。",
+        "href": "affiliate-beginner-material-set/",
+        "cta": "3セットを比較する",
+        "image": "images/affiliate/kangyou-book-4300120277.webp",
+        "imageAlt": "2026年度版 管理業務主任者 基本テキスト"
+      },
+      {
+        "kind": "textbook",
+        "kindLabel": "テキスト",
+        "title": "管業おすすめテキスト3選【2026年度版】",
+        "description": "TAC基本テキスト·LEC出る順速習·Wマスターテキストを比較。5出題分野の章立てと週次計画への組み込み方を解説します。",
+        "href": "affiliate-textbooks-recommend/",
+        "cta": "3冊を比較する",
+        "image": "images/affiliate/kangyou-book-484715343x.webp",
+        "imageAlt": "2026年度版 マンション管理士・管理業務主任者 Wマスターテキスト"
+      },
+      {
+        "kind": "problem-book",
+        "kindLabel": "問題集",
+        "title": "管業おすすめ問題集3選【2026年度版】",
+        "description": "TAC項目別過去8年·LEC分野別過去問·Wマスター過去問集の3冊を比較。テキスト読了後の演習1冊の選び方をまとめます。",
+        "href": "affiliate-problem-books/",
+        "cta": "3冊を比較する",
+        "image": "images/affiliate/kangyou-book-4300120285.webp",
+        "imageAlt": "2026年度版 管理業務主任者 項目別過去8年問題集"
+      }
+    ]
+  },
+  "externalLinks": [
+    {
+      "label": "管理業務主任者試験センター（公式）",
+      "url": "https://www.mankan.or.jp/",
+      "description": "試験日程・要項・合格発表などの公式情報です。"
+    },
+    {
+      "label": "国土交通省（マンション管理関連）",
+      "url": "https://www.mlit.go.jp/",
+      "description": "関連法令・制度情報の参照先です。"
+    }
+  ]
+}
