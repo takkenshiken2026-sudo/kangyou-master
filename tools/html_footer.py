@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
-"""静的 HTML 用フッター（相対パス付き）と GA4 共通タグ。
+"""静的 HTML 用フッター（相対パス付き）と GA4 / AdSense 共通タグ。
 
 - 測定IDを変えるときは GA4_MEASUREMENT_ID と site-analytics.js 内の DEFAULT_MID を揃える。
 - 新規の手書き HTML では </body> 直前に analytics_snippet(Path('相対パス')) と同等の2行を置くか、
   生成ページでは site_page_footer の直後に analytics が付くので head に GA を書かない。
+- AdSense は site-config.json の adsenseClientId を <head> に注入する（adsense_head_snippet）。
 - ヘッダー・フッターは index.html の topnav / site-footer と同型（site-pages.css の site-shell）。
 - ヘッダー・フッターの契約: docs/site-chrome.md（フッター遷移でヘッダー構造が変わらないこと）
 """
@@ -11,9 +12,11 @@
 from __future__ import annotations
 
 import html
+import re
 from pathlib import Path
 
 from tools.site_config import (
+    adsense_client_id,
     base_path,
     brand_logo_lines,
     brand_logo_size_class,
@@ -187,6 +190,39 @@ def ga4_head_snippet() -> str:
         f'gtag("config", "{mid}");\n'
         "</script>"
     )
+
+
+ADSENSE_HEAD_MARKER = "<!--ADSENSE_HEAD-->"
+_ADSENSE_HEAD_BLOCK_RE = re.compile(
+    r"(?:<!--ADSENSE_HEAD-->\s*)?"
+    r'<script\s+async\s+src="https://pagead2\.googlesyndication\.com/pagead/js/adsbygoogle\.js\?client=[^"]+"\s*'
+    r'crossorigin="anonymous"></script>\s*',
+    re.I,
+)
+
+
+def adsense_head_snippet() -> str:
+    """生成 HTML の <head> 内用 AdSense タグ。adsenseClientId 未設定なら空文字。"""
+    client = adsense_client_id()
+    if not client:
+        return ""
+    client_esc = html.escape(client, quote=True)
+    return (
+        f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={client_esc}"\n'
+        f'     crossorigin="anonymous"></script>'
+    )
+
+
+def inject_adsense_head(html_text: str) -> str:
+    """手書き HTML の </head> 直前に AdSense タグを同期（重複除去）。"""
+    text = _ADSENSE_HEAD_BLOCK_RE.sub("", html_text)
+    snippet = adsense_head_snippet()
+    if not snippet:
+        return text
+    block = f"{ADSENSE_HEAD_MARKER}\n{snippet}\n"
+    if "</head>" not in text:
+        return text
+    return text.replace("</head>", f"{block}</head>", 1)
 
 
 def analytics_snippet(rel_path: Path) -> str:

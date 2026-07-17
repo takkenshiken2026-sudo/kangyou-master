@@ -31,6 +31,7 @@ from tools.index_spa_patch import (  # noqa: E402
     INDEX_NOSCRIPT_MARKER_START,
 )
 from tools.site_config import (  # noqa: E402
+    adsense_client_id,
     base_path,
     clean_origin,
     exam_name,
@@ -718,6 +719,57 @@ def _ga4_tracking(root: Path) -> list[Issue]:
     return issues
 
 
+_ADSENSE_SCRIPT_RE = re.compile(
+    r'<script\s+async\s+src="https://pagead2\.googlesyndication\.com/pagead/js/adsbygoogle\.js\?client=([^"]+)"\s*'
+    r'crossorigin="anonymous"></script>',
+    re.I,
+)
+
+
+def _adsense_tracking(root: Path) -> list[Issue]:
+    """adsenseClientId 設定時は index / 静的シェル / 生成サンプルに AdSense タグがあること。"""
+    client = adsense_client_id()
+    if not client:
+        return []
+
+    issues: list[Issue] = []
+    ads_txt = root / "ads.txt"
+    if not ads_txt.is_file():
+        issues.append(Issue("adsenseClientId 設定時は ads.txt が必要です"))
+    else:
+        pub = client.replace("ca-", "", 1) if client.startswith("ca-") else client
+        body = ads_txt.read_text(encoding="utf-8")
+        if pub not in body:
+            issues.append(Issue(f"ads.txt に publisher ID {pub!r} がありません"))
+
+    check_rels = [
+        "index.html",
+        "about.html",
+        "privacy.html",
+        "related-sites.html",
+        "articles/index.html",
+        "terms/index.html",
+        "q/index.html",
+    ]
+    for pattern in ("articles/*/index.html", "terms/g-*.html"):
+        for path in sorted(root.glob(pattern))[:1]:
+            check_rels.append(str(path.relative_to(root)))
+
+    for rel in check_rels:
+        path = root / rel
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        m = _ADSENSE_SCRIPT_RE.search(text)
+        if not m:
+            issues.append(Issue(f"{rel}: AdSense タグがありません（client={client}）"))
+        elif m.group(1) != client:
+            issues.append(
+                Issue(f"{rel}: AdSense client 不一致（期待 {client!r}、実際 {m.group(1)!r}）")
+            )
+    return issues
+
+
 def _static_chrome(root: Path) -> list[Issue]:
     """docs/site-chrome.md — ヘッダー topnav 統一・旧 q-static-header 禁止。"""
     issues: list[Issue] = []
@@ -831,6 +883,7 @@ def main() -> int:
     issues.extend(_responsive_css_source(root))
     issues.extend(_viewport_and_static_css(root))
     issues.extend(_ga4_tracking(root))
+    issues.extend(_adsense_tracking(root))
     issues.extend(_static_page_site_leaks(root))
     issues.extend(_guide_index_picks(root))
 
