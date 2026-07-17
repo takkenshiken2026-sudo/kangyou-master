@@ -733,14 +733,21 @@ def _adsense_tracking(root: Path) -> list[Issue]:
         return []
 
     issues: list[Issue] = []
+    from tools.site_config import adsense_publisher_id
+
+    pub = adsense_publisher_id()
     ads_txt = root / "ads.txt"
     if not ads_txt.is_file():
         issues.append(Issue("adsenseClientId 設定時は ads.txt が必要です"))
     else:
-        pub = client.replace("ca-", "", 1) if client.startswith("ca-") else client
         body = ads_txt.read_text(encoding="utf-8")
-        if pub not in body:
+        if pub and pub not in body:
             issues.append(Issue(f"ads.txt に publisher ID {pub!r} がありません"))
+        expected_line = f"google.com, {pub}, DIRECT, f08c47fec0942fa0"
+        if pub and expected_line not in body:
+            issues.append(
+                Issue(f"ads.txt に正規行がありません（期待: {expected_line}）")
+            )
 
     check_rels = [
         "index.html",

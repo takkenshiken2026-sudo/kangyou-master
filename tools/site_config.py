@@ -539,6 +539,31 @@ def write_site_config_js() -> None:
     )
 
 
+def adsense_publisher_id() -> str:
+    """ads.txt 用の publisher ID（pub-…）。adsenseClientId 未設定なら空。"""
+    client = adsense_client_id()
+    if not client:
+        return ""
+    pub = client[3:] if client.startswith("ca-") else client
+    return pub if pub.startswith("pub-") else f"pub-{pub}"
+
+
+def write_ads_txt() -> None:
+    """ルート ads.txt を site-config から生成（AdSense 検証用）。未設定なら削除しない。"""
+    pub = adsense_publisher_id()
+    if not pub:
+        return
+    origin = clean_origin()
+    host = origin.replace("https://", "").replace("http://", "").strip("/")
+    # Google 公式1行 + OWNERDOMAIN（IAB ads.txt 1.1）。末尾改行必須。
+    lines = [
+        f"OWNERDOMAIN={host}",
+        f"google.com, {pub}, DIRECT, f08c47fec0942fa0",
+        "",
+    ]
+    (ROOT / "ads.txt").write_text("\n".join(lines), encoding="utf-8", newline="\n")
+
+
 def write_crawler_files() -> None:
     origin = clean_origin()
     host = origin.replace("https://", "").replace("http://", "").strip("/")
@@ -549,6 +574,7 @@ def write_crawler_files() -> None:
         f"Sitemap: {origin}/sitemap.xml\n",
         encoding="utf-8",
     )
+    write_ads_txt()
 
 
 def sync_config_files() -> None:
@@ -559,4 +585,4 @@ def sync_config_files() -> None:
 
 if __name__ == "__main__":
     sync_config_files()
-    print("Synced site-config.js, CNAME, robots.txt from site-config.json")
+    print("Synced site-config.js, CNAME, robots.txt, ads.txt from site-config.json")
