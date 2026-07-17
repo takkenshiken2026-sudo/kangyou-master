@@ -38,6 +38,16 @@ do
   fi
   cp "$f" "$OUT/"
 done
+# AdSense: adsenseClientId があるサイトは ads.txt を必須配置
+if grep -q '"adsenseClientId"[[:space:]]*:[[:space:]]*"ca-pub-' site-config.json 2>/dev/null; then
+  if [[ ! -f "$ROOT/ads.txt" ]]; then
+    echo "prepare_public_site.sh: adsenseClientId 設定時は ads.txt が必要です（apply_site_config / site_config を実行）。" >&2
+    exit 1
+  fi
+  cp "$ROOT/ads.txt" "$OUT/"
+elif [[ -f "$ROOT/ads.txt" ]]; then
+  cp "$ROOT/ads.txt" "$OUT/"
+fi
 for d in articles q terms; do
   if [[ -d "$ROOT/$d" ]]; then
     cp -R "$ROOT/$d" "$OUT/"
@@ -51,9 +61,6 @@ for f in eisei1-*.js eisei2-*.js; do
 done
 if [[ -f "$ROOT/privacy-terms.html" ]]; then
   cp "$ROOT/privacy-terms.html" "$OUT/"
-fi
-if [[ -f "$ROOT/ads.txt" ]]; then
-  cp "$ROOT/ads.txt" "$OUT/"
 fi
 # SPA トップ（index.html）用。CSS/JS を index から分離したサイト向け。
 for f in site-spa.css site-spa-fields.js site-app.css; do
@@ -92,5 +99,15 @@ fi
 if grep -rq 'seo-editorial.css' "$OUT/terms" "$OUT/articles" 2>/dev/null && [[ ! -f "$OUT/seo-editorial.css" ]]; then
   echo "prepare_public_site.sh: 用語・ガイドが seo-editorial.css を参照していますが public_site にありません。" >&2
   exit 1
+fi
+if grep -q '"adsenseClientId"[[:space:]]*:[[:space:]]*"ca-pub-' site-config.json 2>/dev/null; then
+  if [[ ! -f "$OUT/ads.txt" ]]; then
+    echo "prepare_public_site.sh: public_site/ads.txt がありません。" >&2
+    exit 1
+  fi
+  if ! grep -q 'google.com, pub-' "$OUT/ads.txt"; then
+    echo "prepare_public_site.sh: public_site/ads.txt に google.com, pub- 行がありません。" >&2
+    exit 1
+  fi
 fi
 echo "prepare_public_site.sh: $OUT に $n ファイルを配置しました。"
