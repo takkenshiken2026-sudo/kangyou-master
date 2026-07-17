@@ -66,5 +66,13 @@ def seo_editorial_article_class(*, extra: str = "") -> str:
 
 def seo_brand_asset_tags(rel_path: Path) -> str:
     from tools.brand_assets import brand_head_markup
+    from tools.html_footer import adsense_head_snippet
 
-    return brand_head_markup(rel_path)
+    parts: list[str] = []
+    brand = brand_head_markup(rel_path)
+    if brand:
+        parts.append(brand)
+    ads = adsense_head_snippet()
+    if ads:
+        parts.append(f"<!--ADSENSE_HEAD-->\n{ads}")
+    return "\n".join(parts)
